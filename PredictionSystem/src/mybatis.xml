@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+	<typeAliases>
+		<typeAlias alias="adeod" type="com.pdsu.edu.domain.Adeod"/>
+		<typeAlias alias="advanceeod" type="com.pdsu.edu.domain.Advanceeod"/>
+		<typeAlias alias="user" type="com.pdsu.edu.domain.User"/>
+		<typeAlias alias="fileimport" type="com.pdsu.edu.domain.Fileimport"/>
+		<typeAlias alias="claimfile" type="com.pdsu.edu.domain.Claimfile"/>
+		<typeAlias alias="claimfilesession" type="com.pdsu.edu.domain.Claimfilesession"/>
+		<typeAlias alias="loginuser" type="com.pdsu.edu.domain.Loginuser"/>
+		<typeAlias alias="adppo" type="com.pdsu.edu.domain.Adppo"/>
+	</typeAliases>
+	<mappers>
+		<mapper resource="com/pdsu/edu/domain/sqlMappers/adeod.xml" />
+		<mapper resource="com/pdsu/edu/domain/sqlMappers/advanceeod.xml" />
+		<mapper resource="com/pdsu/edu/domain/sqlMappers/user.xml" />
+		<mapper resource="com/pdsu/edu/domain/sqlMappers/fileimport.xml" />
+		<mapper resource="com/pdsu/edu/domain/sqlMappers/claimfile.xml" />
+		<mapper resource="com/pdsu/edu/domain/sqlMappers/loginuser.xml" />
+		<mapper resource="com/pdsu/edu/domain/sqlMappers/adppo.xml" />
+	</mappers>
+</configuration>	

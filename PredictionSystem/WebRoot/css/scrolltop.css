@@ -1,0 +1,58 @@
+.backToTop {
+	display: none;
+	width: 27px;
+	line-height: 1.2;
+	padding: 5px 0;
+	background-color: #000;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+	position: fixed;
+	_position: absolute;
+	right: 10px;
+	bottom: 100px;
+	_bottom: "auto";
+	cursor: pointer;
+	opacity: .6;
+	filter: Alpha(opacity = 60);
+}
+
+.backToTopImg {
+	display:none;
+	POSITION: fixed;
+	TEXT-ALIGN: center;
+	LINE-HEIGHT: 30px;
+	WIDTH: 30px;
+	BOTTOM: 35px;
+	HEIGHT: 33px;
+	FONT-SIZE: 12px;
+	CURSOR: pointer;
+	_position: absolute;
+	_right: auto;
+	right: 16px;
+}
+.png{
+   _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/topimg/jt.png'); /* IE6 */
+   _filter: Alpha(opacity = 50);
+}
+
+.showtalk {
+	display:none;
+	POSITION: fixed;
+	TEXT-ALIGN: center;
+	LINE-HEIGHT: 30px;
+	WIDTH: 250px;
+	BOTTOM: 35px;
+	HEIGHT: 62px;
+	FONT-SIZE: 12px;
+	/* CURSOR: pointer; */
+	_position: absolute;
+	_right: auto;
+	
+}
+
+.scrofont {
+   font-size: 14px;
+   font-family:arial;
+   color: #000000;
+}

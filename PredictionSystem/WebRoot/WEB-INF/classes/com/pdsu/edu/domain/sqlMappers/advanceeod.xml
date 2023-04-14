@@ -1,0 +1,1431 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pdsu.edu.domain.Advanceeod">
+	<resultMap type="com.pdsu.edu.domain.Advanceeod" id="advanceeodResult">
+		<id column="fdate" property="fdate" jdbcType="VARCHAR" />
+		<id column="edate" property="edate" jdbcType="VARCHAR" />
+		<id column="ifdate" property="ifdate" jdbcType="VARCHAR" />
+		<id column="iedate" property="iedate" jdbcType="VARCHAR" />
+		<id column="iedate" property="iedate" jdbcType="VARCHAR" />
+		<id column="status" property="status" jdbcType="DECIMAL" />
+		<id column="searchstatus" property="searchstatus" jdbcType="VARCHAR" />
+		
+		<result column="scanned_claim_id" property="scanned_claim_id" jdbcType="VARCHAR" />
+		<result column="employee_ssn" property="employee_ssn" jdbcType="DECIMAL" />
+		<result column="member_id" property="member_id" jdbcType="VARCHAR" />
+		<result column="submission_reason" property="submission_reason" jdbcType="DECIMAL" />
+		<result column="subscriber_lname" property="subscriber_lname" jdbcType="VARCHAR" />
+		<result column="subscriber_fname" property="subscriber_fname" jdbcType="VARCHAR" />
+		<result column="subscriber_mname" property="subscriber_mname" jdbcType="VARCHAR" />
+		<result column="subscriber_suffix" property="subscriber_suffix" jdbcType="VARCHAR" />
+		<result column="subscriber_address1" property="subscriber_address1" jdbcType="VARCHAR" />
+		<result column="subscriber_address2" property="subscriber_address2" jdbcType="VARCHAR" />
+		<result column="subscriber_city" property="subscriber_city" jdbcType="VARCHAR" />
+		<result column="subscriber_st" property="subscriber_st" jdbcType="VARCHAR" />
+		<result column="subscriber_zip" property="subscriber_zip" jdbcType="VARCHAR" />
+		<result column="subscriber_dob" property="subscriber_dob" jdbcType="DATE" />
+		<result column="subscriber_gender" property="subscriber_gender" jdbcType="VARCHAR" />
+		<result column="plan_number" property="plan_number" jdbcType="VARCHAR" />
+		<result column="employer_name" property="employer_name" jdbcType="VARCHAR" />
+		<result column="other_subscriber_lname" property="other_subscriber_lname" jdbcType="VARCHAR" />
+		<result column="other_subscriber_fname" property="other_subscriber_fname" jdbcType="VARCHAR" />
+		<result column="other_subscriber_mname" property="other_subscriber_mname" jdbcType="VARCHAR" />
+		<result column="other_subscriber_suffix" property="other_subscriber_suffix" jdbcType="VARCHAR" />
+		<result column="other_subscriber_dob" property="other_subscriber_dob" jdbcType="DATE" />
+		<result column="other_subscriber_gender" property="other_subscriber_gender" jdbcType="VARCHAR" />
+		<result column="other_policy_number" property="other_policy_number" jdbcType="VARCHAR" />
+		<result column="other_insurance_plan_name" property="other_insurance_plan_name" jdbcType="VARCHAR" />
+		<result column="other_insurance_type" property="other_insurance_type" jdbcType="VARCHAR" />
+		<result column="cob_paid_amount" property="cob_paid_amount" jdbcType="DECIMAL" />
+		<result column="other_payor" property="other_payor" jdbcType="VARCHAR" />
+		<result column="other_payor_identification" property="other_payor_identification" jdbcType="VARCHAR" />
+		<result column="patient_lname" property="patient_lname" jdbcType="VARCHAR" />
+		<result column="patient_fname" property="patient_fname" jdbcType="VARCHAR" />
+		<result column="patient_mname" property="patient_mname" jdbcType="VARCHAR" />
+		<result column="patient_suffix" property="patient_suffix" jdbcType="VARCHAR" />
+		<result column="patient_address1" property="patient_address1" jdbcType="VARCHAR" />
+		<result column="patient_address2" property="patient_address2" jdbcType="VARCHAR" />
+		<result column="patient_city" property="patient_city" jdbcType="VARCHAR" />
+		<result column="patient_st" property="patient_st" jdbcType="VARCHAR" />
+		<result column="patient_zip" property="patient_zip" jdbcType="VARCHAR" />
+		<result column="patient_dob" property="patient_dob" jdbcType="DATE" />
+		<result column="patient_gender" property="patient_gender" jdbcType="VARCHAR" />
+		<result column="patient_account_number" property="patient_account_number" jdbcType="VARCHAR" />
+		<result column="billing_provider_id" property="billing_provider_id" jdbcType="VARCHAR" />
+		<result column="billing_taxid" property="billing_taxid" jdbcType="VARCHAR" />
+		<result column="billing_provider_lname" property="billing_provider_lname" jdbcType="VARCHAR" />
+		<result column="billing_provider_fname" property="billing_provider_fname" jdbcType="VARCHAR" />
+		<result column="billing_provider_mname" property="billing_provider_mname" jdbcType="VARCHAR" />
+		<result column="billing_provider_suffix" property="billing_provider_suffix" jdbcType="VARCHAR" />
+		<result column="billing_provider_address1" property="billing_provider_address1" jdbcType="VARCHAR" />
+		<result column="billing_provider_address2" property="billing_provider_address2" jdbcType="VARCHAR" />
+		<result column="billing_provider_city" property="billing_provider_city" jdbcType="VARCHAR" />
+		<result column="billing_provider_st" property="billing_provider_st" jdbcType="VARCHAR" />
+		<result column="billing_provider_zip" property="billing_provider_zip" jdbcType="VARCHAR" />
+		<result column="billing_group_npi" property="billing_group_npi" jdbcType="VARCHAR" />
+		<result column="billing_other_identifier" property="billing_other_identifier" jdbcType="VARCHAR" />
+		<result column="billing_contact_name" property="billing_contact_name" jdbcType="VARCHAR" />
+		<result column="billing_contact_type" property="billing_contact_type" jdbcType="VARCHAR" />
+		<result column="billing_contact_number" property="billing_contact_number" jdbcType="VARCHAR" />
+		<result column="billing_contact_number2" property="billing_contact_number2" jdbcType="VARCHAR" />
+		<result column="billing_contact_number3" property="billing_contact_number3" jdbcType="VARCHAR" />
+		<result column="currency_indicator" property="currency_indicator" jdbcType="VARCHAR" />
+		<result column="payto_provider_id" property="payto_provider_id" jdbcType="VARCHAR" />
+		<result column="payto_taxid" property="payto_taxid" jdbcType="VARCHAR" />
+		<result column="payto_provider_lname" property="payto_provider_lname" jdbcType="VARCHAR" />
+		<result column="payto_provider_fname" property="payto_provider_fname" jdbcType="VARCHAR" />
+		<result column="payto_provider_mname" property="payto_provider_mname" jdbcType="VARCHAR" />
+		<result column="payto_provider_suffix" property="payto_provider_suffix" jdbcType="VARCHAR" />
+		<result column="payto_provider_address1" property="payto_provider_address1" jdbcType="VARCHAR" />
+		<result column="payto_provider_address2" property="payto_provider_address2" jdbcType="VARCHAR" />
+		<result column="payto_provider_city" property="payto_provider_city" jdbcType="VARCHAR" />
+		<result column="payto_provider_st" property="payto_provider_st" jdbcType="VARCHAR" />
+		<result column="payto_provider_zip" property="payto_provider_zip" jdbcType="VARCHAR" />
+		<result column="payto_group_npi" property="payto_group_npi" jdbcType="VARCHAR" />
+		<result column="payto_other_identifier" property="payto_other_identifier" jdbcType="VARCHAR" />
+		<result column="referring_provider_lname" property="referring_provider_lname" jdbcType="VARCHAR" />
+		<result column="referring_provider_fname" property="referring_provider_fname" jdbcType="VARCHAR" />
+		<result column="referring_provider_mname" property="referring_provider_mname" jdbcType="VARCHAR" />
+		<result column="referring_provider_suffix" property="referring_provider_suffix" jdbcType="VARCHAR" />
+		<result column="referring_taxid" property="referring_taxid" jdbcType="VARCHAR" />
+		<result column="referring_group_npi" property="referring_group_npi" jdbcType="VARCHAR" />
+		<result column="referring_provider_id" property="referring_provider_id" jdbcType="VARCHAR" />
+		<result column="referring_other_identifier" property="referring_other_identifier" jdbcType="VARCHAR" />
+		<result column="rendering_provider_id" property="rendering_provider_id" jdbcType="VARCHAR" />
+		<result column="rendering_taxid" property="rendering_taxid" jdbcType="VARCHAR" />
+		<result column="rendering_group_npi" property="rendering_group_npi" jdbcType="VARCHAR" />
+		<result column="rendering_other_identifier" property="rendering_other_identifier" jdbcType="VARCHAR" />
+		<result column="rendering_provider_lname" property="rendering_provider_lname" jdbcType="VARCHAR" />
+		<result column="rendering_provider_fname" property="rendering_provider_fname" jdbcType="VARCHAR" />
+		<result column="rendering_provider_mname" property="rendering_provider_mname" jdbcType="VARCHAR" />
+		<result column="rendering_provider_suffix" property="rendering_provider_suffix" jdbcType="VARCHAR" />
+		<result column="service_facility_provider_id" property="service_facility_provider_id" jdbcType="VARCHAR" />
+		<result column="service_facility_taxid" property="service_facility_taxid" jdbcType="VARCHAR" />
+		<result column="service_facility_id" property="service_facility_id" jdbcType="VARCHAR" />
+		<result column="service_facility_name" property="service_facility_name" jdbcType="VARCHAR" />
+		<result column="service_facility_address1" property="service_facility_address1" jdbcType="VARCHAR" />
+		<result column="service_facility_address2" property="service_facility_address2" jdbcType="VARCHAR" />
+		<result column="service_facility_city" property="service_facility_city" jdbcType="VARCHAR" />
+		<result column="service_facility_st" property="service_facility_st" jdbcType="VARCHAR" />
+		<result column="service_facility_zip" property="service_facility_zip" jdbcType="VARCHAR" />
+		<result column="service_other_identifier" property="service_other_identifier" jdbcType="VARCHAR" />
+		<result column="service_facility_group_npi" property="service_facility_group_npi" jdbcType="VARCHAR" />
+		<result column="relationship_to_employee" property="relationship_to_employee" jdbcType="VARCHAR" />
+		<result column="work_related_indicator" property="work_related_indicator" jdbcType="VARCHAR" />
+		<result column="auto_accident_indicator" property="auto_accident_indicator" jdbcType="VARCHAR" />
+		<result column="auto_accident_state" property="auto_accident_state" jdbcType="VARCHAR" />
+		<result column="accidental_injury_indicator" property="accidental_injury_indicator" jdbcType="VARCHAR" />
+		<result column="accident_date" property="accident_date" jdbcType="DATE" />
+		<result column="disability_from_date" property="disability_from_date" jdbcType="DATE" />
+		<result column="disability_end_date" property="disability_end_date" jdbcType="DATE" />
+		<result column="releaseofinformation" property="releaseofinformation" jdbcType="VARCHAR" />
+		<result column="assignment_of_benefits" property="assignment_of_benefits" jdbcType="VARCHAR" />
+		<result column="otherinsurance" property="otherinsurance" jdbcType="VARCHAR" />
+		<result column="patient_signature" property="patient_signature" jdbcType="VARCHAR" />
+		<result column="date_of_onset" property="date_of_onset" jdbcType="DATE" />
+		<result column="similar_or_symptom_date" property="similar_or_symptom_date" jdbcType="DATE" />
+		<result column="remarks" property="remarks" jdbcType="VARCHAR" />
+		<result column="diagnosis_type_code" property="diagnosis_type_code" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_1" property="diagnosis_code_1" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_2" property="diagnosis_code_2" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_3" property="diagnosis_code_3" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_4" property="diagnosis_code_4" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_5" property="diagnosis_code_5" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_6" property="diagnosis_code_6" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_7" property="diagnosis_code_7" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_8" property="diagnosis_code_8" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_9" property="diagnosis_code_9" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_10" property="diagnosis_code_10" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_11" property="diagnosis_code_11" jdbcType="VARCHAR" />
+		<result column="diagnosis_code_12" property="diagnosis_code_12" jdbcType="VARCHAR" />
+		<result column="prior_authorization_number" property="prior_authorization_number" jdbcType="VARCHAR" />
+		<result column="date_of_service_from" property="date_of_service_from" jdbcType="DATE" />
+		<result column="date_of_service_through" property="date_of_service_through" jdbcType="DATE" />
+		<result column="place_of_service" property="place_of_service" jdbcType="DECIMAL" />
+		<result column="medicare_assignment" property="medicare_assignment" jdbcType="VARCHAR" />
+		<result column="total_charge_amount" property="total_charge_amount" jdbcType="DECIMAL" />
+		<result column="total_paid_amount" property="total_paid_amount" jdbcType="DECIMAL" />
+		<result column="total_discount_amount" property="total_discount_amount" jdbcType="DECIMAL" />
+		<result column="provider_signature_on_file" property="provider_signature_on_file" jdbcType="VARCHAR" />
+		<result column="pricing_methodology" property="pricing_methodology" jdbcType="VARCHAR" />
+		<result column="ppo" property="ppo" jdbcType="VARCHAR" />
+		<result column="reject_reason_code" property="reject_reason_code" jdbcType="VARCHAR" />
+		<result column="repriced_reference_number" property="repriced_reference_number" jdbcType="VARCHAR" />
+		<result column="claim_message_code" property="claim_message_code" jdbcType="VARCHAR" />
+		<result column="primary_payer_name" property="primary_payer_name" jdbcType="VARCHAR" />
+		<result column="primary_payer_identifier" property="primary_payer_identifier" jdbcType="VARCHAR" />
+		<result column="icn" property="icn" jdbcType="VARCHAR" />
+		<result column="claim_number" property="claim_number" jdbcType="VARCHAR" />
+		<result column="file_name" property="file_name" jdbcType="VARCHAR" />
+		<result column="file_type" property="file_type" jdbcType="DECIMAL" />
+		<result column="sender" property="sender" jdbcType="VARCHAR" />
+		<result column="sender_batchnumber" property="sender_batchnumber" jdbcType="VARCHAR" />
+		<result column="send_date" property="send_date" jdbcType="DATE" />
+		<result column="imported" property="imported" jdbcType="DATE" />
+		<result column="image_created" property="image_created" jdbcType="DECIMAL" />
+		<result column="exported" property="exported" jdbcType="DECIMAL" />
+		<result column="sys_id" property="sys_id" jdbcType="VARCHAR" />
+		<result column="sys_ref1" property="sys_ref1" jdbcType="VARCHAR" />
+		<result column="sys_ref2" property="sys_ref2" jdbcType="VARCHAR" />
+		<result column="sys_import" property="sys_import" jdbcType="DATE" />
+		<result column="subssn" property="subssn" jdbcType="DECIMAL" />
+		<result column="received_date" property="received_date" jdbcType="DATE" />
+		<result column="hcp05" property="hcp05" jdbcType="DECIMAL" />
+		<result column="hcp06" property="hcp06" jdbcType="VARCHAR" />
+		<result column="hcp07" property="hcp07" jdbcType="DECIMAL" />
+		 
+        
+		<result column="claimline_id" property="claimline_id" jdbcType="DECIMAL" />
+		<result column="incdate_from" property="incdate_from" jdbcType="DATE" />
+		<result column="incdate_through" property="incdate_through" jdbcType="DATE" />
+		<result column="emergency_indicator" property="emergency_indicator" jdbcType="VARCHAR" />
+		<result column="cpt_code" property="cpt_code" jdbcType="VARCHAR" />
+		<result column="cpt_modifier" property="cpt_modifier" jdbcType="VARCHAR" />
+		<result column="diagcodepointer" property="diagcodepointer" jdbcType="VARCHAR" />
+		<result column="charge_amount" property="charge_amount" jdbcType="DECIMAL" />
+		<result column="measurement_code" property="measurement_code" jdbcType="VARCHAR" />
+		<result column="totalunitsused" property="totalunitsused" jdbcType="DECIMAL" />
+		<result column="discount_amount" property="discount_amount" jdbcType="DECIMAL" />
+		<result column="message_code" property="message_code" jdbcType="VARCHAR" /> 
+		<result column="place_of_service_line" property="place_of_service_line" jdbcType="DECIMAL" />
+		<result column="rnum" property="rnum" jdbcType="DECIMAL" />
+		
+		<result column="request_id" property="request_id" jdbcType="DECIMAL" />
+		<result column="status_str" property="status_str" jdbcType="VARCHAR" />
+		<result column="date_submitted" property="date_submitted" jdbcType="DATE" />
+		<result column="date_completed" property="date_completed" jdbcType="DATE" />
+		<result column="provider_name" property="provider_name" jdbcType="VARCHAR" />
+		<result column="aeob_link" property="aeob_link" jdbcType="VARCHAR" />
+		<result column="form_doc_id" property="form_doc_id" jdbcType="VARCHAR" />
+		
+		
+		<result column="file_id" property="file_id" jdbcType="VARCHAR" />
+		<result column="ssn" property="ssn" jdbcType="DECIMAL" />
+		<result column="altid" property="altid" jdbcType="VARCHAR" />
+		<result column="last_updated" property="last_updated" jdbcType="DATE" />
+		<result column="updated" property="updated" jdbcType="DATE" />
+		<result column="counttotal" property="counttotal" jdbcType="DECIMAL" />
+		<result column="dep_no" property="dep_no" jdbcType="DECIMAL" />
+	
+		<result column="name" property="name" jdbcType="VARCHAR" />
+		<result column="FAX_NUMBER" property="FAX_NUMBER" jdbcType="VARCHAR" />
+		<result column="EMAIL_ADDRESS" property="EMAIL_ADDRESS" jdbcType="VARCHAR" />
+		<result column="MAILING_ADDRESS" property="MAILING_ADDRESS" jdbcType="VARCHAR" />
+	</resultMap>
+	
+	<select id="selAdvanceeobclaimrow"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+	select scanned_claim_id,employee_ssn,member_id,patient_lname,patient_fname,imported,patient_dob,billing_taxid,rnum,status_str from
+		(select a.scanned_claim_id,employee_ssn,member_id,patient_lname,patient_fname,imported,patient_dob,billing_taxid,rownum as rnum,b.status as status_str
+		from (select * from TBL_837_HCFA_ADVANCE order by Scanned_claim_id desc) a 
+		inner join TBL_AEOB_MAINTENANCE b on a.scanned_claim_id=b.claim_form_id
+		inner join empdep c on a.employee_ssn=c.ssn and (a.member_id = c.idalt or a.member_id = substr('00000'||c.grpno,-5)||substr('00000'||c.empno,-5)||substr('00'||c.depno,-2))
+		inner join eedpelig d on c.GRPNO=d.GRPNO and c.EMPNO=d.empno and c.DEPNO=d.depno
+		<where>
+		d.SNAPTHRUDT>=sysdate
+		and (d.eligflag01='T' or d.eligflag02='T' or d.eligflag03='T' or d.eligflag04='T' or d.eligflag05='T' or d.eligflag06='T' or d.eligflag07='T')
+		<if test="status != null" >
+	    	and b.status=#{status}
+	    </if>
+	    <if test="searchstatus != null" >
+	    	and b.status in (${searchstatus})
+	    </if>
+		<if test="scanned_claim_id != null" >
+			and a.scanned_claim_id=#{scanned_claim_id}
+		</if>
+	    <if test="ssn != null" >
+			and employee_ssn=#{ssn}
+		</if>
+		<if test="altid != null" >
+        	and member_id=#{altid}
+      	</if>
+      	<if test="patient_dob != null" >
+			and patient_dob=#{patient_dob,jdbcType=DATE}
+		</if>
+		<if test="billing_taxid != null" >
+			and billing_taxid=#{billing_taxid}
+		</if>  
+		<if test="ifdate != null and iedate != null " >
+			and (imported>=to_date(#{ifdate,jdbcType=VARCHAR},'mm/dd/yyyy') and imported&lt;=to_date(#{iedate,jdbcType=VARCHAR},'mm/dd/yyyy'))
+		</if> 
+		</where>
+		)
+		<where>
+		<if test="beginrow != null and endrow != null">
+			and rnum > #{beginrow} and rnum &lt;= #{endrow}
+      	</if>
+  		</where> 
+		order by rnum
+	</select>
+	
+	<select id="selAdvanceeobclaim"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+		select a.scanned_claim_id,
+	   employee_ssn,
+	   member_id,
+	   submission_reason,
+	   subscriber_lname,
+	   subscriber_fname,
+	   subscriber_mname,
+	   subscriber_suffix,
+	   subscriber_address1,
+	   subscriber_address2,
+	   subscriber_city,
+	   subscriber_st,
+	   subscriber_zip,
+	   subscriber_dob,
+	   subscriber_gender,
+	   plan_number,
+	   employer_name,
+	   other_subscriber_lname,
+	   other_subscriber_fname,
+	   other_subscriber_mname,
+	   other_subscriber_suffix,
+	   other_subscriber_dob,
+	   other_subscriber_gender,
+	   other_policy_number,
+	   other_insurance_plan_name,
+	   other_insurance_type,
+	   a.cob_paid_amount,
+	   other_payor,
+	   other_payor_identification,
+	   patient_lname,
+	   patient_fname,
+	   patient_mname,
+	   patient_suffix,
+	   patient_address1,
+	   patient_address2,
+	   patient_city,
+	   patient_st,
+	   patient_zip,
+	   patient_dob,
+     patient_gender,
+     patient_account_number,
+     billing_provider_id,
+     billing_taxid,
+     billing_provider_lname,
+     billing_provider_fname,
+     billing_provider_mname,
+     billing_provider_suffix,
+     billing_provider_address1,
+     billing_provider_address2,
+     billing_provider_city,
+     billing_provider_st,
+     billing_provider_zip,
+     billing_group_npi,
+     billing_other_identifier,
+     billing_contact_name,
+     billing_contact_type,
+     billing_contact_number,
+     billing_contact_number2,
+     billing_contact_number3,
+     currency_indicator,
+     payto_provider_id,
+     payto_taxid,
+     payto_provider_lname,
+     payto_provider_fname,
+     payto_provider_mname,
+     payto_provider_suffix,
+     payto_provider_address1,
+     payto_provider_address2,
+     payto_provider_city,
+     payto_provider_st,
+     payto_provider_zip,
+     payto_group_npi,
+     payto_other_identifier,
+     referring_provider_lname,
+     referring_provider_fname,
+     referring_provider_mname,
+     referring_provider_suffix,
+     referring_taxid,
+     referring_group_npi,
+     referring_provider_id,
+     referring_other_identifier,
+     rendering_provider_id,
+     rendering_taxid,
+     rendering_group_npi,
+     rendering_other_identifier,
+     rendering_provider_lname,
+     rendering_provider_fname,
+     rendering_provider_mname,
+     rendering_provider_suffix,
+     service_facility_provider_id,
+     service_facility_taxid,
+     service_facility_id,
+     service_facility_name,
+     service_facility_address1,
+     service_facility_address2,
+     service_facility_city,
+     service_facility_st,
+     service_facility_zip,
+     service_other_identifier,
+     service_facility_group_npi,
+     relationship_to_employee,
+     work_related_indicator,
+     auto_accident_indicator,
+     auto_accident_state,
+      accidental_injury_indicator,
+     accident_date,
+     disability_from_date,
+     disability_end_date,
+     releaseofinformation,
+     assignment_of_benefits,
+     otherinsurance,
+     patient_signature,
+     date_of_onset,
+     similar_or_symptom_date,
+     a.remarks,
+     diagnosis_type_code,
+     diagnosis_code_1,
+     diagnosis_code_2,
+     diagnosis_code_3,
+     diagnosis_code_4,
+     diagnosis_code_5,
+     diagnosis_code_6,
+     diagnosis_code_7,
+     diagnosis_code_8,
+     diagnosis_code_9,
+     diagnosis_code_10,
+     diagnosis_code_11,
+     diagnosis_code_12,
+     prior_authorization_number,
+     date_of_service_from,
+     date_of_service_through,
+     a.place_of_service,
+     medicare_assignment,
+     total_charge_amount,
+     total_paid_amount,
+     total_discount_amount,
+     provider_signature_on_file,
+     a.pricing_methodology,
+     a.ppo,
+     a.reject_reason_code,
+     repriced_reference_number,
+     claim_message_code,
+     primary_payer_name,
+     primary_payer_identifier,
+     icn,
+     a.claim_number,
+     file_name,
+     file_type,
+     sender,
+     sender_batchnumber,
+     send_date,
+     imported,
+     image_created,
+     exported,
+     sys_id,
+     sys_ref1,
+     sys_ref2,
+     sys_import,
+     subssn,
+     received_date,
+     a.hcp05,
+     hcp06,
+     hcp07,b.status as status_str
+   from TBL_837_HCFA_ADVANCE a
+   inner join TBL_AEOB_MAINTENANCE b on a.scanned_claim_id=b.claim_form_id
+  inner join empdep c on a.employee_ssn=c.ssn and (a.member_id = c.idalt or a.member_id = substr('00000'||c.grpno,-5)||substr('00000'||c.empno,-5)||substr('00'||c.depno,-2))
+	inner join eedpelig d on c.GRPNO=d.GRPNO and c.EMPNO=d.empno and c.DEPNO=d.depno
+   <where>
+   d.SNAPTHRUDT>=sysdate
+	and (d.eligflag01='T' or d.eligflag02='T' or d.eligflag03='T' or d.eligflag04='T' or d.eligflag05='T' or d.eligflag06='T' or d.eligflag07='T')
+		<if test="status != null" >
+	    	and b.status=#{status}
+	    </if>
+	    <if test="searchstatus != null" >
+	    	and b.status in (${searchstatus})
+	    </if>
+		<if test="scanned_claim_id != null" >
+	    	and a.scanned_claim_id=#{scanned_claim_id}
+	    </if>
+		<if test="ssn != null" >
+	    	and employee_ssn=#{ssn}
+	    </if>
+		<if test="altid != null" >
+	    	and member_id=#{altid}
+	    </if>
+		<if test="claimline_id != null" >
+	    	and claimline_id=#{claimline_id}
+	    </if>
+	    <if test="patient_dob != null" >
+	    	and patient_dob=#{patient_dob,jdbcType=DATE}
+	    </if>
+	 
+	    <if test="billing_taxid != null" >
+	    	and billing_taxid=#{billing_taxid}
+	    </if>  
+	    <if test="ifdate != null and iedate != null " >
+		    and (imported>=to_date(#{ifdate,jdbcType=VARCHAR},'mm/dd/yyyy') and imported&lt;=to_date(#{iedate,jdbcType=VARCHAR},'mm/dd/yyyy'))
+		</if>
+		<if test="patient_fname != null" >
+		    and a.patient_fname = #{patient_fname,jdbcType=VARCHAR}
+		</if>
+		<if test="fromid != null" >
+		   and fromid = #{fromid}
+		</if>
+	</where> 
+	order by Scanned_claim_id desc
+	</select>
+	
+	
+	<select id="selAdvanceeobpdfrow"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+	select file_id,ssn,altid,file_type,file_name,last_updated,updated,rnum
+	from (select FILE_ID,SSN,ALTID,FILE_TYPE,FILE_NAME,LAST_UPDATED,TO_CHAR(LAST_UPDATED,'mm-dd-yyyy') as UPDATED,rownum as rnum
+ 	from TBL_ADVANCEEOB_FILE 
+ 	<where>
+	    <if test="ifdate != null and iedate != null " >
+		    and (LAST_UPDATED>=to_date(#{ifdate,jdbcType=VARCHAR},'mm/dd/yyyy') and LAST_UPDATED&lt;=to_date(#{iedate,jdbcType=VARCHAR},'mm/dd/yyyy'))
+		</if>
+	    <if test="searchstatus != null" >
+	    	and FILE_TYPE in (${searchstatus})
+	    </if>
+		<if test="ssn != null" >
+	    	and ssn=#{ssn}
+	    </if>
+		<if test="altid != null" >
+	    	and altid=#{altid}
+	    </if>
+	</where>) a
+	<where>
+		<if test="beginrow != null and endrow != null">
+			and rnum > #{beginrow} and rnum &lt;= #{endrow}
+      	</if>
+	</where>
+	order by file_id
+	</select>
+	<select id="selAdvanceeobpdf"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+	select file_id,ssn,altid,updated,file_name,last_updated,TO_CHAR(last_updated,'mm-dd-yyyy') as updated
+ 	from TBL_ADVANCEEOB_FILE 
+ 	<where>
+	    <if test="ifdate != null and iedate != null " >
+		    and (LAST_UPDATED>=to_date(#{ifdate,jdbcType=VARCHAR},'mm/dd/yyyy') and LAST_UPDATED&lt;=to_date(#{iedate,jdbcType=VARCHAR},'mm/dd/yyyy'))
+		</if>
+	    <if test="searchstatus != null" >
+	    	and FILE_TYPE in (${searchstatus})
+	    </if>
+		<if test="ssn != null" >
+	    	and ssn=#{ssn}
+	    </if>
+		<if test="altid != null" >
+	    	and altid=#{altid}
+	    </if>
+ 	</where>
+ 	order by file_id
+	</select>
+	<select id="selAdvanceeobpdfcount"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+	select count(1) as counttotal
+ 	from TBL_ADVANCEEOB_FILE 
+ 	<where>
+	    <if test="ifdate != null and iedate != null " >
+		    and (LAST_UPDATED>=to_date(#{ifdate,jdbcType=VARCHAR},'mm/dd/yyyy') and LAST_UPDATED&lt;=to_date(#{iedate,jdbcType=VARCHAR},'mm/dd/yyyy'))
+		</if>
+	    <if test="searchstatus != null" >
+	    	and FILE_TYPE  in (${searchstatus})
+	    </if>
+		<if test="ssn != null" >
+	    	and ssn=#{ssn}
+	    </if>
+		<if test="altid != null" >
+	    	and altid=#{altid}
+	    </if>
+ 	</where> 
+	</select>
+	
+	<select id="selAdvanceeob"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+		 select a.scanned_claim_id,
+   employee_ssn,
+   member_id,
+   submission_reason,
+   subscriber_lname,
+   subscriber_fname,
+   subscriber_mname,
+   subscriber_suffix,
+   subscriber_address1,
+   subscriber_address2,
+   subscriber_city,
+   subscriber_st,
+   subscriber_zip,
+   subscriber_dob,
+   subscriber_gender,
+   plan_number,
+   employer_name,
+   other_subscriber_lname,
+   other_subscriber_fname,
+   other_subscriber_mname,
+   other_subscriber_suffix,
+   other_subscriber_dob,
+   other_subscriber_gender,
+   other_policy_number,
+   other_insurance_plan_name,
+   other_insurance_type,
+   a.cob_paid_amount,
+   other_payor,
+   other_payor_identification,
+   patient_lname,
+   patient_fname,
+   patient_mname,
+   patient_suffix,
+   patient_address1,
+   patient_address2,
+   patient_city,
+   patient_st,
+   patient_zip,
+   patient_dob,
+     patient_gender,
+     patient_account_number,
+     billing_provider_id,
+     billing_taxid,
+     billing_provider_lname,
+     billing_provider_fname,
+     billing_provider_mname,
+     billing_provider_suffix,
+     billing_provider_address1,
+     billing_provider_address2,
+     billing_provider_city,
+     billing_provider_st,
+     billing_provider_zip,
+     billing_group_npi,
+     billing_other_identifier,
+     billing_contact_name,
+     billing_contact_type,
+     billing_contact_number,
+     billing_contact_number2,
+     billing_contact_number3,
+     currency_indicator,
+     payto_provider_id,
+     payto_taxid,
+     payto_provider_lname,
+     payto_provider_fname,
+     payto_provider_mname,
+     payto_provider_suffix,
+     payto_provider_address1,
+     payto_provider_address2,
+     payto_provider_city,
+     payto_provider_st,
+     payto_provider_zip,
+     payto_group_npi,
+     payto_other_identifier,
+     referring_provider_lname,
+     referring_provider_fname,
+     referring_provider_mname,
+     referring_provider_suffix,
+     referring_taxid,
+     referring_group_npi,
+     referring_provider_id,
+     referring_other_identifier,
+     rendering_provider_id,
+     rendering_taxid,
+     rendering_group_npi,
+     rendering_other_identifier,
+     rendering_provider_lname,
+     rendering_provider_fname,
+     rendering_provider_mname,
+     rendering_provider_suffix,
+     service_facility_provider_id,
+     service_facility_taxid,
+     service_facility_id,
+     service_facility_name,
+     service_facility_address1,
+     service_facility_address2,
+     service_facility_city,
+     service_facility_st,
+     service_facility_zip,
+     service_other_identifier,
+     service_facility_group_npi,
+     relationship_to_employee,
+     work_related_indicator,
+     auto_accident_indicator,
+     auto_accident_state,
+      accidental_injury_indicator,
+     accident_date,
+     disability_from_date,
+     disability_end_date,
+     releaseofinformation,
+     assignment_of_benefits,
+     otherinsurance,
+     patient_signature,
+     date_of_onset,
+     similar_or_symptom_date,
+     a.remarks,
+     diagnosis_type_code,
+     diagnosis_code_1,
+     diagnosis_code_2,
+     diagnosis_code_3,
+     diagnosis_code_4,
+     diagnosis_code_5,
+     diagnosis_code_6,
+     diagnosis_code_7,
+     diagnosis_code_8,
+     diagnosis_code_9,
+     diagnosis_code_10,
+     diagnosis_code_11,
+     diagnosis_code_12,
+     prior_authorization_number,
+     date_of_service_from,
+     date_of_service_through,
+     a.place_of_service,
+     medicare_assignment,
+     total_charge_amount,
+     total_paid_amount,
+     total_discount_amount,
+     provider_signature_on_file,
+     a.pricing_methodology,
+     a.ppo,
+     a.reject_reason_code,
+     repriced_reference_number,
+     claim_message_code,
+     primary_payer_name,
+     primary_payer_identifier,
+     icn,
+     claim_number,
+     file_name,
+     file_type,
+     sender,
+     sender_batchnumber,
+     send_date,
+     imported,
+     image_created,
+     exported,
+     sys_id,
+     sys_ref1,
+     sys_ref2,
+     sys_import,
+     subssn,
+     received_date,
+     a.hcp05,
+     hcp06,
+     hcp07,
+  b.claimline_id,
+  b.incdate_from,
+  b.incdate_through,
+  b.emergency_indicator ,
+  b.cpt_code,
+  b.cpt_modifier,
+  b.diagcodepointer,
+  b.charge_amount,
+  b.measurement_code,
+  b.totalunitsused,
+  b.discount_amount,
+  b.message_code,
+  b.place_of_service as place_of_service_line
+   from TBL_837_HCFA_ADVANCE a
+   left join TBL_837_HCFACLAIMLINES_ADVANCE b on a.scanned_claim_id=b.scanned_claim_id
+   <where>
+			<if test="scanned_claim_id != null" >
+		    	a.scanned_claim_id=#{scanned_claim_id}
+		    </if>
+			<if test="employee_ssn != null" >
+		    	and employee_ssn=#{employee_ssn}
+		    </if>
+			<if test="member_id != null" >
+		    	and member_id=#{member_id}
+		    </if>
+		   
+			<if test="claimline_id != null" >
+		    	and claimline_id=#{claimline_id}
+		    </if>
+			<if test="file_type != null" >
+		    	and file_type=#{file_type}
+		    </if>
+			<if test="fdate != null and edate != null " >
+		    	and (send_date>=to_date(#{fdate},'yyyy-mm-dd') and send_date&lt;=to_date(#{edate},'yyyy-mm-dd'))
+		    </if>
+			<if test="ifdate != null and iedate != null " >
+		    	and (imported>=to_date(#{ifdate},'yyyy-mm-dd') and imported&lt;=to_date(#{iedate},'yyyy-mm-dd'))
+		    </if> 
+		    
+		    <if test="patient_dob != null" >
+		    	and patient_dob=#{patient_dob,jdbcType=DATE}
+		    </if>
+		 
+		    <if test="billing_taxid != null" >
+		    	and billing_taxid=#{billing_taxid}
+		    </if>
+		   
+		</where> 
+		order by Scanned_claim_id desc,claimline_id
+	</select>
+	
+	
+	
+	<insert id="insertAdvanceeob" parameterType="com.pdsu.edu.domain.Advanceeod">
+	  <selectKey resultType="java.lang.Integer" keyProperty="fromid" order="BEFORE" >
+          select misp.seq_tbl_advanceeob_fromid.nextval from dual
+      </selectKey>
+
+		insert into TBL_837_HCFA_ADVANCE(fromid,scanned_claim_id,
+   employee_ssn,
+   member_id,
+   submission_reason,
+   subscriber_lname,
+   subscriber_fname,
+   subscriber_mname,
+   subscriber_suffix,
+   subscriber_address1,
+   subscriber_address2,
+   subscriber_city,
+   subscriber_st,
+   subscriber_zip,
+   subscriber_dob,
+   subscriber_gender,
+   plan_number,
+   employer_name,
+   other_subscriber_lname,
+   other_subscriber_fname,
+   other_subscriber_mname,
+   other_subscriber_suffix,
+   other_subscriber_dob,
+   other_subscriber_gender,
+   other_policy_number,
+   other_insurance_plan_name,
+   other_insurance_type,
+   cob_paid_amount,
+   other_payor,
+   other_payor_identification,
+   patient_lname,
+   patient_fname,
+   patient_mname,
+   patient_suffix,
+   patient_address1,
+   patient_address2,
+   patient_city,
+   patient_st,
+   patient_zip,
+   patient_dob,
+     patient_gender,
+     patient_account_number,
+     billing_provider_id,
+     billing_taxid,
+     billing_provider_lname,
+     billing_provider_fname,
+     billing_provider_mname,
+     billing_provider_suffix,
+     billing_provider_address1,
+     billing_provider_address2,
+     billing_provider_city,
+     billing_provider_st,
+     billing_provider_zip,
+     billing_group_npi,
+     billing_other_identifier,
+     billing_contact_name,
+     billing_contact_type,
+     billing_contact_number,
+     billing_contact_number2,
+     billing_contact_number3,
+     currency_indicator,
+     payto_provider_id,
+     payto_taxid,
+     payto_provider_lname,
+     payto_provider_fname,
+     payto_provider_mname,
+     payto_provider_suffix,
+     payto_provider_address1,
+     payto_provider_address2,
+     payto_provider_city,
+     payto_provider_st,
+     payto_provider_zip,
+     payto_group_npi,
+     payto_other_identifier,
+     referring_provider_lname,
+     referring_provider_fname,
+     referring_provider_mname,
+     referring_provider_suffix,
+     referring_taxid,
+     referring_group_npi,
+     referring_provider_id,
+     referring_other_identifier,
+     rendering_provider_id,
+     rendering_taxid,
+     rendering_group_npi,
+     rendering_other_identifier,
+     rendering_provider_lname,
+     rendering_provider_fname,
+     rendering_provider_mname,
+     rendering_provider_suffix,
+     service_facility_provider_id,
+     service_facility_taxid,
+     service_facility_id,
+     service_facility_name,
+     service_facility_address1,
+     service_facility_address2,
+     service_facility_city,
+     service_facility_st,
+     service_facility_zip,
+     service_other_identifier,
+     service_facility_group_npi,
+     relationship_to_employee,
+     work_related_indicator,
+     auto_accident_indicator,
+     auto_accident_state,
+      accidental_injury_indicator,
+     accident_date,
+     disability_from_date,
+     disability_end_date,
+     releaseofinformation,
+     assignment_of_benefits,
+     otherinsurance,
+     patient_signature,
+     date_of_onset,
+     similar_or_symptom_date,
+     remarks,
+     diagnosis_type_code,
+     diagnosis_code_1,
+     diagnosis_code_2,
+     diagnosis_code_3,
+     diagnosis_code_4,
+     diagnosis_code_5,
+     diagnosis_code_6,
+     diagnosis_code_7,
+     diagnosis_code_8,
+     diagnosis_code_9,
+     diagnosis_code_10,
+     diagnosis_code_11,
+     diagnosis_code_12,
+     prior_authorization_number,
+     date_of_service_from,
+     date_of_service_through,
+     place_of_service,
+     medicare_assignment,
+     total_charge_amount,
+     total_paid_amount,
+     total_discount_amount,
+     provider_signature_on_file,
+     pricing_methodology,
+     ppo,
+     reject_reason_code,
+     repriced_reference_number,
+     claim_message_code,
+     primary_payer_name,
+     primary_payer_identifier,
+     icn,
+     claim_number,
+     file_name,
+     file_type,
+     sender,
+     sender_batchnumber,
+     send_date,
+     imported,
+     image_created,
+     exported,
+     sys_id,
+     sys_ref1,
+     sys_ref2,
+     sys_import,
+     subssn,
+     received_date,
+     hcp05,
+     hcp06,
+     hcp07)  	
+	values(#{fromid,jdbcType=DECIMAL},
+	#{scanned_claim_id,jdbcType=VARCHAR},
+	#{employee_ssn,jdbcType=DECIMAL},
+	#{member_id,jdbcType=VARCHAR},
+	#{submission_reason,jdbcType=DECIMAL},
+	#{subscriber_lname,jdbcType=VARCHAR},
+	#{subscriber_fname,jdbcType=VARCHAR},
+	#{subscriber_mname,jdbcType=VARCHAR},
+	#{subscriber_suffix,jdbcType=VARCHAR},
+	#{subscriber_address1,jdbcType=VARCHAR},
+	#{subscriber_address2,jdbcType=VARCHAR},
+	#{subscriber_city,jdbcType=VARCHAR},
+	#{subscriber_st,jdbcType=VARCHAR},
+	#{subscriber_zip,jdbcType=VARCHAR},
+	#{subscriber_dob,jdbcType=DATE},
+	#{subscriber_gender,jdbcType=VARCHAR},
+	#{plan_number,jdbcType=VARCHAR},
+	#{employer_name,jdbcType=VARCHAR},
+	#{other_subscriber_lname,jdbcType=VARCHAR},
+	#{other_subscriber_fname,jdbcType=VARCHAR},
+	#{other_subscriber_mname,jdbcType=VARCHAR},
+	#{other_subscriber_suffix,jdbcType=VARCHAR},
+	#{other_subscriber_dob,jdbcType=DATE},
+	#{other_subscriber_gender,jdbcType=VARCHAR},
+	#{other_policy_number,jdbcType=VARCHAR},
+	#{other_insurance_plan_name,jdbcType=VARCHAR},
+	#{other_insurance_type,jdbcType=VARCHAR},
+	#{cob_paid_amount,jdbcType=DECIMAL},
+	#{other_payor,jdbcType=VARCHAR},
+	#{other_payor_identification,jdbcType=VARCHAR},
+	#{patient_lname,jdbcType=VARCHAR},
+	#{patient_fname,jdbcType=VARCHAR},
+	#{patient_mname,jdbcType=VARCHAR},
+	#{patient_suffix,jdbcType=VARCHAR},
+	#{patient_address1,jdbcType=VARCHAR},
+	#{patient_address2,jdbcType=VARCHAR},
+	#{patient_city,jdbcType=VARCHAR},
+	#{patient_st,jdbcType=VARCHAR},
+	#{patient_zip,jdbcType=VARCHAR},
+	#{patient_dob,jdbcType=DATE},
+	#{patient_gender,jdbcType=VARCHAR},
+	#{patient_account_number,jdbcType=VARCHAR},
+	#{billing_provider_id,jdbcType=VARCHAR},
+	#{billing_taxid,jdbcType=VARCHAR},
+	#{billing_provider_lname,jdbcType=VARCHAR},
+	#{billing_provider_fname,jdbcType=VARCHAR},
+	#{billing_provider_mname,jdbcType=VARCHAR},
+	#{billing_provider_suffix,jdbcType=VARCHAR},
+	#{billing_provider_address1,jdbcType=VARCHAR},
+	#{billing_provider_address2,jdbcType=VARCHAR},
+	#{billing_provider_city,jdbcType=VARCHAR},
+	#{billing_provider_st,jdbcType=VARCHAR},
+	#{billing_provider_zip,jdbcType=VARCHAR},
+	#{billing_group_npi,jdbcType=VARCHAR},
+	#{billing_other_identifier,jdbcType=VARCHAR},
+	#{billing_contact_name,jdbcType=VARCHAR},
+	#{billing_contact_type,jdbcType=VARCHAR},
+	#{billing_contact_number,jdbcType=VARCHAR},
+	#{billing_contact_number2,jdbcType=VARCHAR},
+	#{billing_contact_number3,jdbcType=VARCHAR},
+	#{currency_indicator,jdbcType=VARCHAR},
+	#{payto_provider_id,jdbcType=VARCHAR},
+	#{payto_taxid,jdbcType=VARCHAR},
+	#{payto_provider_lname,jdbcType=VARCHAR},
+	#{payto_provider_fname,jdbcType=VARCHAR},
+	#{payto_provider_mname,jdbcType=VARCHAR},
+	#{payto_provider_suffix,jdbcType=VARCHAR},
+	#{payto_provider_address1,jdbcType=VARCHAR},
+	#{payto_provider_address2,jdbcType=VARCHAR},
+	#{payto_provider_city,jdbcType=VARCHAR},
+	#{payto_provider_st,jdbcType=VARCHAR},
+	#{payto_provider_zip,jdbcType=VARCHAR},
+	#{payto_group_npi,jdbcType=VARCHAR},
+	#{payto_other_identifier,jdbcType=VARCHAR},
+	#{referring_provider_lname,jdbcType=VARCHAR},
+	#{referring_provider_fname,jdbcType=VARCHAR},
+	#{referring_provider_mname,jdbcType=VARCHAR},
+	#{referring_provider_suffix,jdbcType=VARCHAR},
+	#{referring_taxid,jdbcType=VARCHAR},
+	#{referring_group_npi,jdbcType=VARCHAR},
+	#{referring_provider_id,jdbcType=VARCHAR},
+	#{referring_other_identifier,jdbcType=VARCHAR},
+	#{rendering_provider_id,jdbcType=VARCHAR},
+	#{rendering_taxid,jdbcType=VARCHAR},
+	#{rendering_group_npi,jdbcType=VARCHAR},
+	#{rendering_other_identifier,jdbcType=VARCHAR},
+	#{rendering_provider_lname,jdbcType=VARCHAR},
+	#{rendering_provider_fname,jdbcType=VARCHAR},
+	#{rendering_provider_mname,jdbcType=VARCHAR},
+	#{rendering_provider_suffix,jdbcType=VARCHAR},
+	#{service_facility_provider_id,jdbcType=VARCHAR},
+	#{service_facility_taxid,jdbcType=VARCHAR},
+	#{service_facility_id,jdbcType=VARCHAR},
+	#{service_facility_name,jdbcType=VARCHAR},
+	#{service_facility_address1,jdbcType=VARCHAR},
+	#{service_facility_address2,jdbcType=VARCHAR},
+	#{service_facility_city,jdbcType=VARCHAR},
+	#{service_facility_st,jdbcType=VARCHAR},
+	#{service_facility_zip,jdbcType=VARCHAR},
+	#{service_other_identifier,jdbcType=VARCHAR},
+	#{service_facility_group_npi,jdbcType=VARCHAR},
+	#{relationship_to_employee,jdbcType=VARCHAR},
+	#{work_related_indicator,jdbcType=VARCHAR},
+	#{auto_accident_indicator,jdbcType=VARCHAR},
+	#{auto_accident_state,jdbcType=VARCHAR},
+	#{accidental_injury_indicator,jdbcType=VARCHAR},
+	#{accident_date,jdbcType=DATE},
+	#{disability_from_date,jdbcType=DATE},
+	#{disability_end_date,jdbcType=DATE},
+	#{releaseofinformation,jdbcType=VARCHAR},
+	#{assignment_of_benefits,jdbcType=VARCHAR},
+	#{otherinsurance,jdbcType=VARCHAR},
+	#{patient_signature,jdbcType=VARCHAR},
+	#{date_of_onset,jdbcType=DATE},
+	#{similar_or_symptom_date,jdbcType=DATE},
+	#{remarks,jdbcType=VARCHAR},
+	#{diagnosis_type_code,jdbcType=VARCHAR},
+	#{diagnosis_code_1,jdbcType=VARCHAR},
+	#{diagnosis_code_2,jdbcType=VARCHAR},
+	#{diagnosis_code_3,jdbcType=VARCHAR},
+	#{diagnosis_code_4,jdbcType=VARCHAR},
+	#{diagnosis_code_5,jdbcType=VARCHAR},
+	#{diagnosis_code_6,jdbcType=VARCHAR},
+	#{diagnosis_code_7,jdbcType=VARCHAR},
+	#{diagnosis_code_8,jdbcType=VARCHAR},
+	#{diagnosis_code_9,jdbcType=VARCHAR},
+	#{diagnosis_code_10,jdbcType=VARCHAR},
+	#{diagnosis_code_11,jdbcType=VARCHAR},
+	#{diagnosis_code_12,jdbcType=VARCHAR},
+	#{prior_authorization_number,jdbcType=VARCHAR},
+	#{date_of_service_from,jdbcType=DATE},
+	#{date_of_service_through,jdbcType=DATE},
+	#{place_of_service,jdbcType=DECIMAL},
+	#{medicare_assignment,jdbcType=VARCHAR},
+	#{total_charge_amount,jdbcType=DECIMAL},
+	#{total_paid_amount,jdbcType=DECIMAL},
+	#{total_discount_amount,jdbcType=DECIMAL},
+	#{provider_signature_on_file,jdbcType=VARCHAR},
+	#{pricing_methodology,jdbcType=VARCHAR},
+	#{ppo,jdbcType=VARCHAR},
+	#{reject_reason_code,jdbcType=VARCHAR},
+	#{repriced_reference_number,jdbcType=VARCHAR},
+	#{claim_message_code,jdbcType=VARCHAR},
+	#{primary_payer_name,jdbcType=VARCHAR},
+	#{primary_payer_identifier,jdbcType=VARCHAR},
+	#{icn,jdbcType=VARCHAR},
+	#{claim_number,jdbcType=VARCHAR},
+	#{file_name,jdbcType=VARCHAR},
+	#{file_type,jdbcType=DECIMAL},
+	#{sender,jdbcType=VARCHAR},
+	#{sender_batchnumber,jdbcType=VARCHAR},
+	#{send_date,jdbcType=DATE},
+	#{imported,jdbcType=DATE},
+	#{image_created,jdbcType=DECIMAL},
+	#{exported,jdbcType=DECIMAL},
+	#{sys_id,jdbcType=VARCHAR},
+	#{sys_ref1,jdbcType=VARCHAR},
+	#{sys_ref2,jdbcType=VARCHAR},
+	#{sys_import,jdbcType=DATE},
+	#{subssn,jdbcType=DECIMAL},
+	#{received_date,jdbcType=DATE},
+	#{hcp05,jdbcType=DECIMAL},
+	#{hcp06,jdbcType=VARCHAR},
+	#{hcp07,jdbcType=DECIMAL}
+	)
+ 	</insert>  
+	
+	<insert id="insertAdvanceeobline" parameterType="com.pdsu.edu.domain.Advanceeod">
+		insert into TBL_837_HCFACLAIMLINES_ADVANCE(scanned_claim_id,
+		  claimline_id,
+		  incdate_from,
+		  incdate_through,
+		  place_of_service,
+		  emergency_indicator,
+		  cpt_code,
+		  cpt_modifier,
+		  diagcodepointer,
+		  charge_amount,
+		  cob_paid_amount,
+		  measurement_code,
+		  totalunitsused,
+		  discount_amount,
+		  message_code,
+		  pricing_methodology,
+		  ppo,
+		  reject_reason_code,
+		  remarks,
+		  hcp05
+		)  
+		values(#{scanned_claim_id,jdbcType=VARCHAR},
+		#{claimline_id,jdbcType=DECIMAL},
+		#{incdate_from,jdbcType=DATE},
+		#{incdate_through,jdbcType=DATE},
+		#{place_of_service,jdbcType=DECIMAL},
+		#{emergency_indicator,jdbcType=VARCHAR},
+		#{cpt_code,jdbcType=VARCHAR},
+		#{cpt_modifier,jdbcType=VARCHAR},
+		#{diagcodepointer,jdbcType=VARCHAR},
+		#{charge_amount,jdbcType=DECIMAL},
+		#{cob_paid_amount,jdbcType=DECIMAL},
+		#{measurement_code,jdbcType=VARCHAR},
+		#{totalunitsused,jdbcType=DECIMAL},
+		#{discount_amount,jdbcType=DECIMAL},
+		#{message_code,jdbcType=VARCHAR},
+		#{pricing_methodology,jdbcType=VARCHAR},
+		#{ppo,jdbcType=VARCHAR},
+		#{reject_reason_code,jdbcType=VARCHAR},
+		#{remarks,jdbcType=VARCHAR},
+		#{hcp05,jdbcType=DECIMAL} 
+		)
+ 	</insert> 
+ 	<insert id="insertAeobMaintenance" parameterType="com.pdsu.edu.domain.Advanceeod">
+ 	 <selectKey resultType="java.lang.Integer" keyProperty="requestid" order="BEFORE">
+ 	   select misp.seq_tbl_aeob_requestid.nextval from dual
+ 	 </selectKey>
+ 	 insert into tbl_aeob_maintenance(
+ 	   REQUESTID,TOID,FROMID,MASTER_GROUP,EMP_SSN,DEP_NO,LOGIN_AREA,CALL_NUMBER,DESCRIPTION,PRIORITY,STATUS,DATESUBMITTED,
+       DATECOMPLETED,CLAIM_FORM_ID,DOC_ID,REPLY,DELIVER_METHOD,EMAIL_ADDRESS,FAX_NUMBER,MAILING_ADDRESS,DELIVERED_DATE,RETURNDIALOG)
+     values(
+      #{requestid,jdbcType=DECIMAL},
+      #{toid,jdbcType=DECIMAL},
+      #{fromid,jdbcType=DECIMAL},
+      #{master_group,jdbcType=DECIMAL},
+      #{employee_ssn,jdbcType=DECIMAL},
+      #{dep_no,jdbcType=DECIMAL},
+      #{login_area,jdbcType=VARCHAR},
+      #{call_number,jdbcType=DECIMAL},
+      #{description,jdbcType=VARCHAR},
+      #{priority,jdbcType=DECIMAL},
+      #{status,jdbcType=DECIMAL},
+      sysdate,
+      #{datecompleted,jdbcType=DATE},
+      #{claim_form_id,jdbcType=VARCHAR},
+      #{doc_id,jdbcType=VARCHAR},
+      #{reply,jdbcType=VARCHAR},
+      #{deliver_method,jdbcType=DECIMAL},
+      #{email_address,jdbcType=VARCHAR},
+      #{fax_number,jdbcType=VARCHAR},
+      #{mailing_address,jdbcType=VARCHAR},
+      #{delivered_date,jdbcType=DATE},
+      #{returndialog,jdbcType=VARCHAR}
+     )
+ 	   
+ 	</insert>
+ 	
+ 	<insert id="insertAeobMaintenances" parameterType="com.pdsu.edu.domain.Advanceeod">
+ 	 insert into tbl_aeob_maintenance(
+ 	   REQUESTID,TOID,FROMID,MASTER_GROUP,EMP_SSN,DEP_NO,LOGIN_AREA,CALL_NUMBER,DESCRIPTION,PRIORITY,STATUS,DATESUBMITTED,
+       DATECOMPLETED,CLAIM_FORM_ID,DOC_ID,REPLY,DELIVER_METHOD,EMAIL_ADDRESS,FAX_NUMBER,MAILING_ADDRESS,DELIVERED_DATE,RETURNDIALOG)
+     values(
+      #{request_id,jdbcType=DECIMAL},
+      #{toid,jdbcType=DECIMAL},
+      #{fromid,jdbcType=DECIMAL},
+      #{master_group,jdbcType=DECIMAL},
+      #{employee_ssn,jdbcType=DECIMAL},
+      #{dep_no,jdbcType=DECIMAL},
+      #{login_area,jdbcType=VARCHAR},
+      #{call_number,jdbcType=DECIMAL},
+      #{description,jdbcType=VARCHAR},
+      #{priority,jdbcType=DECIMAL},
+      #{status,jdbcType=DECIMAL},
+      sysdate,
+      #{datecompleted,jdbcType=DATE},
+      #{claim_form_id,jdbcType=VARCHAR},
+      #{doc_id,jdbcType=VARCHAR},
+      #{reply,jdbcType=VARCHAR},
+      #{deliver_method,jdbcType=DECIMAL},
+      #{email_address,jdbcType=VARCHAR},
+      #{fax_number,jdbcType=VARCHAR},
+      #{mailing_address,jdbcType=VARCHAR},
+      #{delivered_date,jdbcType=DATE},
+      #{returndialog,jdbcType=VARCHAR}
+     )
+ 	   
+ 	</insert>
+ 	<select id="selrequestid"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+ 	   select misp.seq_tbl_aeob_requestid.nextval as request_id from dual
+ 	</select>
+ 	
+ 	<select id="selclaimsearch"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+	SELECT  x.REQUESTID As request_id
+	, CASE x.STATUS WHEN 0 THEN 'New Request' WHEN 1 THEN 'Claim Entered' WHEN 2 THEN 'AEOB Processed'
+	WHEN 3 THEN 'AEOB Printed' WHEN 4 THEN 'AEOB Delivered' ELSE 'N/A' END As status_str
+	, x.DATESUBMITTED As Date_Submitted, x.DATECOMPLETED As Date_Completed
+	<!-- , y.PRVNAME As Provider_Name -->
+	, f.RENDERING_PROVIDER_LNAME|| nvl2(trim(f.RENDERING_PROVIDER_SUFFIX),' ' ||f.RENDERING_PROVIDER_SUFFIX,'')||nvl2(trim(f.RENDERING_PROVIDER_FNAME),', ' ||f.RENDERING_PROVIDER_FNAME,'')||' ' ||f.RENDERING_PROVIDER_MNAME  As Provider_Name
+	, f.patient_lname|| nvl2(trim(f.patient_suffix),' ' ||f.patient_suffix,'')||', '||f.patient_fname||' ' ||f.patient_mname as patientname
+	, x.CLMNUM As Claim_Number
+	, (CASE WHEN y.PREDETPRTDT IS NOT NULL THEN 'Y' ELSE 'N' END) As AEOB_Link
+	<!-- , y.CHGAMT As Charge_Amount -->
+	, f.total_charge_amount as Charge_Amount
+	, (CASE WHEN x.CLAIM_FORM_ID IS NOT NULL THEN x.CLAIM_FORM_ID ELSE CAST(x.DOC_ID As Varchar(50)) END) As Form_Doc_ID
+	, y.name,x.FAX_NUMBER,x.EMAIL_ADDRESS,x.MAILING_ADDRESS
+	FROM (  SELECT DATESUBMITTED, DATECOMPLETED, CLAIM_FORM_ID, DOC_ID, STATUS, CLAIM_NUMBER As CLMNUM, REQUESTID,FROMID,FAX_NUMBER,EMAIL_ADDRESS,MAILING_ADDRESS
+	  FROM 
+	  (SELECT * FROM MEDI.TBL_AEOB_MAINTENANCE 
+	  <where> 
+	       status>=0
+	  and CLAIM_NUMBER IS NULL
+		<if test="dep_no != null" >
+	    	and dep_no=#{dep_no}
+	    </if>
+		<if test="request_id != null" >
+	    	and requestid=#{request_id}
+	    </if>
+		<if test="employee_ssn != null" >
+	    	and emp_ssn=#{employee_ssn}
+	    </if>
+	   </where>)
+	  UNION
+	  SELECT DATESUBMITTED, DATECOMPLETED, CLAIM_FORM_ID, DOC_ID, STATUS, substr(CLAIM_NUMBER, 1, 19) As CLMNUM, REQUESTID,FROMID,FAX_NUMBER,EMAIL_ADDRESS,MAILING_ADDRESS
+	  FROM 
+	  (SELECT * FROM MEDI.TBL_AEOB_MAINTENANCE 
+	  <where> 
+	     status>=0
+	  and CLAIM_NUMBER IS NOT NULL 
+		<if test="dep_no != null" >
+	    	and dep_no=#{dep_no}
+	    </if>
+	    <if test="request_id != null" >
+	    	and requestid=#{request_id}
+	    </if>
+		<if test="employee_ssn != null" >
+	    	and emp_ssn=#{employee_ssn}
+	    </if>
+	   </where>)
+	  UNION
+	  SELECT DATESUBMITTED, DATECOMPLETED, CLAIM_FORM_ID, DOC_ID, STATUS, substr(CLAIM_NUMBER, 21, 19) As CLMNUM, REQUESTID,FROMID,FAX_NUMBER,EMAIL_ADDRESS,MAILING_ADDRESS
+	  FROM (SELECT * FROM MEDI.TBL_AEOB_MAINTENANCE
+	  <where>
+	  status>=0
+	  and LENGTH(CLAIM_NUMBER)>20
+		<if test="dep_no != null" >
+	    	and dep_no=#{dep_no}
+	    </if>
+	    <if test="request_id != null" >
+	    	and requestid=#{request_id}
+	    </if>
+		<if test="employee_ssn != null" >
+	    	and emp_ssn=#{employee_ssn}
+	    </if>
+	   </where>
+	   )
+	) x
+	LEFT JOIN 
+	(SELECT TO_CHAR(a.CLMPRE)|| '-' || SUBSTR('000000000'||TO_CHAR(a.CLMNO), -9,9) 
+	|| '-' || SUBSTR('0000'||TO_CHAR(a.CLMSUF), -4,4) As CLMNUM
+	, a.GRPNO, a.EMPNO, a.DEPNO, e.FIRSTNAME, a.PRVNO, a.PRVSUF
+	<!-- 
+	, c.NAME As PRVNAME 
+	, a.CHGAMT
+	-->
+	, a.ENTRYDT, a.PREDET, a.PREDETPRTDT, a.ADJDT, b.NOTE, a.ENTRYOP
+	,e.lastname|| nvl2(trim(e.suffix),' ' ||e.suffix,'')||', '||e.firstname||' ' ||e.mi as name
+	FROM MEDI.CURTRAN a 
+	INNER JOIN MEDI.TRANNOTES b ON a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMSUF=b.CLMSUF and b.CLMLN=0
+	INNER JOIN MEDI.PROVIDER c ON a.PRVNO=c.PRVNO and a.PRVSUF=c.IDSUFFIX
+	INNER JOIN MEDI.EMPDEP e ON a.GRPNO=e.GRPNO and a.EMPNO=e.EMPNO and a.DEPNO=e.DEPNO
+	WHERE a.PREDET='T' and  (b.NOTE LIKE 'AEOBF:%' or b.NOTE LIKE 'AEOBD:%')) y ON x.CLMNUM=y.CLMNUM
+	INNER join TBL_837_HCFA_ADVANCE f on x.CLAIM_FORM_ID=f.scanned_claim_id
+	<where>
+		<if test="scanned_claim_id != null" >
+	    	and f.scanned_claim_id=#{scanned_claim_id}
+	    </if>
+	    <if test="billing_taxid != null" >
+	    	and f.BILLING_TAXID=#{billing_taxid}
+	    </if>
+		<if test="employee_ssn != null" >
+	    	and f.employee_ssn=#{employee_ssn}
+	    </if>
+		<if test="member_id != null" >
+	    	and f.member_id=#{member_id}
+	    </if>
+	    <!-- <if test="patient_dob != null" >
+	    	and f.patient_dob=#{patient_dob,jdbcType=DATE}
+	    </if> -->
+		<if test="fromid != null" >
+		   and x.fromid = #{fromid}
+		</if>
+	</where>
+	ORDER BY x.REQUESTID DESC, x.CLMNUM
+	</select>
+	
+	
+ 	<select id="selupdateadvpdf"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+	with a as(
+	select a.requestid,a.CLAIM_FORM_ID,a.DOC_ID,e.GRPNO,e.EMPNO,a.Dep_No,DATESUBMITTED,a.FAX_NUMBER,a.EMAIL_ADDRESS,a.MAILING_ADDRESS 
+	
+	, CASE a.STATUS WHEN 0 THEN 'New Request' WHEN 1 THEN 'Claim Entered' WHEN 2 THEN 'AEOB Processed'
+	WHEN 3 THEN 'AEOB Printed' WHEN 4 THEN 'AEOB Delivered' ELSE 'N/A' END As status_str
+	, a.DATECOMPLETED As Date_Completed
+	,substr(CLAIM_NUMBER, 21, 19) As CLMNUM
+	from MEDI.TBL_AEOB_MAINTENANCE a
+	left join  MEDI.EMPDEP e ON a.master_group=e.GRPNO and a.EMP_SSN=e.ssn  
+	<where>
+		<if test="billing_taxid != null" >
+		   and fromid = #{billing_taxid}
+		</if>
+		<if test="request_id != null" >
+		   and requestid = #{request_id}
+		</if>
+		<if test="request_id == null" >
+		  and status>=0
+		</if>
+		<if test="dep_no != null" >
+	    	and a.dep_no=#{dep_no}
+	    </if>
+		<if test="employee_ssn != null" >
+	    	and a.emp_ssn=#{employee_ssn}
+	    </if>
+	</where>
+	)
+	select distinct a.requestid As request_id
+	  ,e.lastname|| nvl2(trim(e.suffix),' ' ||e.suffix,'')||', '||e.firstname||' ' ||e.mi as patientname
+	  ,a.CLAIM_FORM_ID as formid
+	  ,a.DOC_ID as docids
+	  ,c.file_ID as docid
+	  ,c.file_name as file_name
+	  ,a.datesubmitted
+	  <!-- ,b.RENDERING_GROUP_NPI  as providerid
+	  ,b.RENDERING_PROVIDER_LNAME|| nvl2(trim(b.RENDERING_PROVIDER_SUFFIX),' ' ||b.RENDERING_PROVIDER_SUFFIX,'')||nvl2(trim(b.RENDERING_PROVIDER_FNAME),', ' ||b.RENDERING_PROVIDER_FNAME,'')||' ' ||b.RENDERING_PROVIDER_MNAME as providername
+	  ,b.total_charge_amount as chargeamount
+	   -->
+	  ,a.FAX_NUMBER,a.EMAIL_ADDRESS,a.MAILING_ADDRESS
+	  ,a.status_str,a.Date_Completed
+	  ,y.PRVNAME As Provider_Name
+	  ,y.CHGAMT as Charge_Amount
+	  , (CASE WHEN y.PREDETPRTDT IS NOT NULL THEN 'Y' ELSE 'N' END) As AEOB_Link
+	  from  a
+	  inner join TBL_ADVANCEEOB_FILE c on a.requestid=c.requestid
+	  left join  MEDI.EMPDEP e ON a.GRPNO=e.GRPNO and a.EMPNO=e.EMPNO and a.DEP_NO=e.DEPNO 
+	  LEFT JOIN (SELECT TO_CHAR(a.CLMPRE)|| '-' || SUBSTR('000000000'||TO_CHAR(a.CLMNO), -9,9) 
+				|| '-' || SUBSTR('0000'||TO_CHAR(a.CLMSUF), -4,4) As CLMNUM
+				, a.GRPNO, a.EMPNO, a.DEPNO, a.PRVNO, a.PRVSUF
+				, a.ENTRYDT, a.PREDET, a.PREDETPRTDT, a.ADJDT, b.NOTE, a.ENTRYOP
+				, c.NAME As PRVNAME , a.CHGAMT
+				FROM MEDI.CURTRAN a 
+				INNER JOIN MEDI.TRANNOTES b ON a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMSUF=b.CLMSUF and b.CLMLN=0
+				INNER JOIN MEDI.PROVIDER c ON a.PRVNO=c.PRVNO and a.PRVSUF=c.IDSUFFIX
+				WHERE a.PREDET='T' and  (b.NOTE LIKE 'AEOBF:%' or b.NOTE LIKE 'AEOBD:%')) y ON a.CLMNUM=y.CLMNUM
+	
+	  order by a.requestid,FORMID,DOCID
+	</select>
+	
+	<select id="selupdateadv"  parameterType="com.pdsu.edu.domain.Advanceeod" resultMap="advanceeodResult">
+	with a as(
+	select a.requestid,a.CLAIM_FORM_ID,a.DOC_ID,e.GRPNO,e.EMPNO,a.Dep_No,DATESUBMITTED,a.FAX_NUMBER,a.EMAIL_ADDRESS,a.MAILING_ADDRESS 
+	from MEDI.TBL_AEOB_MAINTENANCE a
+	inner join  MEDI.EMPDEP e ON a.master_group=e.GRPNO and a.EMP_SSN=e.ssn 
+	<where>
+		<if test="request_id != null" >
+		   and requestid = #{request_id}
+		</if>
+	</where>
+	)
+	select a.requestid As request_id
+    ,e.lastname|| nvl2(trim(e.suffix),' ' ||e.suffix,'')||', '||e.firstname||' ' ||e.mi as patientname
+    ,a.CLAIM_FORM_ID as formid
+    ,a.DOC_ID as docids
+   <!-- ,c.file_ID as docid
+   ,c.file_name as file_name -->
+    ,a.datesubmitted
+    ,b.RENDERING_GROUP_NPI  as providerid
+    ,b.RENDERING_PROVIDER_LNAME|| nvl2(trim(b.RENDERING_PROVIDER_SUFFIX),' ' ||b.RENDERING_PROVIDER_SUFFIX,'')||nvl2(trim(b.RENDERING_PROVIDER_FNAME),', ' ||b.RENDERING_PROVIDER_FNAME,'')||' ' ||b.RENDERING_PROVIDER_MNAME as providername
+    ,b.total_charge_amount as chargeamount
+    ,a.FAX_NUMBER,a.EMAIL_ADDRESS,a.MAILING_ADDRESS
+    from  a
+    inner join  MEDI.TBL_837_HCFA_ADVANCE b on a.CLAIM_FORM_ID=b.scanned_claim_id
+    --inner join TBL_ADVANCEEOB_FILE c on a.requestid=c.requestid
+    inner join  MEDI.EMPDEP e ON a.GRPNO=e.GRPNO and a.EMPNO=e.EMPNO and a.DEP_NO=e.DEPNO 
+	</select>
+	
+	<update id="updateBystatus" parameterType="com.pdsu.edu.domain.Advanceeod" >
+	update TBL_AEOB_MAINTENANCE 
+	 <set >
+		  <if test="status != null" >
+		 	status= #{status,jdbcType=DECIMAL},
+		 </if>
+		  <if test="form_doc_id != null" >
+		 	doc_id= #{form_doc_id},
+		 </if>
+	 </set>
+	 <where>
+	  	<if test="scanned_claim_id != null" >
+	 	and  claim_form_id = #{scanned_claim_id,jdbcType=VARCHAR}
+	 	</if>
+	  	<if test="request_id != null" >
+	 	and  requestid = #{request_id}
+	 	</if>
+	 </where> 
+  </update>
+  
+	<update id="updateBystatuspdf" parameterType="com.pdsu.edu.domain.Advanceeod" >
+	update TBL_ADVANCEEOB_FILE 
+	 <set >
+		  <if test="status != null" >
+		 	file_type= #{status,jdbcType=DECIMAL},
+		 </if>
+	 </set> 
+    <where>
+	  	<if test="scanned_claim_id != null" >
+	 	and  claim_form_id = #{scanned_claim_id,jdbcType=VARCHAR}
+	 	</if>
+	  	<if test="file_id != null" >
+	 	and  file_id = #{file_id}
+	 	</if>
+	  	<if test="request_id != null" >
+	 	and  requestid = #{request_id}
+	 	</if>
+	 </where> 
+  </update>
+  
+</mapper>

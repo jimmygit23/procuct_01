@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>	
+	 <constant name="struts.i18n.encoding" value="UTF-8"/>
+	 		<!-- 指定默认编码集 ，作用于HttpServletRequest的setCharacterEncoding（）和freemarker，vilocity的输出 -->
+	<constant name="struts.configuration.xmlreload" value="true"/>
+			<!-- 当struts配置文件修改时是否自动加载 -->
+	<constant name="struts.devMode" value="false"/>
+			<!-- 开发模式下打印详细的错误信息 -->
+	<constant name="struts.ui.theme" value="xhtml"/>
+	
+	
+	<constant name="struts.action.extension" value="do,action,go"></constant>
+	
+			<!-- multipart/form-data 类型表单FORM 上传文件大小限制  -1为无限制 -->
+	<!--<constant name="struts.multipart.maxSize" value="3570109600" />-->
+	<constant name="struts.multipart.maxSize" value="-1" />
+ 									
+	<package name="user" namespace="/user" extends="struts-default">
+		<action name="user_*" class="userAction" method="{1}">
+			<result name="success" type="redirectAction">user_queryAllUser.action</result>
+			<result name="input">/index.jsp</result>
+			<result name="userList">/userList.jsp</result>
+			<result name="addUser">/userAdd.jsp</result>
+			<result name="updateUser">/userUpdate.jsp</result>
+		</action>
+	</package>
+	<package name="fileimport" namespace="/fileimport" extends="struts-default">
+		<action name="fileimport_*" class="com.pdsu.edu.fileimport.action.FileimportAction" method="{1}">
+			<result name="success">/Complete.jsp</result>
+			<result name="statusline">/showstatus.jsp</result>
+		</action>
+	</package>
+	<package name="adeod" namespace="/adeod" extends="struts-default">
+		<action name="adeod_*" class="com.pdsu.edu.adeod.action.AdeodAction" method="{1}">
+			<result name="addeob">/addpatientclm.jsp</result>
+			<result name="showeob">/showAdvanceEOB.jsp</result>
+			<result name="showeobdetail">/showAdvanceEOBlines.jsp</result>
+			<result name="printeobdetail">/printAdvanceEOBlines.jsp</result>
+			<result name="addeoblines">/AdvanceEOBlines.jsp</result>
+			<result name="addstatus">/AdvanceStatus.jsp</result>
+			<result name="adderror">/AdvanceStatus.jsp</result>
+			<result name="showClaimlist">/advanceclaimlist.jsp</result>
+			<result name="showClaimpdflist">/advanceclaimpdflist.jsp</result>
+			<result name="formsuccess">/advancefileCompleteform.jsp</result>
+		</action>
+	</package>
+	<package name="claimfileimport" namespace="/claimfileimport" extends="struts-default">
+		<action name="claimfileimport_*" class="com.pdsu.edu.claimfileimport.action.ClaimfileimportAction" method="{1}">
+			<result name="showlist">/advancepatientlist.jsp</result>
+			<result name="addfile">/advancefileadd.jsp</result>
+			<result name="addfileline">/advancefileaddline.jsp</result>
+			<result name="delfileline">/advancefileaddlineblank.jsp</result>
+			<result name="showfilelist">/advancefilelist.jsp</result>
+			<result name="showfile">/advancefile.jsp</result>
+			<result name="showstatus">/advancefilestatus.jsp</result>
+			<result name="success">/advancefileComplete.jsp</result>
+			<result name="advanceclaimsearch">/advanceclaimsearch.jsp</result>
+			<result name="emaillist">/advanceemaillist.jsp</result>
+		</action>
+	</package>
+	<package name="login" namespace="/login" extends="struts-default">
+		<action name="login_*" class="com.pdsu.edu.login.action.LoginAction" method="{1}">
+			<result name="success">/advancesearch.jsp</result>
+		</action>					 
+	</package>
+	
+	<package name="providersearch" namespace="/providersearch" extends="struts-default">
+		<action name="providersearch_*" class="com.pdsu.edu.providersearch.action.ProSearchAction" method="{1}">
+			<result name="ppolist">/advanceprovidersearch.jsp</result>
+			<result name="speclist">/advancespeclist.jsp</result>
+			<result name="showspecselect">/advancespecselect.jsp</result>
+			<result name="searchresault">/advsearchresault.jsp</result>
+			<result name="getresaultsize">/advsearchresaultsize.jsp</result>
+			<result name="searchresaultcart">/advsearchresaultcart.jsp</result>
+			<result name="addcartresault">/addcartresault.jsp</result>
+			<result name="prcoderesault">/showprccode.jsp</result>
+			<result name="timeout">/timeout.jsp</result>
+			<result name="prcodecategory">/showcategory.jsp</result>
+			<result name="prcodecategorysub">/showcategorysub.jsp</result>
+			<result name="showinnetwork">/showinnetoutwork.jsp</result>
+		</action>
+	</package>
+</struts>    

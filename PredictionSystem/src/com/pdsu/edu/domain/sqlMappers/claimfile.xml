@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pdsu.edu.domain.Claimfile">
+	<resultMap type="com.pdsu.edu.domain.Claimfile" id="claimfileResult">
+		<id column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+		<id column="FDATE" property="fdate" jdbcType="VARCHAR" />
+		<result column="SSN" property="ssn" jdbcType="DECIMAL" />
+		<result column="SSN" property="ssn" jdbcType="DECIMAL" />
+		<result column="ALTID" property="altid" jdbcType="VARCHAR" />
+		<result column="FILE_TYPE" property="file_type" jdbcType="VARCHAR" />
+		<result column="FILE_NAME" property="file_name" jdbcType="VARCHAR" />
+		<result column="UPDATED" property="updated" jdbcType="VARCHAR" />
+		<result column="LAST_UPDATED" property="last_updated" jdbcType="DATE" />
+		
+		<result column="REQUESTID" property="requestid" jdbcType="DECIMAL" />
+		<result column="TOID" property="toid" jdbcType="DECIMAL" />
+		<result column="FROMID" property="fromid" jdbcType="DECIMAL" />
+		<result column="MASTER_GROUP" property="master_group" jdbcType="DECIMAL" />
+		<result column="EMP_SSN" property="emp_ssn" jdbcType="DECIMAL" />
+		<result column="DEP_NO" property="grp_no" jdbcType="DECIMAL" />
+		<result column="DEP_NO" property="emp_no" jdbcType="DECIMAL" />
+		<result column="DEP_NO" property="dep_no" jdbcType="DECIMAL" />
+		<result column="LOGIN_AREA" property="login_area" jdbcType="VARCHAR" />
+		<result column="CALL_NUMBER" property="call_number" jdbcType="DECIMAL" />
+		<result column="DESCRIPTION" property="description" jdbcType="VARCHAR" />
+		<result column="PRIORITY" property="priority" jdbcType="DECIMAL" />
+		<result column="STATUS" property="status" jdbcType="DECIMAL" />
+		<result column="DATESUBMITTED" property="datesubmitted" jdbcType="DATE" />
+		<result column="DATECOMPLETED" property="datecompleted" jdbcType="DATE" />
+		<result column="CLAIM_FORM_ID" property="claim_form_id" jdbcType="VARCHAR" />
+		<result column="DOC_ID" property="doc_id" jdbcType="DECIMAL" />
+		<result column="REPLY" property="reply" jdbcType="VARCHAR" />
+		<result column="DELIVER_METHOD" property="deliver_method" jdbcType="DECIMAL" />
+		<result column="FAX_NUMBER" property="fax_number" jdbcType="VARCHAR" />
+		<result column="EMAIL_ADDRESS" property="email_address" jdbcType="VARCHAR" />
+		<result column="MAILING_ADDRESS" property="mailing_address" jdbcType="VARCHAR" />
+		<result column="DELIVERED_DATE" property="delivered_date" jdbcType="DATE" />
+		<result column="RETURNDIALOG" property="returndialog" jdbcType="VARCHAR" />
+		<result column="ClAIM_NUMBER" property="claim_number" jdbcType="VARCHAR" />
+		<result column="EMAIL" property="email" jdbcType="VARCHAR" />
+		<result column="TOTAL" property="total" jdbcType="DECIMAL" />
+	</resultMap>
+	
+	<select id="selAll"  parameterType="claimfile" resultMap="claimfileResult">
+		select ssn from empdep
+	</select>
+	
+	<select id="selFilelist"  parameterType="claimfile" resultMap="claimfileResult">
+		select FILE_ID as fileId,requestid,SSN,ALTID,FILE_TYPE,FILE_NAME,LAST_UPDATED,TO_CHAR(LAST_UPDATED,'mm-dd-yyyy') as UPDATED 
+		from TBL_ADVANCEEOB_FILE
+		<where>
+			<if test="ssn != null" >
+		    	and ssn=#{ssn}
+		    </if>
+			<!-- <if test="altid != null" >
+		    	and altid=#{altid}
+		    </if> -->
+			<if test="fileId != null" >
+		    	and file_id=#{fileId}
+		    </if>
+			<if test="file_type != null" >
+		    	and file_type=#{file_type}
+		    </if>
+			<if test="file_name != null" >
+		    	and file_name=#{file_name}
+		    </if>
+			<if test="fdate != null and edate != null " >
+		    	and (last_updated>=to_date(#{fdate},'yyyy-mm-dd') and last_updated&lt;=to_date(#{edate},'yyyy-mm-dd'))
+		    </if>
+			<if test="requestid != null" >
+		    	and REQUESTID=#{requestid}
+		    </if>  
+		</where> 
+		order by requestid desc,file_id asc
+	</select>
+	<select id="selFileidmax"  parameterType="claimfile" resultMap="claimfileResult">
+		select max(FILE_ID) as FILEID 
+		from TBL_ADVANCEEOB_FILE
+		<where>
+			<if test="ssn != null" >
+		    	and ssn=#{ssn}
+		    </if>
+			<!-- <if test="altid != null" >
+		    	and altid=#{altid}
+		    </if> -->
+			<if test="file_type != null" >
+		    	and file_type=#{file_type}
+		    </if>
+			<if test="file_name != null" >
+		    	and file_name=#{file_name}
+		    </if>
+			<if test="fdate != null and edate != null " >
+		    	and (last_updated>=to_date(#{fdate},'yyyy-mm-dd') and last_updated&lt;=to_date(#{edate},'yyyy-mm-dd'))
+		    </if>
+		</where>  
+	</select>
+	<select id="selEmaillist"  parameterType="claimfile" resultMap="claimfileResult">
+		select REQUESTID,
+		TOID,
+		FROMID,
+		MASTER_GROUP,
+		EMP_SSN,
+		DEP_NO,
+		LOGIN_AREA,
+		CALL_NUMBER,
+		DESCRIPTION,
+		PRIORITY,
+		STATUS,
+		DATESUBMITTED,
+		DATECOMPLETED,
+		CLAIM_FORM_ID,
+		DOC_ID,
+		REPLY,
+		DELIVER_METHOD,
+		FAX_NUMBER, 
+		EMAIL_ADDRESS,
+		MAILING_ADDRESS,
+		DELIVERED_DATE,
+		RETURNDIALOG,
+		ClAIM_NUMBER
+		 from TBL_AEOB_MAINTENANCE
+		<where>
+			<if test="status != null" >
+		    	and status=#{status}
+		    </if> 
+			<if test="deliver_method != null" >
+		    	and deliver_method=#{deliver_method}
+		    </if> 
+		    
+		    
+		    and datecompleted is null
+		    and email_address is not null
+		</where> 
+		order by REQUESTID desc
+	</select>
+	<select id="selEmaillistbyrows"  parameterType="claimfile" resultMap="claimfileResult">
+		select * from
+		(select REQUESTID,
+		TOID,
+		FROMID,
+		MASTER_GROUP,
+		EMP_SSN,
+		DEP_NO,
+		LOGIN_AREA,
+		CALL_NUMBER,
+		DESCRIPTION,
+		PRIORITY,
+		STATUS,
+		DATESUBMITTED,
+		DATECOMPLETED,
+		CLAIM_FORM_ID,
+		DOC_ID,
+		REPLY,
+		DELIVER_METHOD,
+		FAX_NUMBER, 
+		EMAIL_ADDRESS,
+		MAILING_ADDRESS,
+		DELIVERED_DATE,
+		RETURNDIALOG,
+		ClAIM_NUMBER,rownum as rnum
+		 from TBL_AEOB_MAINTENANCE
+		<where>
+			<if test="status != null" >
+		    	and status=#{status}
+		    </if> 
+			<if test="deliver_method != null" >
+		    	and deliver_method=#{deliver_method}
+		    </if> 
+		    
+		    
+		    and datecompleted is null
+		    and email_address is not null
+		</where> 
+		)
+		<where>
+		<if test="beginrow != null and endrow != null">
+			and rnum > #{beginrow} and rnum &lt;= #{endrow}
+      	</if>
+  		</where> 
+		order by rnum
+	</select>
+	
+	<select id="selcheckEmaillist"  parameterType="claimfile" resultMap="claimfileResult">
+	select email from empdep
+	<where>
+		<if test="email_address != null" >
+			and email = #{email_address}  
+      	</if>
+		<if test="grp_no != null" >
+			and grpno = #{grp_no}  
+      	</if>
+		<if test="emp_no != null" >
+			and empno = #{emp_no}  
+      	</if>
+		<if test="dep_no != null" >
+			and depno = #{dep_no}  
+      	</if>
+  	</where> 
+  	union
+  	select email from tbl_login
+	<where>
+		<if test="email_address != null" >
+			and email = #{email_address}  
+      	</if>
+		<if test="ssn != null" >
+			and ssn = #{ssn}  
+      	</if>
+  	</where> 
+  	
+	</select>
+	<select id="selempEmaillist"  parameterType="claimfile" resultMap="claimfileResult">
+	with aa as(
+	select addr1 as t_addr1,
+	       trim(addr2) as t_addr2,
+	       case when intladdr='F' then city||', '||state||' '||substr(substr('00000'||zipcode,-9,9),1,5)
+	       else city end  as t_addr3,
+	       NVL2(countrycd,countrycd,0) as countrycd
+	from empdep
+	<where>
+		<if test="email_address != null" >
+			and email = #{email_address}  
+      	</if>
+		<if test="grp_no != null" >
+			and grpno = #{grp_no}  
+      	</if>
+		<if test="emp_no != null" >
+			and empno = #{emp_no}  
+      	</if>
+		<if test="dep_no != null" >
+			and depno = #{dep_no}  
+      	</if>
+  	</where>
+	)
+	select t_addr1 || NVL2(trim(t_addr2),' ; '||trim(t_addr2),'') || NVL2(trim(t_addr3),' ; '||trim(t_addr3),'') || NVL2(trim(name),' ; COUNTRY: '||trim(name),'') as email
+	from aa left join isocountry b on aa.countrycd=b.cdno and aa.countrycd not in(0,840)
+	</select>
+	
+	<select id="selcheckEmaillistbyrows"  parameterType="claimfile" resultMap="claimfileResult">
+	select count(1) as total 
+	from (select email from empdep
+	<where>
+		<if test="email_address != null" >
+			and email = #{email_address}  
+      	</if>
+		<if test="grp_no != null" >
+			and grpno = #{grp_no}  
+      	</if>
+		<if test="emp_no != null" >
+			and empno = #{emp_no}  
+      	</if>
+		<if test="dep_no != null" >
+			and depno = #{dep_no}  
+      	</if>
+  	</where> 
+  	union
+  	select email from tbl_login
+	<where>
+		<if test="email_address != null" >
+			and email = #{email_address}  
+      	</if>
+		<if test="ssn != null" >
+			and ssn = #{ssn}  
+      	</if>
+  	</where> 
+  	)   aa
+	</select>
+	 
+	<insert id="insertAdvanceFile" parameterType="claimfile">
+		 <selectKey resultType="java.lang.Long" keyProperty="fileId" order="BEFORE" >
+	      select MISP.SEQ_TBL_ADVANCEEOB_FILE.nextval from dual
+	     </selectKey> 
+		insert into TBL_ADVANCEEOB_FILE(FILE_ID,SSN,ALTID,FILE_TYPE,FILE_NAME,LAST_UPDATED,REQUESTID)  
+		values(#{fileId,jdbcType=DECIMAL},#{ssn,jdbcType=DECIMAL},#{altid,jdbcType=VARCHAR},#{file_type,jdbcType=VARCHAR},#{file_name,jdbcType=VARCHAR},#{last_updated,jdbcType=DATE},#{requestid,jdbcType=DECIMAL})
+ 	</insert>   
+ 	
+ 	
+	<delete id="delAdvanceFile" parameterType="claimfile">
+		delete from TBL_ADVANCEEOB_FILE 
+		<where>
+			<if test="fileId != null" >
+		    	and FILE_ID=#{fileId}
+		    </if> 
+			<if test="file_name != null" >
+		    	and file_name=#{file_name}
+		    </if> 
+			<if test="requestid != null" >
+		    	and REQUESTID=#{requestid}
+		    </if>  
+		</where> 
+	</delete>
+	  
+ 	
+	<delete id="delFileMaintenance" parameterType="claimfile">
+		delete from TBL_AEOB_MAINTENANCE 
+		<where>
+			<if test="fileId != null" >
+		    	and DOC_ID=#{fileId}
+		    </if>  
+			<if test="requestid != null" >
+		    	and REQUESTID=#{requestid}
+		    </if>  
+		</where> 
+	</delete>
+</mapper>

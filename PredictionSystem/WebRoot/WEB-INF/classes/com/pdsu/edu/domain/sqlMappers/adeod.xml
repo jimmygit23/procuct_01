@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pdsu.edu.domain.Adeod">
+	<resultMap type="com.pdsu.edu.domain.Adeod" id="adeodResult">
+    <id column="SSNC" property="ssnc" jdbcType="DECIMAL" />
+    <id column="IDALTC" property="idaltc" jdbcType="VARCHAR" />
+    <id column="DOBC" property="dobc" jdbcType="VARCHAR" />
+		<result column="SSN" property="ssn" jdbcType="DECIMAL" />
+		<result column="GRPNO" property="grpno" jdbcType="DECIMAL" />
+		<result column="EMPNO" property="empno" jdbcType="DECIMAL" />
+		<result column="DEPNO" property="depno" jdbcType="DECIMAL" />
+		<result column="LASTNAME" property="lastname" jdbcType="VARCHAR" />
+		<result column="FIRTNAME" property="firstname" jdbcType="VARCHAR" />
+		<result column="MI" property="mi" jdbcType="VARCHAR" />
+		<result column="SUFFIX" property="suffix" jdbcType="VARCHAR" />
+		<result column="DOB" property="dob" jdbcType="DATE" />
+		<result column="IDALT" property="idalt" jdbcType="VARCHAR" />
+		<result column="gender" property="gender" jdbcType="VARCHAR" /> 
+		<result column="spouse" property="spouse" jdbcType="VARCHAR" />
+		<result column="child" property="child" jdbcType="VARCHAR" /> 
+		<result column="other" property="other" jdbcType="VARCHAR" /> 
+		<result column="memberid" property="memberid" jdbcType="VARCHAR" /> 
+		<result column="proccd" property="proccd" jdbcType="VARCHAR" /> 
+		<result column="descr" property="descr" jdbcType="VARCHAR" /> 
+		<result column="modcd" property="modcd" jdbcType="VARCHAR" />
+		<result column="code" property="code" jdbcType="VARCHAR" />
+		<result column="ssnsub" property="ssnsub" jdbcType="VARCHAR" />
+		<result column="descno" property="descno" jdbcType="DECIMAL" />
+	</resultMap>
+	
+	<select id="selAll"  parameterType="adeod" resultMap="adeodResult">
+		select ssn from empdep
+	</select>
+	
+	<select id="selpatientuser" parameterType="adeod" resultMap="adeodResult">
+	select a.grpno,a.empno,a.depno,ssn,lastname,firstname,mi,suffix,dob,idalt,gender,spouse,child,other,substr('000000000'||ssn,-4,4) as ssnsub   
+	from empdep a
+	inner join eedpelig b
+	on a.GRPNO=b.GRPNO and a.EMPNO=b.empno and a.DEPNO=b.depno
+		<where> b.SNAPTHRUDT>=sysdate
+		and (b.eligflag01='T' or b.eligflag02='T' or b.eligflag03='T' or b.eligflag04='T' or b.eligflag05='T' or b.eligflag06='T' or b.eligflag07='T')
+		<if test="grpno != null" >
+			and a.grpno=#{grpno}
+		</if>
+		<if test="empno != null" >
+			and a.empno=#{empno}
+		</if>
+		<if test="depno != null" >
+			and a.depno=#{depno}
+		</if>
+		<if test="idaltc != null" >
+			and idalt=#{idaltc}
+		</if>
+		<if test="ssnc != null" >
+				and ssn=#{ssnc}
+		</if>
+		<if test="dobc != null" >
+			and dob=to_date(#{dobc},'mm/dd/yyyy')
+		</if>
+		</where>
+		order by a.grpno,a.empno,a.depno
+	</select>
+	
+	
+	<select id="selpatientList"  parameterType="adeod" resultMap="adeodResult">
+		with patient_temp as(select a.grpno,a.empno	 from empdep a
+		inner join eedpelig b
+		on a.GRPNO=b.GRPNO and a.EMPNO=b.empno and a.DEPNO=b.depno
+		<where> 
+			b.SNAPTHRUDT>=sysdate
+			and (b.eligflag01='T' or b.eligflag02='T' or b.eligflag03='T' or b.eligflag04='T' or b.eligflag05='T' or b.eligflag06='T' or b.eligflag07='T')
+			<if test="idaltc != null" >
+				and idalt=#{idaltc}
+			</if>
+			<if test="ssnc != null" >
+				and ssn=#{ssnc}
+			</if>
+		</where>
+		)
+		select a.grpno,a.empno,a.depno,ssn,lastname,firstname,mi,suffix,dob,idalt,gender,spouse,child,other,substr('000000000'||ssn,-4,4) as ssnsub   
+		from empdep a
+		inner join eedpelig b
+		on a.GRPNO=b.GRPNO and a.EMPNO=b.empno and a.DEPNO=b.depno
+		inner join patient_temp c
+		on a.GRPNO=c.GRPNO and a.EMPNO=c.empno
+		<where> 
+			b.SNAPTHRUDT>=sysdate
+			and (b.eligflag01='T' or b.eligflag02='T' or b.eligflag03='T' or b.eligflag04='T' or b.eligflag05='T' or b.eligflag06='T' or b.eligflag07='T')
+			<if test="dobc != null" >
+			and dob=to_date(#{dobc},'mm/dd/yyyy')
+			</if>
+		</where> 
+	</select>
+	
+	<select id="selectInsuredInfo" parameterType="adeod" resultMap="adeodResult">
+	  select lastname,firstname,mi,suffix,ssn,dob,gender,idalt from empdep
+	  <where>
+	     <if test="grpno != null">
+	       grpno = #{grpno,jdbcType=DECIMAL}
+	     </if>
+	     <if test="empno != null">
+	       and empno = #{empno,jdbcType=DECIMAL}
+	     </if>
+	       and depno = 0
+	     
+	  </where>
+	</select>
+	<select id="selectPhyName" parameterType="java.lang.String" resultMap="adeodResult">
+	  SELECT PHYFSTNM as firstname, PHYMI as mi, PHYLSTNM as lastname, PHYDEG as suffix
+      FROM MEDI.PROVIDER a
+      WHERE NPI=#{npi} and PHYFSTNM is not null and PHYLSTNM IS NOT NULL
+      ORDER BY  MCLSTDT DESC, LSTCHGDT DESC
+	</select>
+	<select id="selectProccd" parameterType="java.lang.String" resultMap="adeodResult">
+	    SELECT PROCCD, DESCR
+		FROM MEDI.PROCEDUR
+		WHERE PROCCD = #{proccd,jdbcType=VARCHAR} and (THRUDT IS NULL OR THRUDT>=SYSDATE)
+	</select>
+	<select id="selectModcd" parameterType="java.lang.String" resultMap="adeodResult">
+	    SELECT MODCD, DESCR FROM MEDI.SYSMODCD WHERE MODCD = #{modcd,jdbcType=VARCHAR} and DESCR IS NOT NULL
+	</select>
+	<select id="selectCode" parameterType="java.lang.String" resultMap="adeodResult">
+	    SELECT CODE FROM MEDI.DIAGCODES WHERE upper(replace(CODE,'.','')) = upper(replace(#{code,jdbcType=VARCHAR},'.','')) and CODETP=0 and ENDDT>=SYSDATE
+	</select>
+	<select id="selectPOS" parameterType="java.lang.Integer" resultMap="adeodResult">
+	    SELECT DESCNO,descr FROM MEDI.SYSPOSCODE WHERE DESCNO = #{pos,jdbcType=DECIMAL} and DESCNO != 0 
+	</select>
+	<select id="selectMstno" parameterType="java.lang.Integer" resultType="java.lang.Integer">
+	  select master_group from tbl_group where gr_number=#{grpno}
+	</select>
+	
+</mapper>

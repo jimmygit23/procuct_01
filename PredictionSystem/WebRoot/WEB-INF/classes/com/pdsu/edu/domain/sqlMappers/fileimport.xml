@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pdsu.edu.domain.Fileimport">
+	
+	<resultMap type="com.pdsu.edu.domain.Fileimport" id="fileimportResult">
+	<id column="FILE_ID" property="fileId" jdbcType="DECIMAL" />
+	<id column="PROVIDER_ID" property="providerId" jdbcType="DECIMAL" />
+	<id column="TIN_ID" property="providertinId" jdbcType="DECIMAL" />
+	<id column="RATE_ID" property="rateId" jdbcType="DECIMAL" />
+	<id column="CONTRACT_ID" property="contractId" jdbcType="DECIMAL" />
+	<id column="ALLOWED_ID" property="allowedId" jdbcType="DECIMAL" />
+	
+    <result column="ENTITY_NAME" property="reporting_entity_name" jdbcType="VARCHAR" />
+    <result column="PLAN_NAME" property="plan_name" jdbcType="VARCHAR" />
+    <result column="MARKET_TYPE" property="plan_market_type" jdbcType="VARCHAR" />
+    <result column="NEGOTIATION_ARRANGEMENT" property="negotiation_arrangement" jdbcType="VARCHAR" />
+    <result column="LAST_UPDATED_ON" property="last_updated_on" jdbcType="DATE" />
+    
+	<result column="PROV_ID" property="provId" jdbcType="DECIMAL" />
+	<result column="PROVIDER_FILEID" property="providerfileId" jdbcType="DECIMAL" />
+    <result column="NEGOTIATED_TYPE" property="negotiated_type" jdbcType="VARCHAR" />
+    <result column="NEGOTIATION_ARRANGEMENT_TYPE" property="negotiation_arrangement_type" jdbcType="VARCHAR" />
+    <result column="EXPIRATION_DATE" property="expiration_date" jdbcType="DATE" />
+	<result column="TIN" property="tinnum" jdbcType="DECIMAL" />
+	
+    <result column="SERVICE_CODE" property="service_code" jdbcType="VARCHAR" />
+    <result column="BILLING_CODE_TYPE" property="billing_code_type" jdbcType="VARCHAR" />
+	<result column="BILLING_CODE_TYPE_VERSION" property="billing_code_type_version" jdbcType="VARCHAR" />
+    <result column="NEGOTIATED_RATE_TYPE" property="negotiated_rate_type" jdbcType="VARCHAR" />
+    
+    
+	<result column="CONTRACT_RATEID" property="contractrateId" jdbcType="DECIMAL" />
+	<result column="BILLING_CODE" property="billing_code" jdbcType="VARCHAR" />
+	<result column="NEGOTIATED_RATE" property="negotiated_rate" jdbcType="DECIMAL" />
+	
+	<result column="ALLOWED_RATEID" property="allowedrateId" jdbcType="DECIMAL" />
+	<result column="ALLOWED_AMOUNT" property="allowedamount" jdbcType="DECIMAL" />
+	<result column="BILLED_CHARGE" property="billing_charge" jdbcType="DECIMAL" />
+ 	 
+ 	 
+ 	
+	</resultMap>
+	
+	<insert id="insertoonFile" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="fileId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_OON_FILE.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_OON_FILE(FILE_ID,ENTITY_NAME,PLAN_NAME,MARKET_TYPE,LAST_UPDATED_ON)  
+		values(#{fileId,jdbcType=DECIMAL},#{reporting_entity_name,jdbcType=VARCHAR},#{plan_name,jdbcType=VARCHAR},#{plan_market_type,jdbcType=VARCHAR},#{last_updated_on,jdbcType=DATE})
+ 	</insert> 
+ 	
+	<insert id="insertFile" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="fileId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_INN_FILE.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_INN_FILE(FILE_ID,ENTITY_NAME,PLAN_NAME,MARKET_TYPE,NEGOTIATION_ARRANGEMENT,LAST_UPDATED_ON)  
+		values(#{fileId,jdbcType=DECIMAL},#{reporting_entity_name,jdbcType=VARCHAR},#{plan_name,jdbcType=VARCHAR},#{plan_market_type,jdbcType=VARCHAR},#{negotiation_arrangement,jdbcType=VARCHAR},#{last_updated_on,jdbcType=DATE})
+ 	</insert> 
+		
+	<insert id="insertoonProvider" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="providerId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_OON_PROVIDER.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_OON_PROVIDER(PROVIDER_ID,FILE_ID)  
+		values(#{providerId,jdbcType=DECIMAL},#{providerfileId,jdbcType=DECIMAL})
+ 	</insert> 
+		
+	<insert id="insertProvider" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="providerId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_INN_PROVIDER.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_INN_PROVIDER(PROVIDER_ID,FILE_ID,NEGOTIATED_TYPE,NEGOTIATION_ARRANGEMENT_TYPE,EXPIRATION_DATE)  
+		values(#{providerId,jdbcType=DECIMAL},#{providerfileId,jdbcType=DECIMAL},#{negotiated_type,jdbcType=VARCHAR},#{negotiation_arrangement_type,jdbcType=VARCHAR},#{expiration_date,jdbcType=DATE})
+ 	</insert> 
+ 	
+	<insert id="insertoonProvidertin" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="providertinId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_OON_PROVIDER_TIN.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_OON_PROVIDER_TIN(TIN_ID,PROVIDER_ID,TIN)  
+		values(#{providertinId,jdbcType=DECIMAL},#{provId,jdbcType=DECIMAL},#{tinnum,jdbcType=DECIMAL})
+ 	</insert>  
+ 	
+	<insert id="insertProvidertin" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="providertinId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_INN_PROVIDER_TIN.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_INN_PROVIDER_TIN(TIN_ID,PROVIDER_ID,TIN)  
+		values(#{providertinId,jdbcType=DECIMAL},#{provId,jdbcType=DECIMAL},#{tinnum,jdbcType=DECIMAL})
+ 	</insert>  
+ 	
+	<insert id="insertoonRate" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="rateId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_OON_RATE.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_OON_RATE(RATE_ID,PROVIDER_ID,SERVICE_CODE,BILLING_CODE_TYPE,BILLING_CODE_TYPE_VERSION)  
+		values(#{rateId,jdbcType=DECIMAL},#{provId,jdbcType=DECIMAL},#{service_code,jdbcType=VARCHAR},#{billing_code_type,jdbcType=VARCHAR},#{billing_code_type_version,jdbcType=VARCHAR})
+ 	</insert>  
+ 	
+ 	
+	<insert id="insertRate" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="rateId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_INN_RATE.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_INN_RATE(RATE_ID,PROVIDER_ID,SERVICE_CODE,BILLING_CODE_TYPE,BILLING_CODE_TYPE_VERSION,NEGOTIATED_RATE_TYPE)  
+		values(#{rateId,jdbcType=DECIMAL},#{provId,jdbcType=DECIMAL},#{service_code,jdbcType=VARCHAR},#{billing_code_type,jdbcType=VARCHAR},#{billing_code_type_version,jdbcType=VARCHAR},#{negotiated_rate_type,jdbcType=VARCHAR})
+ 	</insert>  
+ 	
+ 	
+	<insert id="insertrateoonAllowed" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="allowedId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_OON_ALLOWED.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_OON_ALLOWED(ALLOWED_ID,RATE_ID,BILLING_CODE,ALLOWED_AMOUNT,BILLED_CHARGE)  
+		values(#{allowedId,jdbcType=DECIMAL},#{allowedrateId,jdbcType=DECIMAL},#{billing_code,jdbcType=VARCHAR},#{allowedamount,jdbcType=DECIMAL},#{billing_charge,jdbcType=DECIMAL})
+ 	</insert>  
+
+	<insert id="insertrateContract" parameterType="fileimport">
+		 <selectKey resultType="java.lang.Long" keyProperty="contractId" order="BEFORE" >
+	      select MISP.SEQ_TBL_RATES_INN_CONTRACT.nextval from dual
+	     </selectKey> 
+		insert into TBL_RATES_INN_CONTRACT(CONTRACT_ID,RATE_ID,BILLING_CODE,NEGOTIATED_RATE)  
+		values(#{contractId,jdbcType=DECIMAL},#{contractrateId,jdbcType=DECIMAL},#{billing_code,jdbcType=VARCHAR},#{negotiated_rate,jdbcType=DECIMAL})
+ 	</insert>  
+ 	
+</mapper>

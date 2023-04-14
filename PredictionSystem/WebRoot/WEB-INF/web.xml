@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee   http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+ <!-- 配置spring配置文件加载的位置 -->
+ <context-param>
+  <param-name>contextConfigLocation</param-name>
+  <param-value>classpath:beans.xml</param-value>
+ </context-param>
+ <filter>
+  <filter-name>SessionFilter</filter-name>
+  <filter-class>com.pdsu.edu.syscom.filter.SessionFilter</filter-class>
+  <!-- <filter-class>com.pdsu.edu.syscom.util.SessionUser</filter-class>-->
+  <init-param>
+   <param-name>sessionKey</param-name>
+   <param-value>sessionUser</param-value>
+  </init-param>
+  <init-param>
+   <param-name>redirectUrl</param-name>
+   <param-value>/ach_quick_logon.jsp</param-value>
+  </init-param>
+ <!--    <init-param>
+  <param-name>excepUrlRegex</param-name>
+   <param-value>/servlets/(login|regist)Servlet</param-value>
+  </init-param>    -->
+ </filter>
+ <!--<filter-mapping>
+   		<filter-name>SessionFilter</filter-name> 
+  		<url-pattern>*.jsp</url-pattern> 
+  	 </filter-mapping> 
+	 <filter-mapping>
+   		<filter-name>SessionFilter</filter-name> 
+  		<url-pattern>*.html</url-pattern> 
+  	 </filter-mapping>   
+	<filter-mapping>
+   		<filter-name>SessionFilter</filter-name> 
+  		<url-pattern>/servlets/*</url-pattern> 
+  	 </filter-mapping>  -->
+ <!--配置struts2 -->
+ <filter>
+  <filter-name>struts2</filter-name>
+  <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+ </filter>
+ <!-- <filter-mapping>
+  <filter-name>SessionFilter</filter-name>
+  <url-pattern>*.action</url-pattern>
+ </filter-mapping>-->
+ <filter-mapping>
+  <filter-name>struts2</filter-name>
+  <url-pattern>/*</url-pattern>
+ </filter-mapping>
+ <!-- 加载spring的配置文件 -->
+ <listener>
+  <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+ </listener>
+ <!-- Spring 刷新Introspector防止内存泄露 -->
+ <listener>
+  <listener-class>org.springframework.web.util.IntrospectorCleanupListener</listener-class>
+ </listener>
+ <!-- session超时定义,单位为分钟 -->
+ <session-config>
+  <session-timeout>30</session-timeout>
+ </session-config>
+ <welcome-file-list>
+  <!-- <welcome-file>index.jsp</welcome-file> 
+ <welcome-file>advancesearch.jsp</welcome-file> -->
+  <welcome-file>ach_quick_logon.jsp</welcome-file>
+ </welcome-file-list>
+ <login-config>
+  <auth-method>BASIC</auth-method>
+ </login-config>
+</web-app>

@@ -1,0 +1,1951 @@
+﻿/* CSS Document */
+/* 整个页面的样式部分*/
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-color: #f3f3f3;
+	font-family: arial;
+	
+}
+.tabData {
+	font: 84.5% "Trebuchet MS", sans-serif; margin: 50px;
+}
+.tabData2 {
+	font: 84.5% "Trebuchet MS", sans-serif;
+}
+.a2 {
+	color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/* 12号字样式====================================================================================================*/
+/*黑*/
+.font_black12 {
+	font-size: 12px; color: #000000;line-height: 18px;text-decoration:none;font-family: arial;
+}
+.font_black12 a {
+	font-size: 12px; color: #000000;line-height: 18px;text-decoration:none;font-family: arial;
+}
+.font_black12 a:link {
+	font-size: 12px; color: #000000;line-height: 18px;text-decoration:none;font-family: arial;
+}
+.font_black12 a:hover {
+	font-size: 12px; color: #ff6600;line-height: 18px;text-decoration:none;font-family: arial;
+}
+
+/*黑倾斜*/
+.font_black12x {
+	font-size: 12px;color: #000000;line-height: 18px;font-style: italic;
+}
+.font_black12x a {
+	font-size: 12px; color: #000000;line-height: 18px;text-decoration:none;font-style: italic;
+}
+.font_black12x a:link {
+	font-size: 12px; color: #000000;line-height: 18px;text-decoration:none;font-style: italic;
+}
+.font_black12x a:hover {
+	font-size: 12px; color: #ff6600;line-height: 18px;text-decoration:none;font-style: italic;
+}
+
+
+
+.font_black14x {
+	font-size: 14px;color: #000000;line-height: 18px;font-style: italic;
+}
+.font_black14x a {
+	font-size: 14px; color: #000000;line-height: 18px;text-decoration:none;font-style: italic;
+}
+.font_black14x a:link {
+	font-size: 14px; color: #000000;line-height: 18px;text-decoration:none;font-style: italic;
+}
+.font_black14x a:hover {
+	font-size: 14px; color: #ff6600;line-height: 18px;text-decoration:none;font-style: italic;
+}
+
+
+
+/*粗体样式*/
+.font_black12_bold {
+	font-size: 12px; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none;font-family: arial;
+}
+.font_black12_bold a {
+	font-size: 12px; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none;font-family: arial;
+}
+.font_black12_bold a:link {
+	font-size: 12px; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none;font-family: arial;
+}
+.font_black12_bold a:hover {
+	font-size: 12px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none;font-family: arial;
+}
+/*白*/
+.font_white12 {
+	font-size: 12px; color: #ffffff;line-height: 18px;text-decoration:none
+}
+.font_white12 a {
+	font-size: 12px; color: #ffffff;line-height: 18px;text-decoration:none
+}
+.font_white12 a:link {
+	font-size: 12px; color: #ffffff;line-height: 18px;text-decoration:none
+}
+.font_white12 a:hover {
+	font-size: 12px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+/*粗体样式*/
+.font_white12_bold {
+	font-size: 12px; color: #ffffff;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_white12_bold a {
+	font-size: 12px; color: #ffffff;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_white12_bold a:link {
+	font-size: 12px; color: #ffffff;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_white12_bold a:hover {
+	font-size: 12px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*灰 分为三个层次*/
+/*深灰*/
+.font_brown12_333 {
+	font-size: 12px; color: #333333;line-height: 18px;text-decoration:none
+}
+.font_brown12_333 a {
+	font-size: 12px; color: #333333;line-height: 18px;text-decoration:none
+}
+.font_brown12_333 a:link {
+	font-size: 12px; color: #333333;line-height: 18px;text-decoration:none
+}
+.font_brown12_333 a:hover {
+	font-size: 12px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_brown12_333_bold {
+	font-size: 12px; color: #333333;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_333_bold a {
+	font-size: 12px; color: #333333;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_333_bold a:link {
+	font-size: 12px; color: #333333;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_333_bold a:hover {
+	font-size: 12px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*中灰*/
+.font_brown12_666 {
+	font-size: 12px; color: #666666;line-height: 18px;text-decoration:none
+}
+.font_brown12_666 a {
+	font-size: 12px; color: #666666;line-height: 18px;text-decoration:none
+}
+.font_brown12_666 a:link {
+	font-size: 12px; color: #666666;line-height: 18px;text-decoration:none
+}
+.font_brown12_666 a:hover {
+	font-size: 12px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_brown12_666_bold {
+	font-size: 12px; color: #666666;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_666_bold a {
+	font-size: 12px; color: #666666;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_666_bold a:link {
+	font-size: 12px; color: #666666;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_666_bold a:hover {
+	font-size: 12px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*浅灰*/
+.font_brown12_999 {
+	font-size: 12px; color: #999999;line-height: 18px;text-decoration:none
+}
+.font_brown12_999 a {
+	font-size: 12px; color: #999999;line-height: 18px;text-decoration:none
+}
+.font_brown12_999 a:link {
+	font-size: 12px; color: #999999;line-height: 18px;text-decoration:none
+}
+.font_brown12_999 a:hover {
+	font-size: 12px; color:#ff6600;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_brown12_999_bold {
+	font-size: 12px; color: #999999;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_999_bold a {
+	font-size: 12px; color: #999999;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_999_bold a:link {
+	font-size: 12px; color: #999999;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown12_999_bold a:hover {
+	font-size: 12px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*蓝*/
+.font_blue12 {
+	font-size: 12px; color: #062978;line-height: 18px;text-decoration:none
+}
+.font_blue12 a {
+	font-size: 12px; color: #062978;line-height: 18px;text-decoration:none
+}
+.font_blue12 a:link {
+	font-size: 12px; color: #062978;line-height: 18px;text-decoration:underline
+}
+.font_blue12 a:hover {
+	font-size: 12px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_blue12_bold {
+	font-size: 12px; color: #062978;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_blue12_bold a {
+	font-size: 12px; color: #062978;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_blue12_bold a:link {
+	font-size: 12px; color: #062978;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_blue12_bold a:hover {
+	font-size: 12px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*橙*/
+.font_orange12 {
+	font-size: 12px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+.font_orange12 a {
+	font-size: 12px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+.font_orange12 a:link {
+	font-size: 12px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+.font_orange12 a:hover {
+	font-size: 12px; color: #000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_orange12_bold {
+	font-size: 12px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_orange12_bold a {
+	font-size: 12px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_orange12_bold a:link {
+	font-size: 12px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_orange12_bold a:hover {
+	font-size: 12px; color: #000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*红*/
+.font_red12 {
+	font-size: 12px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+.font_red12 a {
+	font-size: 12px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+.font_red12 a:link {
+	font-size: 12px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+.font_red12 a:hover {
+	font-size: 12px; color: #000000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_red12_bold {
+	font-size: 12px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_red12_bold a {
+	font-size: 12px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_red12_bold a:link {
+	font-size: 12px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_red12_bold a:hover {
+	font-size: 12px; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+
+/* 14号字样式====================================================================================================*/
+/*黑*/
+.font_black14 {
+	font-size: 14px;
+	color: #000000;
+	line-height: 18px;
+	text-decoration:none
+}
+.font_black14 a {
+	font-size: 14px; color: #000000;line-height: 18px;text-decoration:none
+}
+.font_black14 a:link {
+	font-size: 14px; color: #000000;line-height: 18px;text-decoration:none
+}
+.font_black14 a:hover {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+/*粗体样式*/
+.font_black14_bold {
+	font-size: 14px; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_black14_bold a {
+	font-size: 14px; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_black14_bold a:link {
+	font-size: 14px; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_black14_bold a:hover {
+	font-size: 14px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*白*/
+.font_white14 {
+	font-size: 14px; color: #ffffff;line-height: 18px;text-decoration:none
+}
+.font_white14 a {
+	font-size: 14px; color: #ffffff;line-height: 18px;text-decoration:none
+}
+.font_white14 a:link {
+	font-size: 14px; color: #ffffff;line-height: 18px;text-decoration:none
+}
+.font_white14 a:hover {
+	font-size: 14px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+/*粗体样式*/
+.font_white14_bold {
+	font-size: 14px; color: #ffffff;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_white14_bold a {
+	font-size: 14px; color: #ffffff;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_white14_bold a:link {
+	font-size: 14px; color: #ffffff;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_white14_bold a:hover {
+	font-size: 14px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*灰 分为三个层次*/
+/*深灰*/
+.font_brown14_333 {
+	font-size: 14px; color: #333333;line-height: 18px;text-decoration:none
+}
+.font_brown14_333 a {
+	font-size: 14px; color: #333333;line-height: 18px;text-decoration:none
+}
+.font_brown14_333 a:link {
+	font-size: 14px; color: #333333;line-height: 18px;text-decoration:none
+}
+.font_brown14_333 a:hover {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_brown14_333_bold {
+	font-size: 14px; color: #333333;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_333_bold a {
+	font-size: 14px; color: #333333;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_333_bold a:link {
+	font-size: 14px; color: #333333;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_333_bold a:hover {
+	font-size: 14px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*中灰*/
+.font_brown14_666 {
+	font-size: 14px; color: #666666;line-height: 18px;text-decoration:none
+}
+.font_brown14_666 a {
+	font-size: 14px; color: #666666;line-height: 18px;text-decoration:none
+}
+.font_brown14_666 a:link {
+	font-size: 14px; color: #666666;line-height: 18px;text-decoration:none
+}
+.font_brown14_666 a:hover {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_brown14_666_bold {
+	font-size: 14px; color: #666666;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_666_bold a {
+	font-size: 14px; color: #666666;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_666_bold a:link {
+	font-size: 14px; color: #666666;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_666_bold a:hover {
+	font-size: 14px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*浅灰*/
+.font_brown14_999 {
+	font-size: 14px; color: #999999;line-height: 18px;text-decoration:none
+}
+.font_brown14_999 a {
+	font-size: 14px; color: #999999;line-height: 18px;text-decoration:none
+}
+.font_brown14_999 a:link {
+	font-size: 14px; color: #999999;line-height: 18px;text-decoration:none
+}
+.font_brown14_999 a:hover {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_brown14_999_bold {
+	font-size: 14px; color: #999999;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_999_bold a {
+	font-size: 14px; color: #999999;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_999_bold a:link {
+	font-size: 14px; color: #999999;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_brown14_999_bold a:hover {
+	font-size: 14px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*蓝*/
+.font_blue14 {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:none
+}
+.font_blue14 a {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:none
+}
+.font_blue14 a:link {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:underline;
+}
+.font_blue14 a:hover {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_blue14_bold {
+	font-size: 14px; color: #062978;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_blue14_bold a {
+	font-size: 14px; color: #062978;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_blue14_bold a:link {
+	font-size: 14px; color: #062978;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_blue14_bold a:hover {
+	font-size: 14px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*橙*/
+.font_orange14 {
+	font-size: 14px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+.font_orange14 a {
+	font-size: 14px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+.font_orange14 a:link {
+	font-size: 14px; color: #ff6600;line-height: 18px;text-decoration:none
+}
+.font_orange14 a:hover {
+	font-size: 14px; color:#000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_orange14_bold {
+	font-size: 14px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_orange14_bold a {
+	font-size: 14px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_orange14_bold a:link {
+	font-size: 14px; color: #ff6600;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_orange14_bold a:hover {
+	font-size: 14px; color:#000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+/*红*/
+.font_red14 {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+.font_red14 a {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+.font_red14 a:link {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+.font_red14 a:hover {
+	font-size: 14px; color: #000000;line-height: 18px;text-decoration:none
+}
+/*粗体*/
+.font_red14_bold {
+	font-size: 14px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_red14_bold a {
+	font-size: 14px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_red14_bold a:link {
+	font-size: 14px; color: #ff0000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_red14_bold a:hover {
+	font-size: 14px; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+
+/* 16号字样式====================================================================================================*/
+/*黑*/
+.font_black16 {
+	font-size: 16px;
+	color: #000000;
+	line-height: 22px;
+	text-decoration:none
+}
+.font_black16 a {
+	font-size: 16px; color: #000000;line-height: 22px;text-decoration:none
+}
+.font_black16 a:link {
+	font-size: 16px; color: #000000;line-height: 22px;text-decoration:none
+}
+.font_black16 a:hover {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+/*粗体样式*/
+.font_black16_bold {
+	font-size: 16px; color: #000000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_black16_bold a {
+	font-size: 16px; color: #000000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_black16_bold a:link {
+	font-size: 16px; color: #000000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_black16_bold a:hover {
+	font-size: 16px; color: #ff0000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+
+/*黑倾斜*/
+.font_black16x {
+	font-size: 16px;color: #000000;line-height: 22px;font-style: italic;
+}
+.font_black16x a {
+	font-size: 16px; color: #000000;line-height: 22px;text-decoration:none;font-style: italic;
+}
+.font_black16x a:link {
+	font-size: 16px; color: #000000;line-height: 22px;text-decoration:none;font-style: italic;
+}
+.font_black16x a:hover {
+	font-size: 16px; color: #ff6600;line-height: 22px;text-decoration:none;font-style: italic;
+}
+/*白*/
+.font_white16 {
+	font-size: 16px; color: #ffffff;line-height: 22px;FILTER: DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+.font_white16 a {
+	font-size: 16px; color: #ffffff;line-height: 22px;FILTER: DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+.font_white16 a:link {
+	font-size: 16px; color: #ffffff;line-height: 22px;text-decoration:none;FILTER: DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+.font_white16 a:hover {
+	font-size: 16px; color: #ffffff;line-height: 22px;text-decoration:none;FILTER: DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+/*粗体样式*/
+.font_white16_bold {
+	font-size: 16px; color: #ffffff;font-weight:bold;line-height: 22px;DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+.font_white16_bold a {
+	font-size: 16px; color: #ffffff;font-weight:bold;line-height: 22px;DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+.font_white16_bold a:link {
+	font-size: 16px; color: #ffffff;font-weight:bold;line-height: 22px;text-decoration:none;DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+.font_white16_bold a:hover {
+	font-size: 16px; color: #ffffff;font-weight:bold;line-height: 22px;text-decoration:none;DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+/*灰 分为三个层次*/
+/*深灰*/
+.font_brown16_333 {
+	font-size: 16px; color: #333333;line-height: 22px;text-decoration:none
+}
+.font_brown16_333 a {
+	font-size: 16px; color: #333333;line-height: 22px;text-decoration:none
+}
+.font_brown16_333 a:link {
+	font-size: 16px; color: #333333;line-height: 22px;text-decoration:none
+}
+.font_brown16_333 a:hover {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+/*粗体*/
+.font_brown16_333_bold {
+	font-size: 16px; color: #333333;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_333_bold a {
+	font-size: 16px; color: #333333;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_333_bold a:link {
+	font-size: 16px; color: #333333;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_333_bold a:hover {
+	font-size: 16px; color: #ff0000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+/*中灰*/
+.font_brown16_666 {
+	font-size: 16px; color: #666666;line-height: 22px;text-decoration:none
+}
+.font_brown16_666 a {
+	font-size: 16px; color: #666666;line-height: 22px;text-decoration:none
+}
+.font_brown16_666 a:link {
+	font-size: 16px; color: #666666;line-height: 22px;text-decoration:none
+}
+.font_brown16_666 a:hover {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+/*粗体*/
+.font_brown16_666_bold {
+	font-size: 16px; color: #666666;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_666_bold a {
+	font-size: 16px; color: #666666;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_666_bold a:link {
+	font-size: 16px; color: #666666;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_666_bold a:hover {
+	font-size: 16px; color: #ff0000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+/*浅灰*/
+.font_brown16_999 {
+	font-size: 16px; color: #999999;line-height: 22px;text-decoration:none
+}
+.font_brown16_999 a {
+	font-size: 16px; color: #999999;line-height: 22px;text-decoration:none
+}
+.font_brown16_999 a:link {
+	font-size: 16px; color: #999999;line-height: 22px;text-decoration:none
+}
+.font_brown16_999 a:hover {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+/*粗体*/
+.font_brown16_999_bold {
+	font-size: 16px; color: #999999;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_999_bold a {
+	font-size: 16px; color: #999999;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_999_bold a:link {
+	font-size: 16px; color: #999999;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_brown16_999_bold a:hover {
+	font-size: 16px; color: #ff0000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+/*蓝*/
+.font_blue16 {
+	font-size: 16px; color: #062978;line-height: 22px;text-decoration:none
+}
+.font_blue16 a {
+	font-size: 16px; color: #062978;line-height: 22px;text-decoration:none
+}
+.font_blue16 a:link {
+	font-size: 16px; color: #062978;line-height: 22px;text-decoration:underline;
+}
+.font_blue16 a:hover {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+/*粗体*/
+.font_blue16_bold {
+	font-size: 16px; color: #062978;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_blue16_bold a {
+	font-size: 16px; color: #062978;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_blue16_bold a:link {
+	font-size: 16px; color: #062978;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_blue16_bold a:hover {
+	font-size: 16px; color: #ff0000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+/*橙*/
+.font_orange16 {
+	font-size: 16px; color: #ff6600;line-height: 22px;text-decoration:none
+}
+.font_orange16 a {
+	font-size: 16px; color: #ff6600;line-height: 22px;text-decoration:none
+}
+.font_orange16 a:link {
+	font-size: 16px; color: #ff6600;line-height: 22px;text-decoration:none
+}
+.font_orange16 a:hover {
+	font-size: 16px; color: #000;line-height: 22px;text-decoration:none
+}
+/*粗体*/
+.font_orange16_bold {
+	font-size: 16px; color: #ff6600;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_orange16_bold a {
+	font-size: 16px; color: #ff6600;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_orange16_bold a:link {
+	font-size: 16px; color: #ff6600;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_orange16_bold a:hover {
+	font-size: 16px; color: #000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+/*红*/
+.font_red16 {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+.font_red16 a {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+.font_red16 a:link {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+.font_red16 a:hover {
+	font-size: 16px; color: #000000;line-height: 22px;text-decoration:none
+}
+/*粗体*/
+.font_red16_bold {
+	font-size: 16px; color: #ff0000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_red16_bold a {
+	font-size: 16px; color: #ff0000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_red16_bold a:link {
+	font-size: 16px; color: #ff0000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+.font_red16_bold a:hover {
+	font-size: 16px; color: #000000;font-weight:bold;line-height: 22px;text-decoration:none
+}
+
+
+/*TAB页样式*/
+a.tab {
+	font-size: 12px;
+	font-style: normal;
+	font-weight:normal;
+	color: #000000;
+	text-decoration: none;
+	height: 30px;
+	width: 90px;
+	padding-top: 8px;
+}
+a.tab:link {
+	font-size: 12px;
+	font-style: normal;
+	color: #000000;
+	height: 30px;
+	width: 90px;
+	padding-top: 8px;
+}
+a.tab:hover {
+	font-size: 12px;
+	font-style: normal;
+	font-weight:bold;
+	color: #000000;
+	height: 30px;
+	width: 90px;
+	padding-top: 8px;
+}
+/*左侧有缩进(padding-left:*px;)的菜单样式*/
+a.left_menu {
+	padding-left: 32px; 
+	font-size: 14px; 
+	background-image: url(../images/2_b.gif); 
+	width: 174px; 
+	height: 33px;
+	COLOR: #000; 
+	PADDING-TOP: 7px; 
+	FONT-STYLE: normal;  
+	TEXT-DECORATION: none
+}
+a.left_menu:link {
+	padding-left: 32px; 
+	FONT-SIZE: 14px; 
+	BACKGROUND-IMAGE: url(../images/2_b.gif); 
+	WIDTH: 174px; 
+	HEIGHT: 33px; 
+	COLOR: #000; 
+	PADDING-TOP: 7px; 
+	FONT-STYLE: normal; 
+	TEXT-DECORATION: none
+}
+a.left_menu:hover {
+	PADDING-LEFT: 32px; 
+	FONT-SIZE: 14px; 
+	BACKGROUND-IMAGE: url(../images/2_b_hover.gif); 
+	WIDTH: 174px; 
+	HEIGHT: 33px; 
+	COLOR: #003399; 
+	PADDING-TOP: 8px; 
+	FONT-STYLE: normal; 
+	TEXT-DECORATION: none
+}
+
+
+a.menu_left_link {
+	font-size: 12px;
+	font-style: normal;
+	font-weight:bold;
+	color: #fff;
+	text-decoration: none;
+	height: 27px;
+	width: 194px;
+	padding-top: 7px;
+	padding-left: 36px;
+	letter-spacing:1px;
+}
+a.menu_left_link:link {
+	font-size: 12px;
+	font-style: normal;
+	color: #fff;
+    height: 27px;
+	width: 194px;
+	padding-top: 7px;
+	padding-left: 36px;
+	letter-spacing:1px;
+}
+a.menu_left_link:hover {
+	font-size: 12px;
+	font-style: normal;
+	font-weight:bold;
+	color: #fff;
+	height: 27px;
+	width: 194px;
+	padding-top: 7px;
+	padding-left: 36px;
+	letter-spacing:1px;
+}
+
+
+/* 详细文章页面中的字体样式======================================================*/
+
+
+.title_blue {
+	font-weight: bold; font-size: 16px; color: #0e478e; line-height: 22px; text-decoration: none
+}
+.title_black {
+	font-weight: bold; font-size: 16px; color: #000000; line-height: 22px; text-decoration: none
+}
+
+.title_orange{
+	font-weight: bold; font-size: 16px; color: #ff6600; line-height: 22px; text-decoration: none
+}
+/*详细文章内容样式*/
+.txt {
+	font-size: 16px; color: #000000; line-height: 22px; text-decoration: none
+}
+
+/*蓝色下划线详细文章内容样式*/
+.txt_blue_underline {
+	font-size: 16px;
+	color: #039;
+	line-height: 22px;
+	text-decoration: underline
+}
+
+/* 表单样式======================================================*/
+/*/////////////////输入框全边框样式//////////////////////*/
+.input001 {
+	font-size: 12px;
+	font-style: normal;
+	color: #666;
+	text-decoration: none;
+	height: 22px;
+	padding: 1px;
+	width: 111px;
+	border: 1px solid #b4b4b4;
+}
+.input001_1 {
+	font-size: 14px;
+	font-style: normal;
+	color: #666;
+	text-decoration: none;
+	height: 22px;
+	padding: 1px;
+	width: 111px;
+	border: 1px solid #b4b4b4;
+}
+
+
+/*/////////////////输入框只有下边框样式//////////////////////*/
+.input002 {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #666;
+	text-decoration: none;
+	height: 22px;
+	padding: 4px;
+	width: 111px;
+	BORDER-RIGHT:0px none; 
+	BORDER-TOP:0px none; 
+	BORDER-LEFT:0px none; 
+	BORDER-BOTTOM: 1px solid #b4b4b4;}
+
+/*/////////////////输入框没边框样式//////////////////////*/
+.input003 {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #333;
+	text-decoration: none;
+	height: 22px;
+	padding: 4px;
+	width: 111px;
+	BORDER-RIGHT:0px none; 
+	BORDER-TOP:0px none; 
+	BORDER-LEFT:0px none; 
+	BORDER-BOTTOM: 0px none;}
+.select001 {
+	font-size: 12px;
+	font-style: normal;
+	color: #666;
+	border: 1px solid #b4b4b4;
+	height: 22px;
+	width: 150px;
+	text-decoration: none;
+}
+/*/////////////////area全边框样式//////////////////////*/
+.area001 {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #333;
+	text-decoration: none;
+	padding: 3px;
+	height: 100px;
+	width: 100%;
+	border: 1px solid #b4b4b4;
+	}
+/*/////////////////area只有下边框样式//////////////////////*/
+.area002 {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #333;
+	text-decoration: none;
+	padding: 3px;
+	height: 100px;
+	width: 100%;
+	BORDER-RIGHT:0px none; 
+	BORDER-TOP:0px none; 
+	BORDER-LEFT:0px none; 
+	BORDER-BOTTOM: 1px solid #b4b4b4;
+}
+
+
+/*/////////////////area没边框样式//////////////////////*/
+.area003 {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: normal;
+	color: #333;
+	text-decoration: none;
+	padding: 3px;
+	height: 100px;
+	width: 100%;
+	BORDER-RIGHT:0px none; 
+	BORDER-TOP:0px none; 
+	BORDER-LEFT:0px none; 
+	BORDER-BOTTOM: 0px none;
+}
+
+/*阴影样式*/
+.shadow { FILTER: DropShadow(Color=#000000, OffX=1, OffY=1, Positive=1)
+}
+/*图片居左样式*/
+.alignleft {
+float: left;
+margin: 6px;
+}
+
+
+/*logo样式*/
+.logo {
+	text-align: center;
+	margin-left:7px;
+}
+.logoTD {
+	text-align: center;
+	padding-bottom: 20px;
+	background-repeat:no-repeat;
+	background-position:top left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*     
+经常会用到的比如说鼠标点上去背景会变的一些样例
+
+1：这个是鼠标放上去表格行的背景颜色会变的样式 onMouseOver="bgColor='#EFF8FE'" onmouseout="bgColor='#FFFFFF'"
+<tr border="1" cellpadding="1" cellspacing="0" class="text" onMouseOver="bgColor='#EFF8FE'" onmouseout="bgColor='#FFFFFF'">
+
+同理，鼠标放上去表格的背景图片会变的话写成：<td height="31" align="left" onmouseover="background='images/mouseover.gif'" onmouseout="background='images/mouseout.gif'">
+
+2：去掉有链接图片的虚线框 onfocus="this.blur()"
+<a href="#" onfocus="this.blur()"><img src=images/*.gif border=0></a>
+
+3：新闻公告滚动条
+<marquee direction="up" scrollamount="1" scrolldelay="1" onMouseOver="stop()" onMouseOut="start()"  width="80" height="150">
+
+这个写在table之外,如： <marquee direction="up" scrollamount="1" scrolldelay="1" onMouseOver="stop()" onMouseOut="start()" width="184" height="150"><table width="190"...><tr><td></td></tr></table></marquee>
+
+4:表格边框的显示与隐藏，是可以用frame参数来控制的。请注意它只控制表格的边框图，而不影晌单元格。
+只显示上边框 <table frame=above>
+只显示下边框 <table frame=below> 
+只显示左、右边框 <table frame=vsides>
+只显示上、下边框 <table frame=hsides>
+只显示左边框 <table frame=lhs>
+只显示右边框 <table frame=rhs>
+不显示任何边框 <table frame=void>
+
+隐藏 横向 分隔线   rules=cols 
+什么 都 没有       rules=none 
+隐藏 纵向 分隔线   rules=rows  
+隐藏 纵向 分隔线(只去头尾)   rules=rowa 
+
+5:flash背景透明<param name="wmode" value="transparent" />
+示例：
+ <param name="movie" value="images/tell.swf">
+ <param name="quality" value="high">
+ <param name="wmode" value="transparent">
+ <embed src="images/tell.swf"....></embed>
+ 
+6：表格边框极细的样式：style=border-collapse:collapse
+ <table width="95%" border="1" cellpadding="0" cellspacing="0" bordercolor="#8FCEF1" style="border-collapse:collapse" rules=rows frame=below>
+ 
+*/
+
+td.Tabmenu1 {
+	font-size: 14px;
+	font-family:Arial ;
+	color: #000000;
+	text-decoration: none;
+	background:#ff9900;
+	text-align: center;
+	/* [disabled]height: 26px; */
+	font-weight: bold;
+}
+td.Tabmenu1 a {
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+}
+td.Tabmenu1 a:link {
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+}
+td.Tabmenu1 a:hover {
+	font-size: 14px;
+	color: #ff9900;
+	text-decoration: none;
+}
+td.Tabmenu2 {
+	font-size: 14px;
+	font-family:Arial ;
+	text-decoration: none;
+	color:#ff9900;
+	text-align: center;
+	/* [disabled]height: 26px; */
+	padding-top: 6px;
+	font-weight: bold;
+}
+
+td.Tabmenu2 a {
+	font-size: 14px;
+	color: #ff9900;
+	text-decoration: none;
+}
+td.Tabmenu2 a:link {
+	font-size: 14px;
+	color: #7e7e7e;
+	text-decoration: none;
+}
+td.Tabmenu2 a:hover {
+	font-size: 14px;
+	color: #ff9900;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+td.Tabmenu0 {
+	font-size: 14px;
+	font-family:Arial ;
+	text-decoration: none;
+	background:#ff9900;
+	text-align: center;
+	height: 26px;
+	padding-top: 6px;
+	font-weight: bold;
+}
+
+td.Tabmenu0 a {
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+}
+td.Tabmenu0 a:link {
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+}
+td.Tabmenu0 a:hover {
+	font-size: 14px;
+	color: #fff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+
+
+
+td.Tabmenu3 {
+	font-size: 14px;
+	font-family:Arial ;
+	color: #000000;
+	text-decoration: none;
+	background-image: url(../image/left_orange_line.gif);
+	background-repeat: repeat-x;
+	background-position: bottom;
+	padding-left: 5px;
+	font-weight: bold;
+}
+td.Tabmenu3 a {
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+}
+td.Tabmenu3 a:link {
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+}
+td.Tabmenu3 a:hover {
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+}
+td.Tabmenu4 {
+	font-size: 14px;
+	font-family:Arial ;
+	text-decoration: none;
+	color: #ff9900;
+	/*background-image: url(../image/left_orange_line_hover.gif);*/
+	background-repeat: repeat-x;
+	background-position: bottom;
+	text-align: center;
+	padding-left: 5px;
+	font-weight: bold;
+}
+
+td.Tabmenu4 a {
+	font-size: 14px;
+	color: #ff9900;
+	text-decoration: none;
+}
+td.Tabmenu4 a:link {
+	font-size: 14px;
+	color: #ff9900;
+	text-decoration: none;
+}
+td.Tabmenu4 a:hover {
+	font-size: 14px;
+	color: #ff9900;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+td.Tabmenu5 {
+	font-size: 14px;
+	font-family:Arial ;
+	text-decoration: none;
+	background:#ff9900;
+	text-align: center;
+	height: 26px;
+	font-weight: bold;
+	background-image: url(../image/left_orange_line.gif);
+}
+
+td.Tabmenu5 a {
+	font-size: 14px;
+	color: #ff9900;
+	text-decoration: none;
+}
+td.Tabmenu5 a:link {
+	font-size: 14px;
+	color: #ff9900;
+	text-decoration: none;
+}
+td.Tabmenu5 a:hover {
+	font-size: 14px;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.editBlock{
+    padding:1px;padding:0px;padding:0;
+}
+.editBlock table{width:100%;}
+.editBlock th{
+	height:28px;
+	text-align:center;
+	font-weight:normal;
+	padding:4px;
+	padding-top:8px;
+	border:1px solid #000;
+	vertical-align:top;
+}
+.editBlock td{
+	height:24px;
+	text-align:right;
+	border:1px solid #000;
+	padding:2px 4px;
+}
+.editBlock td td{
+	
+	padding:2px 4px;
+	border:0
+}
+.editBlock .subtitle,.editBlock .subtitleClose{
+	text-align:left;
+	padding:4px 4px;
+	cursor:pointer	
+} 
+
+
+
+.editBlock1{
+    padding:1px;padding:0px;padding:0;
+}
+.editBlock1 table{width:100%;}
+.editBlock1 th{
+	height:28px;
+	text-align:center;
+	font-weight:bold;
+	padding:4px;
+	padding-top:8px;
+	vertical-align:top;
+	font-size: 18px;
+	color: #ff6600;
+	text-decoration:none 
+}
+.editBlock1 td{
+	height:24px;
+	text-align:left;
+	border:0;
+	padding:2px 4px;
+}
+.editBlock1 td td{
+	padding:2px 4px;
+	border:0
+}
+.editBlock1 .subtitle,.editBlock1 .subtitleClose{
+	text-align:left;
+	padding:4px 4px;
+	cursor:pointer	
+} 
+
+
+.editBlock2{
+    padding:1px;padding:0px;padding:0;
+}
+.editBlock2 table{width:100%;}
+.editBlock2 th{
+	height:28px;
+	text-align:center;
+	font-weight:bold;
+	padding:4px;
+	padding-top:8px;
+	vertical-align:top;
+	font-size: 18px;
+	text-decoration:none;
+	background-image: url(../image/left_topIco.gif);
+	color: #FFF;
+}
+.editBlock2 td{
+	height:24px;
+	text-align:left;
+	border:0;
+	padding:2px 4px;
+}
+.editBlock2 td td{
+	padding:2px 4px;
+	border:0
+}
+.editBlock2 .subtitle,.editBlock1 .subtitleClose{
+	text-align:left;
+	padding:4px 4px;
+	cursor:pointer	
+} 
+
+
+a.tabList1{
+	background:url(../image/button2.gif) left 0;
+	color:ff6600;
+	text-decoration:none;
+	height:30px;
+	float:left;
+	cursor:hand;
+	margin:0 5px 0 0;
+	font-size: 12px;
+}
+a.tabList1:hover{
+	background:url(../image/button2.gif) left -30px;
+	height:30px;
+	font-size: 12px;
+	text-decoration: none;
+}
+a.tabList1 span{
+	background:url(../image/button2.gif) right 0;
+	padding:9px 8px 5px 0;
+	margin:0 0 0 8px;
+	float:left;
+	height:16px;
+	font-size: 12px;
+	text-decoration: none;
+} 
+a.tabList1:hover span{
+	background:url(../image/button2.gif) right -30px;
+	color:#000;
+	padding:9px 8px 5px 0;
+	margin:0 0 0 8px;
+	height:16px;
+	font-size: 12px;
+	text-decoration: none;
+} 
+a.tabList1_sel{
+	color:#ff6600;
+	background:url(../image/button2.gif) left -30px;
+	height:30px;
+	font-size: 12px;
+	text-decoration: none;
+	float:left;
+	cursor:hand;
+	margin:0 5px 0 0;
+}
+a.tabList1_sel:hover{
+	background:url(../image/button2.gif) left -30px;
+	height:30px;
+	font-size: 12px;
+	text-decoration: none;
+}
+a.tabList1_sel span{
+	background:url(../image/button2.gif) right -30px;
+	color:#000;
+	padding:9px 8px 5px 0;
+	margin:0 0 0 8px;
+	float:left;
+	height:16px;
+	font-size: 12px;
+	text-decoration: none;
+} 
+a.tabList1_sel:hover span{
+	background:url(../image/button2.gif) right -30px;
+	color:#000;
+	padding:9px 8px 5px 0;
+	margin:0 0 0 8px;
+	height:16px;
+	font-size: 12px;
+	text-decoration: none;
+} 
+
+
+td.main_topbg {
+	font-size: 12px;
+	color: #003e8b;
+	text-decoration: none;
+	background-color: #FFFFFF;
+	background-image: url(../image/Page_HN_CMIS_13.gif);
+	background-repeat: repeat-x;
+	height: 30px;
+}
+
+input.button_1 {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	background-image: url(../image/button_1.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	height: 22px;
+	width: 50px;
+	/**padding-top: 2px;**/
+	padding-bottom:2px;
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+input.button_1:hover{
+     cursor:pointer;
+}
+input.button_2 {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	background-image: url(../image/button_2.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	height: 22px;
+	width: 60px;
+	/**padding-top: 2px;**/
+	padding-bottom:2px;
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+input.button_2:hover{
+     cursor:pointer;
+}
+input.button_3 {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	background-image: url(../image/button_3.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	height: 22px;
+	width: 70px;
+	/**padding-top: 2px;**/
+	padding-bottom:2px;
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+input.button_3:hover{
+     cursor:pointer;
+}
+input.button_4 {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	background-image: url(../image/button_4.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	height: 22px;
+	width: 80px;
+	/**padding-top: 2px;**/
+	padding-bottom:2px;
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+input.button_4:hover{
+     cursor:pointer;
+}
+input.button_5 {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	background-image: url(../image/button_5.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	height: 22px;
+	width: 90px;
+	/**padding-top: 2px;**/
+	padding-bottom:2px;
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+input.button_5:hover{
+     cursor:pointer;
+}
+input.button_6 {
+	font-size: 12px;
+	color: #333333;
+	text-decoration: none;
+	background-image: url(../image/button_6.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	text-align: center;
+	height: 22px;
+	width: 100px;
+	/**padding-top: 2px;**/
+	padding-bottom:2px;
+	background-color: #FFFFFF;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: none;
+	border-left-style: none;
+}
+input.button_6:hover{
+     cursor:pointer;
+}
+.fourteen {
+	FONT-SIZE: 14px;
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+.test {
+	FONT-SIZE: 14px;
+	COLOR: #f18e00;
+	FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+
+.main {
+	FONT-FAMILY: Arial, Helvetica, sans-serif;
+	FONT-SIZE: 12px;
+}
+/**jquery css **/
+.containmentDiv{
+    width: 550px; 
+    height: 320px;
+    border: 1px solid #ccc; 
+    padding:5px;
+}
+.layeredDiv{
+   font-size: 14px;	
+   font-family: arial;
+   width: 100px; 
+   height: 60px; 
+   border: 1px solid #dddddd;
+   padding: 2px;
+   margin:5px;
+   background-color:#dddddd;
+   filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
+	-moz-box-shadow: 2px 2px 1px #909090;
+	-webkit-box-shadow: 2px 2px 1px #909090;
+	box-shadow:2px 2px 1px #909090;
+}
+.layeredDiv a {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:none
+}
+.layeredDiv a:link {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:none
+}
+.layeredDiv a:hover {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+
+.layeredDiv2{
+   font-size: 14px;	
+   font-family: arial;
+   width: 100px; 
+   height: 60px; 
+   border: 1px solid #ff9900;
+   padding: 2px;
+   margin:5px;
+   background-color:#ff9900;
+   filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
+	-moz-box-shadow: 2px 2px 1px #909090;
+	-webkit-box-shadow: 2px 2px 1px #909090;
+	box-shadow:2px 2px 1px #909090;
+}   
+/**table1 头区域 table样式 **/
+
+.table1{
+    width:500px; 
+    /** height:100px; **/
+    border: solid 1px #ffce8b;
+
+}
+/**table2 数据 区域 table样式 **/
+.table2{
+    width:500px; 
+    /** height:100px; **/
+    border: solid 1px #ffce8b;
+
+}
+/** 头区域  th 背景橙黄，字体14号黑色 **/
+.thclass1 {
+   font-size: 14px;
+   color: #000000;
+   background:#FFCE8B;
+}
+/** list 数据区域 th 样式  背景橙黄，字体14号白色 **/
+.thclass2 {
+   font-size: 14px;
+   font-family:Arial;
+   color: #ffffff;
+   align:center;
+   background:#FFCE8B;
+}
+/** 对象 数据区域 th 样式  背景 浅橙黄，字体14号黑色 #ffffff  **/
+.thclass3 {
+   font-size: 14px;
+   font-family:Arial;
+   color:#000000;
+   align:center;
+   background:#FFFFF0;
+}
+/** 对象 数据区域 th 样式  背景 浅橙黄，字体13号黑色 #ffffff  **/
+.thclass13 {
+   font-size: 13px;
+   font-family:Arial;
+   color:#000000;
+   align:center;
+   background:#FFFFF0;
+}
+
+/** 对象 数据区域 td 样式  背景 浅橙黄，字体14号 乳白色 **/
+.tdclass3 {
+   font-size: 14px;
+   /** font-family:Arial; **/
+   color:#000000;
+   align:center;
+   background:#ffffff;
+}
+
+/**jquery accordion   */
+/** 字体 12 **/
+.font_size12{
+	font-size: 12px;
+}
+
+/** 字体 14*/
+.font_size14{
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+/** 字体 16*/
+.font_size16{
+	font-size: 16px;
+}
+
+/**输入框*/
+.input004 {
+	font-size: 12px;
+	font-style: normal;
+	color: #666;
+	height: 22px;
+	width: 111px;
+	border: 1px solid #b4b4b4;
+}
+/**arial 字体 **/
+/*黑*/
+.font_black12_arial {
+	font-size: 12px;font-family:Arial ; color: #000000;line-height: 18px;text-decoration:none
+}
+/*粗体样式*/
+.font_black12_bold_arial {
+	font-size: 12px;font-family:Arial ; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+.font_black14_arial {
+	font-size: 14px;font-family:Arial ; color: #000000;line-height: 18px;text-decoration:none
+}
+/*粗体样式*/
+.font_black14_bold_arial {
+	font-size: 14px;font-family:Arial ; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+
+.font_black16_arial {
+	font-size: 16px;font-family:Arial ; color: #000000;line-height: 18px;text-decoration:none
+}
+/*粗体样式*/
+.font_black16_bold_arial {
+	font-size: 16px;font-family:Arial ; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+
+/**14号黑体 居中  背景淡灰 */
+.tdclass{
+	font-size:14px;
+   	color:#000000;
+  	background:#f0f0f0;
+  	font-family:Arial ;
+}
+
+/**14号黑体 居中  背景中灰 */
+.tdclass1{
+	font-size:14px;
+	text-align:center; 
+   	color:#000000;
+  	background:#d4d4d4;
+}
+
+/**14号黑体 居中  背景白色*/
+.tdclass2 {
+   font-size: 14px;
+   font-family:Arial; 
+   color:#000000;
+   text-align:center;
+   background:#ffffff;
+}
+
+/**14号黑体 居中  背景淡黄 */
+.tdclass4{
+	font-size:14px;
+	text-align:center; 
+   	color:#000000;
+  	background:#fafad2;
+}
+
+/**14号黑体 居右  背景白色 */
+.tdclass5{
+	font-size:14px;
+	text-align:right; 
+   	color:#000000;
+  	background:#ffffff;
+}
+
+/**14号黑体 居左  背景白色 */
+.tdclass6{
+	font-size:14px;
+	text-align:left; 
+	font-family:Arial ;
+   	color:#000000;
+  	background:#ffffff;
+}
+
+/**12号黑体 居左  背景白色 */
+.tdclass6_1{
+	font-size:12px;
+	text-align:left; 
+	font-family:Arial ;
+   	color:#000000;
+  	background:#ffffff;
+}
+
+/** 16号白色arial字体 加粗  */
+.font_white_bold16{
+	font-size: 16px;
+	font-family: arial;
+	color: #ffffff;
+	font-weight: bold;
+}
+/**arial 11号  字体  粗**/
+.font_black11_bold_arial {
+	font-size: 11px;font-family:Arial ; color: #000000;font-weight:bold;line-height: 18px;text-decoration:none
+}
+
+/** 解说区域 16号  黑色  arial 字体   */
+.font_black16_size {
+	font-size: 16px;
+	color: #000000;
+	line-height: 22px;
+	font-family:arial;
+	text-decoration:none
+}
+.font_black16_size a {
+	font-size: 16px; color: #000000;line-height: 22px;text-decoration:none
+}
+.font_black16_size a:link {
+	font-size: 16px; color: #000000;line-height: 22px;text-decoration:none
+}
+.font_black16_size a:hover {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+
+/** 链接 16号 蓝色  arial 字体   */
+.font_blue16_href {
+	font-size: 16px;
+	color: #062978;
+	line-height: 25px;
+	font-family:arial;
+	background-color:#ffce8b;
+	text-decoration:none
+}
+.font_blue16_href a {
+	font-size: 16px; color: #062978;line-height: 22px;text-decoration:none
+}
+.font_blue16_href a:link {
+	font-size: 16px; color: #062978;line-height: 22px;text-decoration:none
+}
+.font_blue16_href a:hover {
+	font-size: 16px; color: #ff0000;line-height: 22px;text-decoration:none
+}
+
+/** 解说区域 14号  蓝色  arial 字体  加粗 */
+.font_blue14_size_bold {
+	font-size: 14px;
+	color: #062978;
+	line-height: 18px;
+	font-family:arial;
+	font-weight:bold;
+	text-decoration:none
+}
+.font_blue14_size_bold a {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:none
+}
+.font_blue14_size_bold a:link {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:none
+}
+.font_blue14_size_bold a:hover {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+/**  14号  蓝色  arial 字体  加粗 下化线 */
+
+.font_blue14_size_bold_underline {
+	font-size: 14px;
+	color: #062978;
+	line-height: 18px;
+	font-family:arial;
+	font-weight:bold;
+	text-decoration:none
+}
+.font_blue14_size_bold_underline a {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:none
+}
+.font_blue14_size_bold_underline a:link {
+	font-size: 14px; color: #062978;line-height: 18px;text-decoration:underline
+}
+.font_blue14_size_bold_underline a:hover {
+	font-size: 14px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+
+
+/** 链接 12号  白色  arial 字体   */
+.font_black12_size {
+	font-size: 12px; 
+	color: #ffffff;
+	line-height: 22px;
+	text-decoration:none;
+	font-family: arial;
+	background-color: #ffce8b;
+}
+.font_black12_size a {
+	font-size: 12px; color: #ffffff;line-height: 18px;text-decoration:none
+}
+.font_black12_size a:link {
+	font-size: 12px; color: #ffffff;line-height: 18px;text-decoration:none
+}
+.font_black12_size a:hover {
+	font-size: 12px; color: #ff0000;line-height: 18px;text-decoration:none
+}
+
+/* 无边框 */
+.noborder{
+	height: 20px;
+    font-size: 12px;
+	font-style: normal;
+	color: #666;
+	background-color:#b4eeb4 ;
+    BORDER-RIGHT:0px none;
+    BORDER-TOP:0px none; 
+    BORDER-LEFT:0px none; 
+    BORDER-BOTTOM: 0px none;
+}
+
+/** 用户 12号 橘黄色 arial字体  */
+.welcomeclass12 {
+	font-size: 12px;font-family:Arial ; color: #ff9900;line-height: 18px;text-decoration:none
+}
+
+/** logout 12号白色arial 字体 */
+.logoutclass {
+	font-size: 12px;font-family:Arial ; color: #ffffff;line-height: 10px;text-decoration:none
+}
+.logoutclass a {
+	font-size: 12px; color: #ffffff;line-height: 10px;text-decoration:none
+}
+.logoutclass a:link {
+	font-size: 12px; color: #ffffff;line-height: 10px;text-decoration:none
+}
+.logoutclass a:hover {
+	font-size: 12px; color: #ff9900;line-height: 10px;text-decoration:none
+}
+
+/** list 数据区域 th 样式  背景深色橙黄，字体14号白色 */
+.thclass4 {
+   font-size: 14px;
+   color: #ffffff;
+   align:center;
+   background:#FF9900;
+}
+
+/** 链接 带下划线 14号 蓝色  arial字体  鼠标悬停红色*/
+.font_blue14_arial {
+	font-size:14px;color:#062978;line-height:18px;text-decoration:none;font-family:arial;
+}
+.font_blue14_arial a {
+	font-size:14px;color:#062978;line-height:18px;text-decoration:none;font-family:arial;
+}
+.font_blue14_arial a:link {
+	font-size:14px;color:#062978;line-height:18px;text-decoration:underline;font-family:arial;
+}
+.font_blue14_arial a:hover {
+	font-size:14px;color:#ff0000;line-height:18px;text-decoration:none;font-family:arial;
+}
+
+/*news link */ 
+.news_black14 {
+	font-size: 14px; color: #000000;line-height: 18px;text-decoration:underline;font-family: arial
+}
+.news_black14 a{
+	font-size: 14px; color: #000000;line-height: 18px;text-decoration:none;font-family: arial
+}
+.news_black14 a:link {
+	font-size: 14px; color: #000000;line-height: 18px;text-decoration:none;font-family: arial
+}
+.news_black14 a:hover {
+	font-size: 14px; color: #ff9900;line-height: 18px;text-decoration:underline;font-family: arial
+}
+/*  */
+.selectDiv{
+   font-size: 12px;	
+   font-family: arial;
+   width: 400px; 
+   height: 20px; 
+   border: 1px solid #dddddd;
+   background-color:#dddddd;
+   filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
+	-moz-box-shadow: 2px 2px 1px #909090;
+	-webkit-box-shadow: 2px 2px 1px #909090;
+	box-shadow:2px 2px 1px  #909090;
+	
+}
+
+.selectDiv2{
+   font-size: 12px;	
+   font-family: arial;
+   width: 400px; 
+   height: 20px; 
+   border: 1px solid #ff9900;
+   background-color:#ff9900;
+   filter:progid:DXImageTransform.Microsoft.Shadow(color=#909090,direction=120,strength=4);
+	-moz-box-shadow: 2px 2px 1px #909090;
+	-webkit-box-shadow: 2px 2px 1px #909090;
+	box-shadow:2px 2px 1px #909090;
+}
+
+/** span **/
+.spanWidth{
+   display:-moz-inline-box;
+   display:inline-block;
+   width:100px;
+}
+
+.privatelink {
+	font-family: Arial, Helvetica;
+	font-size: 13px;
+	color: 000099;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.publiclink {
+	font-family: Arial, Helvetica;
+	font-size: 15px;
+	color: ffffff;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.publiclink:hover {
+	font-family: Arial, Helvetica;
+	font-size: 15px;
+	color: ffcc00;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.fieldtitle {
+	font-family: Arial, Helvetica;
+	font-size: 11px;
+	color: 000000;
+	text-decoration: none;
+}
+

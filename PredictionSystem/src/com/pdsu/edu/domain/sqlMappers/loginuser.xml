@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pdsu.edu.domain.Loginuser">
+<resultMap id="LoginuserMap" type="com.pdsu.edu.domain.Loginuser" >
+    <result column="LOGIN" property="login" jdbcType="VARCHAR" />
+    <result column="PASSWORD" property="password" jdbcType="VARCHAR" />
+    <result column="SSN" property="ssn" jdbcType="DECIMAL" />
+    <result column="USER_NUMBER" property="user_number" jdbcType="DECIMAL" />
+    <result column="GR_NUMBER" property="gr_number" jdbcType="DECIMAL" />
+    <result column="SUBGROUP" property="subgroup" jdbcType="DECIMAL" />
+    <result column="CREATETIME" property="createtime" jdbcType="DATE" />
+    <result column="LOGINTYPE" property="logintype" jdbcType="VARCHAR" />
+    <result column="NAME" property="name" jdbcType="CHAR" />
+    <result column="PPO" property="ppo" jdbcType="DECIMAL" />
+    <result column="PREVIOUSLYLOGGEDIN" property="previouslyloggedin" jdbcType="CHAR" />
+    <result column="TERMDATE" property="termdate" jdbcType="DATE" />
+    <result column="LOCATIONID" property="locationid" jdbcType="DECIMAL" />
+    <result column="EMPLOYEECLASSID" property="employeeclassid" jdbcType="DECIMAL" />
+    <result column="CORPORATIONID" property="corporationid" jdbcType="DECIMAL" />
+    <result column="SYS_CUSER" property="sys_cuser" jdbcType="DECIMAL" />
+    <result column="SYS_CDATE" property="sys_cdate" jdbcType="DATE" />
+    <result column="MSOID" property="msoid" jdbcType="DECIMAL" />
+    <result column="FORCEENROLLMENT" property="forceenrollment" jdbcType="CHAR" />
+    <result column="INTPOPEDOM" property="intpopedom" jdbcType="DECIMAL" />
+    <result column="DEP_NUMBER" property="dep_number" jdbcType="DECIMAL" />
+    <result column="EMAIL" property="email" jdbcType="VARCHAR" />
+    <result column="MAIL_EOB" property="mail_eob" jdbcType="CHAR" />
+    <result column="MAIL_LETTER" property="mail_letter" jdbcType="CHAR" />
+    <result column="PROMPT_DATE" property="prompt_date" jdbcType="DATE" />
+    <result column="MODIFYDATE" property="modifydate" jdbcType="DATE" />
+    <result column="DOB" property="dob" jdbcType="VARCHAR" />
+    
+  </resultMap>
+
+  
+  <select id="selLogin" resultMap="LoginuserMap" parameterType="loginuser">
+  select login,password,ssn,gr_number,subgroup,logintype,ppo,corporationid from TBL_LOGIN 
+  <where>
+  		(termdate is null or termdate &gt;= sysdate)
+	     <if test="gr_number != null">
+	     and gr_number = #{gr_number,jdbcType=DECIMAL}
+	     </if>
+	     <if test="ssn != null">
+	     and ssn = #{ssn,jdbcType=DECIMAL}
+	     </if>
+	     <if test="login != null">
+	     and Login=#{login}
+	     </if>
+	     <if test="password != null">
+	     and password=#{password}
+	     </if>
+	</where>
+  
+  </select>
+  
+  
+  
+	<select id="selemploginuser" resultMap="LoginuserMap" parameterType="loginuser">
+	select ssn,dob
+	from empdep a 
+		<where> 
+		<if test="grpno != null" >
+			and a.grpno=#{grpno}
+		</if>
+		<if test="empno != null" >
+			and a.empno=#{empno}
+		</if>
+		<if test="depno != null" >
+			and a.depno=#{depno}
+		</if> 
+		<if test="ssn != null" >
+				and ssn=#{ssn}
+		</if> 
+		</where>
+		order by a.grpno,a.empno,a.depno
+	</select>
+	
+  
+  
+</mapper>

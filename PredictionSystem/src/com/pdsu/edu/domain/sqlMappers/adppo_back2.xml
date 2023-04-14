@@ -1,0 +1,848 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pdsu.edu.domain.Adppo">
+	<resultMap type="com.pdsu.edu.domain.Adppo" id="adppoResult">
+    <id column="ppono" property="ppono" jdbcType="DECIMAL" />
+    <id column="provtype" property="provtype" jdbcType="VARCHAR" />
+    <id column="taxid" property="taxid" jdbcType="VARCHAR" />
+    <id column="spec" property="spec" jdbcType="VARCHAR" />
+    <id column="ox1" property="ox1" jdbcType="VARCHAR" />
+    <id column="oy1" property="oy1" jdbcType="VARCHAR" />
+    <id column="ox2" property="ox2" jdbcType="VARCHAR" />
+    <id column="oy2" property="oy2" jdbcType="VARCHAR" />
+    <id column="ix1" property="ix1" jdbcType="VARCHAR" />
+    <id column="iy1" property="iy1" jdbcType="VARCHAR" />
+    <id column="ix2" property="ix2" jdbcType="VARCHAR" />
+    <id column="iy2" property="iy2" jdbcType="VARCHAR" />
+    <id column="provname" property="provname" jdbcType="VARCHAR" />
+    <id column="provst" property="provst" jdbcType="VARCHAR" />
+    <id column="mastgroup" property="mastgroup" jdbcType="DECIMAL" />
+    <id column="ssn" property="ssn" jdbcType="DECIMAL" />
+    <id column="corporationid" property="corporationid" jdbcType="VARCHAR" />
+    <id column="newfeaturesind" property="newfeaturesind" jdbcType="DECIMAL" />
+    <id column="grnumber" property="grnumber" jdbcType="DECIMAL" />
+     
+		<result column="ppo" property="ppo" jdbcType="DECIMAL" />
+		<result column="ppo_name" property="ppo_name" jdbcType="VARCHAR" /> 
+		<result column="specialty_id" property="specialty_id" jdbcType="DECIMAL" />
+		<result column="specialty" property="specialty" jdbcType="VARCHAR" /> 
+		<result column="lat" property="lat" jdbcType="DECIMAL" />
+		<result column="lon" property="lon" jdbcType="DECIMAL" />
+		<result column="latlon" property="latlon" jdbcType="DECIMAL" />
+
+		<result column="name" property="name" jdbcType="VARCHAR" /> 
+		<result column="address1" property="address1" jdbcType="VARCHAR" /> 
+		<result column="address2" property="address2" jdbcType="VARCHAR" /> 
+		<result column="city" property="city" jdbcType="VARCHAR" /> 
+		<result column="st" property="st" jdbcType="VARCHAR" /> 
+		<result column="phone" property="phone" jdbcType="VARCHAR" /> 
+		<result column="lname" property="lname" jdbcType="VARCHAR" /> 
+		<result column="fname" property="fname" jdbcType="VARCHAR" /> 
+		<result column="effdate" property="effdate" jdbcType="VARCHAR" /> 
+		<result column="termdate" property="termdate" jdbcType="VARCHAR" />  
+		<result column="zip" property="zip" jdbcType="DECIMAL" /> 
+		<result column="cartid" property="cartid" jdbcType="DECIMAL" /> 
+		<result column="carttId" property="carttId" jdbcType="DECIMAL" /> 
+		
+		
+		<result column="specific_plan_type" property="specific_plan_type" jdbcType="VARCHAR" /> 
+		<result column="CoverageTypeID" property="CoverageTypeID" jdbcType="VARCHAR" /> 
+		<result column="nationalPPO" property="nationalPPO" jdbcType="VARCHAR" /> 
+		<result column="PPO_WebUrl" property="PPO_WebUrl" jdbcType="VARCHAR" /> 
+		<result column="seq" property="seq" jdbcType="VARCHAR" /> 
+		
+		<result column="memberlogin" property="memberlogin" jdbcType="VARCHAR" /> 
+		<result column="Provcode" property="Provcode" jdbcType="VARCHAR" /> 
+		
+		
+		<result column="poscode" property="poscode" jdbcType="VARCHAR" /> 
+		<result column="serviceamt" property="serviceamt" jdbcType="VARCHAR" /> 
+		
+		
+	</resultMap>
+	
+	<select id="selmembercart"  parameterType="adppo" resultMap="adppoResult">
+	select  cartid,providername as name,  address1,  address2,  city, St,  zip, 
+     specialty,  phone,  lname,  fname, effdate, termdate,latlon,poscode,serviceamt
+     from TBL_ADVANCEEOB_MEMBERCART   
+		<where>
+			<if test="memberlogin != null" >
+				and memberlogin=#{memberlogin}
+			</if>
+			<if test="cartid != null" >
+				and cartid=#{cartid}
+			</if>
+		</where> 
+		order by 
+			<if test="seq == 'filDistance'" >
+				 latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 serviceamt,
+			 </if>
+			 providername
+	</select>
+	
+	
+ 	<insert id="insertmembercart" parameterType="Adppo">
+ 		<selectKey resultType="java.lang.Long" keyProperty="carttId" order="BEFORE" >
+	      select MISP.SEQ_TBL_ADVANCEEOB_CART.nextval from dual
+	     </selectKey> 
+ 	 insert into TBL_ADVANCEEOB_MEMBERCART(cartid,providername,address1,address2,city,st,zip,specialty,phone,lname,fname,effdate,termdate,latlon,memberlogin,poscode,serviceamt)
+     values(#{carttId,jdbcType=DECIMAL}
+     ,#{name,jdbcType=VARCHAR}
+     ,#{address1,jdbcType=VARCHAR}
+     ,#{address2,jdbcType=VARCHAR}
+     ,#{city,jdbcType=VARCHAR}
+     ,#{st,jdbcType=VARCHAR}
+     ,#{zip,jdbcType=VARCHAR}
+     ,#{specialty,jdbcType=VARCHAR}
+     ,#{phone,jdbcType=VARCHAR}
+     ,#{lname,jdbcType=VARCHAR}
+     ,#{fname,jdbcType=VARCHAR}
+     ,#{effdate,jdbcType=VARCHAR}
+     ,#{termdate,jdbcType=VARCHAR}
+     ,#{latlon,jdbcType=VARCHAR}
+     ,#{memberlogin,jdbcType=VARCHAR}
+     ,#{poscode,jdbcType=VARCHAR}
+     ,#{serviceamt,jdbcType=VARCHAR}
+     )
+ 	</insert>
+ 	   
+ 	 
+	<delete id="deltmembercart" parameterType="Adppo">
+		delete from TBL_ADVANCEEOB_MEMBERCART 
+		<where>
+			<if test="cartid != null" >
+		    	and cartid=#{cartid}
+		    </if>   
+		</where> 
+	</delete>
+ 	 
+	
+	
+	<select id="selppoAll"  parameterType="adppo" resultMap="adppoResult">
+		select ppo, ppo_name   from tbl_PPO  where insql != 0 
+		order by ppo_name
+	</select>
+	 
+	<select id="selppoSpecialty"  parameterType="adppo" resultMap="adppoResult">
+		select distinct specialty,specialty_id
+		from Tbl_PPO_Specialty_Conversion a
+		inner join Tbl_Specialty b on a.spec1=b.specialty_id 
+		<where>
+			<if test="ppono != null" >
+				and a.ppo=#{ppono}
+			</if>
+		</where> 
+	</select>
+	
+	<select id="selLatlon"  parameterType="adppo" resultMap="adppoResult">
+		<!-- select lat, lon from tbl_ZipFull  where zip = 96854; -->
+		select latitude as lat,longitude as lon
+		from  tbl_zipcodes
+		<where>
+			<if test="zip != null" >
+				and zipcode=#{zip}
+			</if>
+		</where>  
+	</select>
+	
+	
+	<select id="selProbylocationtaxid"  parameterType="adppo" resultMap="adppoResult">
+	with aa as(
+	Select DISTINCT  a.name, a.address1, a.address2, a.city,a.St, a.zip, 
+  	b.specialty, a.phone, a.lname, a.fname,a.effdate,a.termdate 
+  	--,abs(c.latitude-${ix1}) AS latt,abs(c.longitude-${iy1}) AS longg
+    --,abs(c.latitude-34.7333)*abs(c.latitude-34.7333)+abs(c.longitude-118.1492)*abs(c.longitude-118.1492) as latlon1
+  	, power(abs(c.latitude-${ix1})*abs(c.latitude-${ix1})+abs(c.longitude-${iy1})*abs(c.longitude-${iy1}),0.5) as latlon
+  	
+  	<if test="ppono != null" >
+    FROM PPO_${ppono} a
+    </if>
+    <if test="ppono == null" >
+    FROM PPO_102 a 
+    </if>
+    LEFT JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+	INNER JOIN tbl_zipcodes c ON a.zip=c.zipcode 
+	 
+	<where>
+		(a.termdate >= sysdate or a.termdate is null) 
+			<if test="provtype != null" >
+				and b.providertype=#{provtype}
+			</if>
+			<if test="provname != null" >
+				and a.name like '%${provname}%'
+			</if>
+			<if test="spec != null" >
+				and a.spec1 in (${spec})
+			</if>
+			 
+		 
+			<if test="ox1 != null" >
+			   AND (c.latitude &gt;= ${ox1}) and (c.latitude &lt;= ${ox2})
+			   AND (c.longitude &lt;= ${oy2}) and (c.longitude &gt;= ${oy1})
+			</if> 
+			
+			<if test="taxid != null" >
+				and a.NPI =#{taxid}
+			</if>
+			  
+			<if test="provst != null" >
+				and a.st =#{provst}
+			 </if>
+	</where>
+	order by 
+			<if test="seq == 'filDistance'" >
+				 latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 
+			 </if>
+	a.name
+	<!--
+			
+			<if test="seq == null" >
+				 order by a.name
+			 </if>
+	order by a.name
+	-->
+	)
+	select a.*,e.cartid
+	from aa a
+	left join TBL_ADVANCEEOB_MEMBERCART e on a.name=e.providername 
+	and  a.address1=e.address1  
+	and  a.city=e.city 
+	and a.St=e.St 
+	and  a.zip=e.zip 
+	and a.specialty=e.specialty 
+	</select>
+	
+	
+	<select id="selProbylocationtaxidFH"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	  select b.codes
+	  from TBL_FH_RATE_CODES b
+	  <where>
+			  	<if test="Provcode != null" >
+			 	and (b.codes=#{Provcode} 
+				   	or exists(
+				      select 1 from PROCEDUR a where a.proccd=b.codes
+				                               and (a.fromdt is null or a.fromdt&lt;=sysdate)
+				                               and (a.thrudt is null or a.thrudt&gt;=sysdate)
+				                               and a.descr like '%${Provcode}%'
+				      ) 
+				    )
+			 	</if>
+	    </where>
+	)
+	<if test="provst == null" >
+		<if test="ox1 != null" >
+			,ziplatlon as(
+			select latitude,longitude,zipcode 
+			, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5) as latlon
+		  	from tbl_zipcodes 
+			<where>   
+					 
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					 
+			</where>
+			) 
+		</if> 
+	</if>
+	<if test="ppono != null" >
+		,ppos as (
+		  Select   upper(a.name) as name, upper(a.address1) as address1, 
+		   upper(a.city) as city,a.St, a.zip, a.phone, 
+		   a.spec1,substr(a.keyid,1,instr(a.keyid,'_')-1) as keyid,a.taxid,a.npi 
+		   , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="provst == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode
+		   </if>
+		  <where> 
+		   
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 	and a.st=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and a.name like '%${provname}%'
+				 </if>
+		  </where>
+		)
+	</if>
+	 select distinct  a.prov_npi_1,a.provtaxid,a.internalprovnum 
+	 ,a.provtype ,a.name,a.address1,a.city,a.state ,a.postalcode
+	 ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,''as comments 
+	 ,c.codeversion,substr(a.postalcode,1,5) as zipcode
+	 <if test="provst == null" >
+	 <if test="ox1 != null" >
+	 	,d.latlon
+	 </if>
+	 </if>
+	 <if test="provst != null" >
+  		,'' AS latlon
+  	 </if>
+	 <if test="ppono != null" >
+	 	, e.phone, e.specialty ,e.effdate,e.termdate 
+	 </if>
+	 <if test="ppono == null" >
+	 	, 'XXX-XXX-XXXX' as phone, '' as specialty ,'' as effdate,'' as termdate 
+	 </if>
+	 from TBL_FH_PRDT a 
+	 inner join TBL_FH_PRATE_DETAILS c on a.cntlrate=c.cntlrate 
+	 inner join tempcodes b on c.code=b.codes
+	 <if test="provst == null" >
+	 <if test="ox1 != null" >
+	 	inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5)  
+	 </if>
+	 </if>
+	 <if test="ppono != null" >
+	 	inner join ppos e on a.prov_npi_1=e.npi and a.provtaxid=e.taxid
+	 	and upper(replace(a.state,' ',''))=upper(replace(e.St,' ','')) 
+  		and upper(replace(a.city,' ',''))=upper(replace(e.city,' ',''))
+  		and upper(replace(replace(a.address1,',',''),' ',''))=upper(replace(replace(e.address1,',',''),' ',''))
+  		and substr(a.postalcode,1,5) = e.zip
+	 </if>
+	 WHERE a.provtype='P'  
+	 		and a.prov_npi_1 is not null   
+	 		<if test="provst != null" >
+	 			and upper(replace(a.state,' ',''))=#{provst}
+	 		</if>
+	  order by 
+	  		 <if test="seq == 'filDistance'" >
+				 d.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 
+			 </if>
+			 a.prov_npi_1,a.provtaxid,a.internalprovnum 
+	 			,a.provtype ,a.name,a.address1,a.city,a.state ,a.postalcode
+	 			,c.codetype,c.code,c.poscode
+	 
+	</select>
+	<select id="selProbylocationtaxidFHS"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	  select b.codes
+	  from TBL_FH_RATE_CODES b
+	  <where>
+			  	<if test="Provcode != null" >
+			 	and (b.codes=#{Provcode} 
+				   	or exists(
+				      select 1 from PROCEDUR a where a.proccd=b.codes
+				                               and (a.fromdt is null or a.fromdt&lt;=sysdate)
+				                               and (a.thrudt is null or a.thrudt&gt;=sysdate)
+				                               and a.descr like '%${Provcode}%'
+				      ) 
+				    )
+			 	</if>
+	    </where>
+	)
+	<if test="provst == null" >
+	<if test="ox1 != null" >
+		,ziplatlon as(
+		select latitude,longitude,zipcode
+		, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5) as latlon
+	  	from tbl_zipcodes 
+		<where>   
+				 
+					   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+					   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+				 
+		</where>
+		) 
+	</if> 
+	</if>
+	<if test="ppono != null" >
+		,ppos as (
+		  Select   upper(a.name) as name, upper(a.address1) as address1, 
+		   upper(a.city) as city,a.St, a.zip, a.phone, 
+		   a.spec1,substr(a.keyid,1,instr(a.keyid,'_')-1) as keyid,a.taxid,a.npi 
+		   , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="provst == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode
+		   </if>
+		  <where> 
+		   
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 	and a.st=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and a.name like '%${provname}%'
+				 </if>
+		  </where>
+		)
+	</if>
+	 select distinct  a.prov_npi_1,a.provtaxid,a.internalprovnum 
+	 ,a.provtype ,a.name,a.address1,a.city,a.state ,a.postalcode
+	 ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,''as comments 
+	 ,c.codeversion,substr(a.postalcode,1,5) as zipcode
+	 <if test="provst == null" >
+	 <if test="ox1 != null" >
+	 	,d.latlon
+	 </if>
+	 </if>
+	 <if test="provst != null" >
+  		,'' AS latlon
+  	 </if>
+	 <if test="ppono != null" >
+	 	, e.phone, e.specialty ,e.effdate,e.termdate 
+	 </if>
+	 <if test="ppono == null" >
+	 	, 'XXX-XXX-XXXX' as phone, '' as specialty ,'' as effdate,'' as termdate 
+	 </if>
+	 from TBL_FH_PRDT a 
+	 inner join TBL_FH_PRATE_DETAILS c on a.cntlrate=c.cntlrate 
+	 inner join tempcodes b on c.code=b.codes
+	 <if test="provst == null" >
+	 <if test="ox1 != null" >
+	 	inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5)  
+	 </if>
+	 </if>
+	 <if test="ppono != null" >
+	 	inner join ppos e on a.provtaxid=e.taxid and a.internalprovnum = e.keyid
+	 	and upper(replace(a.state,' ',''))=upper(replace(e.St,' ','')) 
+  		and upper(replace(a.city,' ',''))=upper(replace(e.city,' ',''))
+  		and upper(replace(replace(a.address1,',',''),' ',''))=upper(replace(replace(e.address1,',',''),' ',''))
+  		 and substr(a.postalcode,1,5) = e.zip
+	 </if>
+	 WHERE a.provtype='P'  
+	 		and a.prov_npi_1 is null   
+	 		<if test="provst != null" >
+	 			and upper(replace(a.state,' ',''))=#{provst}
+	 		</if>
+	 
+	  order by  
+	  		 <if test="seq == 'filDistance'" >
+				 d.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 
+			 </if>
+			a.prov_npi_1,a.provtaxid,a.internalprovnum 
+	 			,a.provtype ,a.name,a.address1,a.city,a.state ,a.postalcode
+	 			,c.codetype,c.code,c.poscode
+	 
+	</select>
+	
+	<select id="selProbylocationtaxidFHF"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	  select b.codes
+	  from TBL_FH_RATE_CODES b
+	  <where>
+			  	<if test="Provcode != null" >
+			 	and (b.codes=#{Provcode} 
+				   	or exists(
+				      select 1 from PROCEDUR a where a.proccd=b.codes
+				                               and (a.fromdt is null or a.fromdt&lt;=sysdate)
+				                               and (a.thrudt is null or a.thrudt&gt;=sysdate)
+				                               and a.descr like '%${Provcode}%'
+				      ) 
+				    )
+			 	</if>
+	    </where>
+	)
+	<if test="provst == null" >
+	<if test="ox1 != null" >
+		,ziplatlon as(
+		select latitude,longitude,zipcode
+		, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5) as latlon
+	  	from tbl_zipcodes 
+		<where>   
+				 
+					   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+					   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+				 
+		</where>
+		) 
+	</if> 
+	</if>
+	<if test="ppono != null" >
+		,ppos as (
+		  Select   upper(a.name) as name, upper(a.address1) as address1, 
+		   upper(a.city) as city,a.St, a.zip, a.phone, 
+		   a.spec1,substr(a.keyid,1,instr(a.keyid,'_')-1) as keyid,a.taxid,a.npi 
+		   , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="provst == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode
+		   </if>
+		  <where> 
+		   
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 	and a.st=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and a.name like '%${provname}%'
+				 </if>
+		  </where>
+		)
+	</if>
+	 select distinct  a.prov_npi_1,a.provtaxid,a.internalprovnum 
+	 ,a.provtype ,a.name,a.address1,a.city,a.state ,a.postalcode
+	 ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,''as comments 
+	 ,c.codeversion,substr(a.postalcode,1,5) as zipcode
+	 <if test="provst == null" >
+	 <if test="ox1 != null" >
+	 	,d.latlon
+	 </if>
+	 </if>
+	 <if test="provst != null" >
+  		,'' AS latlon
+  	 </if>
+	 <if test="ppono != null" >
+	 	, e.phone, e.specialty ,e.effdate,e.termdate 
+	 </if>
+	 <if test="ppono == null" >
+	 	, 'XXX-XXX-XXXX' as phone, '' as specialty ,'' as effdate,'' as termdate 
+	 </if>
+	 from TBL_FH_PRDT a 
+ 	 inner join TBL_FH_FRATE_DETAILS c on a.cntlpkg=c.cntlpkg 
+	 inner join tempcodes b on c.code=b.codes
+	 <if test="provst == null" >
+	 <if test="ox1 != null" >
+	 	inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5)  
+	 </if>
+	 </if>
+	 <if test="ppono != null" >
+	 	inner join ppos e on a.prov_npi_1=e.npi and a.provtaxid=e.taxid
+	 	and upper(replace(a.state,' ',''))=upper(replace(e.St,' ','')) 
+  		and upper(replace(a.city,' ',''))=upper(replace(e.city,' ',''))
+  		and upper(replace(replace(a.address1,',',''),' ',''))=upper(replace(replace(e.address1,',',''),' ',''))
+  		 and substr(a.postalcode,1,5) = e.zip
+	 </if>
+	 WHERE a.provtype='F'  
+	 		and a.prov_npi_1 is not null   
+	 		<if test="provst != null" >
+	 			and upper(replace(a.state,' ',''))=#{provst}
+	 		</if>
+	 
+	  order by  
+	  		 <if test="seq == 'filDistance'" >
+				 d.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 
+			 </if>
+			a.prov_npi_1,a.provtaxid,a.internalprovnum 
+	 			,a.provtype ,a.name,a.address1,a.city,a.state ,a.postalcode
+	 			,c.codetype,c.code,c.poscode
+	</select>
+	<select id="selProbylocationtaxidFHFS"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	  select b.codes
+	  from TBL_FH_RATE_CODES b
+	  <where>
+			  	<if test="Provcode != null" >
+			 	and (b.codes=#{Provcode} 
+				   	or exists(
+				      select 1 from PROCEDUR a where a.proccd=b.codes
+				                               and (a.fromdt is null or a.fromdt&lt;=sysdate)
+				                               and (a.thrudt is null or a.thrudt&gt;=sysdate)
+				                               and a.descr like '%${Provcode}%'
+				      ) 
+				    )
+			 	</if>
+	    </where>
+	)
+	<if test="provst == null" >
+	<if test="ox1 != null" >
+		,ziplatlon as(
+		select latitude,longitude,zipcode
+		, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5) as latlon
+	  	from tbl_zipcodes 
+		<where>   
+				 
+					   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+					   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+				 
+		</where>
+		) 
+	</if> 
+	</if>
+	<if test="ppono != null" >
+		,ppos as (
+		  Select   upper(a.name) as name, upper(a.address1) as address1, 
+		   upper(a.city) as city,a.St, a.zip, a.phone, 
+		   a.spec1,substr(a.keyid,1,instr(a.keyid,'_')-1) as keyid,a.taxid,a.npi 
+		   , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="provst == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode
+		   </if>
+		  <where> 
+		   
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 	and a.st=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and a.name like '%${provname}%'
+				 </if>
+		  </where>
+		)
+	</if>
+	 select distinct  a.prov_npi_1,a.provtaxid,a.internalprovnum 
+	 ,a.provtype ,a.name,a.address1,a.city,a.state ,a.postalcode
+	 ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,''as comments 
+	 ,c.codeversion,substr(a.postalcode,1,5) as zipcode
+	 <if test="provst == null" >
+	 <if test="ox1 != null" >
+	 	,d.latlon
+	 </if>
+	 </if>
+	 <if test="provst != null" >
+  		,'' AS latlon
+  	 </if>
+	 <if test="ppono != null" >
+	 	, e.phone, e.specialty ,e.effdate,e.termdate 
+	 </if>
+	 <if test="ppono == null" >
+	 	, 'XXX-XXX-XXXX' as phone, '' as specialty ,'' as effdate,'' as termdate 
+	 </if>
+	 from TBL_FH_PRDT a 
+ 	 inner join TBL_FH_FRATE_DETAILS c on a.cntlpkg=c.cntlpkg 
+	 inner join tempcodes b on c.code=b.codes
+	 <if test="provst == null" >
+	 <if test="ox1 != null" >
+	 	inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5)  
+	 </if>
+	 </if>
+	 <if test="ppono != null" >
+	 	inner join ppos e on a.provtaxid=e.taxid and a.internalprovnum = e.keyid
+	 	and upper(replace(a.state,' ',''))=upper(replace(e.St,' ','')) 
+  		and upper(replace(a.city,' ',''))=upper(replace(e.city,' ',''))
+  		and upper(replace(replace(a.address1,',',''),' ',''))=upper(replace(replace(e.address1,',',''),' ',''))
+  		 and substr(a.postalcode,1,5) = e.zip
+	 </if>
+	 WHERE a.provtype='F'  
+	 		and a.prov_npi_1 is  null   
+	 		<if test="provst != null" >
+	 			and upper(replace(a.state,' ',''))=#{provst}
+	 		</if>
+	 
+	  order by  
+	  		 <if test="seq == 'filDistance'" >
+				 d.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 
+			 </if>
+			a.prov_npi_1,a.provtaxid,a.internalprovnum 
+	 			,a.provtype ,a.name,a.address1,a.city,a.state ,a.postalcode
+	 			,c.codetype,c.code,c.poscode
+	</select>
+	
+	
+	
+	
+	<select id="selPpobymember"  parameterType="adppo" resultMap="adppoResult">
+			with x as(
+			select Employee_SSN,Group_Number,Master_Group
+			from Tbl_Employee_Eligibility
+			<where>
+				<if test="mastgroup != null" >
+				and Master_Group =#{mastgroup}
+			 	</if>
+			 	
+			 	<if test="ssn != null" >
+				and Employee_SSN =#{ssn}
+			 	</if>
+			</where>
+			)
+			SELECT DISTINCT e.PPO, e.PPO_name
+			        , CAST((CASE f.WLTEligFlag WHEN 1 THEN 'Medical' WHEN 2 THEN 'Dental' WHEN 3 THEN 'Vision'
+			        ELSE '' END) As Varchar2(50)) As specific_plan_type
+			        , d.CoverageTypeID, c.nationalPPO, e.PPO_WebUrl ,1  as seq
+			      FROM  Tbl_master_Group  a  
+			      INNER JOIN  tbl_group  b  ON a.mastergroup = b.master_Group
+			      INNER JOIN  BenefitPackages  c  ON b.gr_number = c.groupID 
+			      INNER JOIN  coverage  d  ON c.coverageID = d.coverageID
+			      INNER JOIN tbl_PPO  e  ON c.providerNetworkID = e.ppo
+			      INNER JOIN  CoverageTypes  f  ON d.coveragetypeid=f.coveragetypeid
+			      INNER JOIN (  
+			          SELECT DISTINCT x.Group_Number, '1' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE  y.Medical='T'
+			          UNION
+			          SELECT DISTINCT x.Group_Number, '2' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE y.Dental='T'
+			          UNION
+			          SELECT DISTINCT x.Group_Number, '3' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE  y.Vision='T'
+			        ) g on f.WLTEligFlag=g.CvgType
+			      WHERE  b.gr_number = g.Group_Number and sysdate between c.starting and c.ending
+			    UNION  -- Secondary PPO
+			      SELECT DISTINCT e.PPO, e.PPO_name
+			        , (CASE f.WLTEligFlag WHEN 1 THEN 'Medical' WHEN 2 THEN 'Dental' WHEN 3 THEN 'Vision'
+			        ELSE '' END) || '; Secondary PPO' As specific_plan_type
+			        , d.CoverageTypeID, c.nationalPPO, e.PPO_WebUrl, 2 as seq
+			      FROM  Tbl_master_Group  a  
+			      INNER JOIN tbl_group  b  ON a.mastergroup = b.master_Group
+			      INNER JOIN BenefitPackages  c  ON b.gr_number = c.groupID 
+			      INNER JOIN coverage  d  ON c.coverageID = d.coverageID
+			      INNER JOIN tbl_PPO  e  ON c.nationalppo= e.ppo
+			      INNER JOIN CoverageTypes  f  ON d.coveragetypeid=f.coveragetypeid
+			      INNER JOIN (  
+			          SELECT DISTINCT x.Group_Number, '1' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE  y.Medical='T'
+			          UNION
+			          SELECT DISTINCT x.Group_Number, '2' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE   y.Dental='T'
+			          UNION
+			          SELECT DISTINCT x.Group_Number, '3' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE   y.Vision='T'
+			        ) g on f.WLTEligFlag=g.CvgType
+			      WHERE  b.gr_number = g.Group_Number and sysdate between c.starting and c.ending
+			      AND c.providerNetworkID!=c.nationalppo
+			      ORDER BY specific_plan_type, SEQ
+  </select>
+  
+	
+	<select id="selPpobymastergroup"  parameterType="adppo" resultMap="adppoResult">		  
+			 
+			 <if test="newfeaturesind ==0" >
+			with aa as(
+			select a.PPO,a.plan_type_id,a.master_group,a.NationalPPO,a.gr_number
+			from tbl_group a
+			INNER JOIN tbl_master_Group  b  ON a.master_group = b.mastergroup
+			<where>
+				<if test="corporationid != null" >
+				and b.corporationID =  #{corporationid}
+				</if>
+				
+				<if test="mastgroup != null" >
+				and  b.mastergroup =#{mastgroup}
+				</if>
+			</where> 
+			)
+			,ppos as(
+			  SELECT DISTINCT a.PPO, a.PPO_name, c.specific_plan_type, a.PPO As nationalPPO, a.PPO_WebUrl
+			  FROM tbl_PPO   a  
+			  INNER JOIN aa  ON a.PPO =  aa.PPO
+			  INNER JOIN tbl_plan_type   c  ON aa.plan_type_id = c.plan_type_ID  
+			  WHERE   a.insql != 0
+			    UNION
+			  SELECT DISTINCT a.PPO, a.PPO_name, c.specific_plan_type, a.PPO As nationalPPO, a.PPO_WebUrl
+			  FROM tbl_PPO   a  
+			  INNER JOIN aa  ON a.PPO = (CASE WHEN aa.NationalPPO=116 THEN 16 ELSE aa.NationalPPO END) 
+			  INNER JOIN tbl_plan_type   c  ON aa.plan_type_id = c.plan_type_ID 
+			  WHERE  a.insql != 0
+			  )
+			  select DISTINCT *
+			  from ppos
+			  Order by PPO_name
+			</if>
+			
+			<if test="newfeaturesind ==1" >
+			 
+			with aa as(
+			select a.PPO,a.plan_type_id,a.master_group,a.NationalPPO,a.gr_number
+			from tbl_group a
+			INNER JOIN tbl_master_Group  b  ON a.master_group = b.mastergroup
+			<where>
+				<if test="corporationid != null" >
+				and b.corporationID =  #{corporationid}
+				</if>
+				
+				<if test="mastgroup != null" >
+				 and b.mastergroup =#{mastgroup}
+				</if>
+			</where> 
+			)
+			,ppos as(
+			SELECT DISTINCT e.PPO, e.PPO_name
+			    , (CASE f.WLTEligFlag WHEN 1 THEN 'Medical' WHEN 2 THEN 'Dental' ELSE '' END) as specific_Plan_Type
+			    ,  d.CoverageTypeID, e.PPO As nationalPPO, e.PPO_WebUrl
+			  FROM  aa
+			  INNER JOIN BenefitPackages   c  ON aa.gr_number = c.groupID  
+			  INNER JOIN coverage   d  ON c.coverageID = d.coverageID 
+			  INNER JOIN tbl_PPO   e  ON c.providerNetworkID = e.ppo and e.InSQL=1
+			  INNER JOIN CoverageTypes   f  ON d.coveragetypeid=f.coveragetypeid
+			  WHERE  f.WLTEligFlag in (1, 2)
+			 UNION
+			  SELECT DISTINCT e.PPO, e.PPO_name
+			    , (CASE f.WLTEligFlag WHEN 1 THEN 'Medical' WHEN 2 THEN 'Dental' ELSE '' END) as specific_Plan_Type
+			    ,  d.CoverageTypeID, e.PPO As nationalPPO, e.PPO_WebUrl
+			  FROM  aa
+			  INNER JOIN BenefitPackages   c  ON aa.gr_number = c.groupID and c.providerNetworkID!=c.nationalPPO  
+			  INNER JOIN coverage   d  ON c.coverageID = d.coverageID 
+			  INNER JOIN tbl_PPO   e  ON c.nationalPPO = e.ppo and e.InSQL=1
+			  INNER JOIN CoverageTypes   f  ON d.coveragetypeid=f.coveragetypeid
+			  WHERE   f.WLTEligFlag in (1, 2)
+			)
+			  select DISTINCT *
+			  from ppos
+			  Order by coverageTypeID, ppo_name
+			</if>
+	</select>	  
+			  
+			  
+			  
+	<select id="selPpobyid"  parameterType="adppo" resultMap="adppoResult">	
+	select ppo, ppo_name   from tbl_PPO  
+	<where>
+		<if test="ppono != null" >
+				and ppo=#{ppono}
+			</if>
+	</where> 
+	</select>
+	<select id="selSubgroupinfo"  parameterType="adppo" resultMap="adppoResult">	
+	select ppo,nationalPPO  from tbl_group  
+		<where>
+			<if test="grnumber != null" >
+					and gr_number=#{grnumber}
+				</if>
+		</where> 
+	</select>
+	
+	<select id="selCorporationbyid"  parameterType="adppo" resultMap="adppoResult">	
+	select corporationid,newfeaturesind from tbl_corporation
+		<where>
+			<if test="corporationid != null" >
+					and corporationid=#{corporationid}
+				</if>
+		</where> 
+	</select>
+	
+	 
+</mapper>

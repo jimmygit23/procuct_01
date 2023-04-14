@@ -1,0 +1,3309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pdsu.edu.domain.Adppo">
+	<resultMap type="com.pdsu.edu.domain.Adppo" id="adppoResult">
+    <id column="grpno" property="grpno" jdbcType="VARCHAR" />
+    <id column="empno" property="empno" jdbcType="VARCHAR" />
+    <id column="depno" property="depno" jdbcType="VARCHAR" />
+    <id column="ppono" property="ppono" jdbcType="DECIMAL" />
+    <id column="provtype" property="provtype" jdbcType="VARCHAR" />
+    <id column="taxid" property="taxid" jdbcType="VARCHAR" />
+    <id column="spec" property="spec" jdbcType="VARCHAR" />
+    <id column="ox1" property="ox1" jdbcType="VARCHAR" />
+    <id column="oy1" property="oy1" jdbcType="VARCHAR" />
+    <id column="ox2" property="ox2" jdbcType="VARCHAR" />
+    <id column="oy2" property="oy2" jdbcType="VARCHAR" />
+    <id column="ix1" property="ix1" jdbcType="VARCHAR" />
+    <id column="iy1" property="iy1" jdbcType="VARCHAR" />
+    <id column="ix2" property="ix2" jdbcType="VARCHAR" />
+    <id column="iy2" property="iy2" jdbcType="VARCHAR" />
+    <id column="provname" property="provname" jdbcType="VARCHAR" />
+    <id column="provst" property="provst" jdbcType="VARCHAR" />
+    <id column="mastgroup" property="mastgroup" jdbcType="DECIMAL" />
+    <id column="ssn" property="ssn" jdbcType="DECIMAL" />
+    <id column="corporationid" property="corporationid" jdbcType="VARCHAR" />
+    <id column="newfeaturesind" property="newfeaturesind" jdbcType="DECIMAL" />
+    <id column="grnumber" property="grnumber" jdbcType="DECIMAL" />
+    
+    <id column="UCRGRPNO" property="UCRGRPNO" jdbcType="DECIMAL" />
+    <id column="UCRZIP" property="UCRZIP" jdbcType="VARCHAR" />
+    <id column="UCRCPT" property="UCRCPT" jdbcType="VARCHAR" />
+    <id column="UCRMODCD" property="UCRMODCD" jdbcType="VARCHAR" />
+    <id column="cpt" property="cpt" jdbcType="VARCHAR" />
+     
+		<result column="ppo" property="ppo" jdbcType="DECIMAL" />
+		<result column="ppo_name" property="ppo_name" jdbcType="VARCHAR" /> 
+		<result column="specialty_id" property="specialty_id" jdbcType="DECIMAL" />
+		<result column="specialty" property="specialty" jdbcType="VARCHAR" /> 
+		<result column="lat" property="lat" jdbcType="DECIMAL" />
+		<result column="lon" property="lon" jdbcType="DECIMAL" />
+		<result column="latlon" property="latlon" jdbcType="DECIMAL" />
+
+		<result column="name" property="name" jdbcType="VARCHAR" /> 
+		<result column="address1" property="address1" jdbcType="VARCHAR" /> 
+		<result column="address2" property="address2" jdbcType="VARCHAR" /> 
+		<result column="city" property="city" jdbcType="VARCHAR" /> 
+		<result column="st" property="st" jdbcType="VARCHAR" /> 
+		<result column="phone" property="phone" jdbcType="VARCHAR" /> 
+		<result column="lname" property="lname" jdbcType="VARCHAR" /> 
+		<result column="fname" property="fname" jdbcType="VARCHAR" /> 
+		<result column="effdate" property="effdate" jdbcType="VARCHAR" /> 
+		<result column="termdate" property="termdate" jdbcType="VARCHAR" />  
+		<result column="zip" property="zip" jdbcType="DECIMAL" /> 
+		<result column="cartid" property="cartid" jdbcType="DECIMAL" /> 
+		<result column="carttId" property="carttId" jdbcType="DECIMAL" /> 
+		
+		
+		<result column="specific_plan_type" property="specific_plan_type" jdbcType="VARCHAR" /> 
+		<result column="CoverageTypeID" property="CoverageTypeID" jdbcType="VARCHAR" /> 
+		<result column="nationalPPO" property="nationalPPO" jdbcType="VARCHAR" /> 
+		<result column="PPO_WebUrl" property="PPO_WebUrl" jdbcType="VARCHAR" /> 
+		<result column="seq" property="seq" jdbcType="VARCHAR" /> 
+		
+		<result column="memberlogin" property="memberlogin" jdbcType="VARCHAR" /> 
+		<result column="Provcode" property="Provcode" jdbcType="VARCHAR" /> 
+		
+		
+		<result column="poscode" property="poscode" jdbcType="VARCHAR" /> 
+		<result column="serviceamt" property="serviceamt" jdbcType="VARCHAR" /> 
+		<result column="sqlstr" property="sqlstr" jdbcType="VARCHAR" /> 
+		<result column="proccd" property="proccd" jdbcType="VARCHAR" /> 
+		<result column="descr" property="descr" jdbcType="VARCHAR" /> 
+		
+		<result column="pagelow" property="pagelow" jdbcType="VARCHAR" /> 
+		<result column="pageup" property="pageup" jdbcType="VARCHAR" /> 
+		<result column="total" property="total" jdbcType="DECIMAL" />
+		
+		<result column="mst_ip" property="mst_ip" jdbcType="DECIMAL" />
+		<result column="sub_ip" property="sub_ip" jdbcType="DECIMAL" />
+		<result column="mst_category" property="mst_category" jdbcType="VARCHAR" /> 
+		<result column="sub_category" property="sub_category" jdbcType="VARCHAR" /> 
+		
+		
+		
+		<result column="CLMLN" property="CLMLN" jdbcType="VARCHAR" /> 
+		<result column="CLMNO" property="CLMNO" jdbcType="VARCHAR" /> 
+		<result column="CLMPRE" property="CLMPRE" jdbcType="VARCHAR" /> 
+		<result column="DEDNO" property="DEDNO" jdbcType="VARCHAR" /> 
+		<result column="OOPNO" property="OOPNO" jdbcType="VARCHAR" /> 
+		<result column="BENCD" property="BENCD" jdbcType="VARCHAR" /> 
+		<result column="ANNACC1" property="ANNACC1" jdbcType="VARCHAR" /> 
+		<result column="ANNACC2" property="ANNACC2" jdbcType="VARCHAR" /> 
+		<result column="LIFACC1" property="LIFACC1" jdbcType="VARCHAR" /> 
+ 
+		<result column="LIFACC2" property="LIFACC2" jdbcType="VARCHAR" /> 
+		<result column="PERC" property="PERC" jdbcType="VARCHAR" /> 
+		<result column="VSTSCD" property="VSTSCD" jdbcType="VARCHAR" /> 
+		<result column="COPAYCD" property="COPAYCD" jdbcType="VARCHAR" /> 
+		<result column="COPAYAMT" property="COPAYAMT" jdbcType="VARCHAR" /> 
+		<result column="FREQCD" property="FREQCD" jdbcType="VARCHAR" /> 
+		<result column="WVECD" property="WVECD" jdbcType="VARCHAR" /> 
+		<result column="AMTLMT" property="AMTLMT" jdbcType="VARCHAR" /> 
+		<result column="AMTFLAG" property="AMTFLAG" jdbcType="VARCHAR" /> 
+		<result column="ANNVSTS" property="ANNVSTS" jdbcType="VARCHAR" /> 
+		<result column="TMFRMTP" property="TMFRMTP" jdbcType="VARCHAR" /> 
+		<result column="TMFRMCT" property="TMFRMCT" jdbcType="VARCHAR" /> 
+		<result column="TMFRMDEN" property="TMFRMDEN" jdbcType="VARCHAR" /> 
+ 
+ 
+		<result column="TMFRMCD" property="TMFRMCD" jdbcType="VARCHAR" /> 
+		<result column="DLYLMTCD" property="DLYLMTCD" jdbcType="VARCHAR" /> 
+		<result column="COPDED" property="COPDED" jdbcType="VARCHAR" /> 
+		<result column="COPOOP" property="COPOOP" jdbcType="VARCHAR" /> 
+		<result column="OOPINCDED" property="OOPINCDED" jdbcType="VARCHAR" /> 
+		<result column="INOUTACCS" property="INOUTACCS" jdbcType="VARCHAR" /> 
+		<result column="IOACCSCOMDED" property="IOACCSCOMDED" jdbcType="VARCHAR" /> 
+		<result column="PPONO" property="PPONO" jdbcType="VARCHAR" /> 
+		<result column="CVGMAPFLAG" property="CVGMAPFLAG" jdbcType="VARCHAR" /> 
+		<result column="PRVRESP" property="PRVRESP" jdbcType="VARCHAR" /> 
+		<result column="EERESP" property="EERESP" jdbcType="VARCHAR" /> 
+		<result column="EDEAMT" property="EDEAMT" jdbcType="VARCHAR" /> 
+		<result column="COPAMT" property="COPAMT" jdbcType="VARCHAR" /> 
+		<result column="COINAMT" property="COINAMT" jdbcType="VARCHAR" /> 
+		<result column="DEDPSTAMT" property="DEDPSTAMT" jdbcType="VARCHAR" /> 
+		<result column="OOPPSTAMT" property="OOPPSTAMT" jdbcType="VARCHAR" /> 
+		<result column="DEDREMPLN" property="DEDREMPLN" jdbcType="VARCHAR" /> 
+		<result column="DEDREMPPO" property="DEDREMPPO" jdbcType="VARCHAR" /> 
+		<result column="OOPREMPLN" property="OOPREMPLN" jdbcType="VARCHAR" /> 
+		<result column="OOPREMPPO" property="OOPREMPPO" jdbcType="VARCHAR" /> 
+		<result column="UNITS" property="UNITS" jdbcType="VARCHAR" /> 
+		<result column="UNITSALWD" property="UNITSALWD" jdbcType="VARCHAR" /> 
+		<result column="CVGTP" property="CVGTP" jdbcType="VARCHAR" /> 
+		<result column="CHGAMT" property="CHGAMT" jdbcType="VARCHAR" /> 
+		<result column="ADJCVRD" property="ADJCVRD" jdbcType="VARCHAR" /> 
+		<result column="INCFRMDT" property="INCFRMDT" jdbcType="VARCHAR" /> 
+		<result column="GRPNO" property="GRPNO" jdbcType="VARCHAR" /> 
+		<result column="EMPNO" property="EMPNO" jdbcType="VARCHAR" /> 
+		<result column="DEPNO" property="DEPNO" jdbcType="VARCHAR" /> 
+		<result column="MODCD1" property="MODCD1" jdbcType="VARCHAR" /> 
+		<result column="DIAG" property="DIAG" jdbcType="VARCHAR" /> 
+		<result column="POS" property="POS" jdbcType="VARCHAR" /> 
+		<result column="AGE" property="AGE" jdbcType="VARCHAR" /> 
+		<result column="PRVTP" property="PRVTP" jdbcType="VARCHAR" /> 
+		<result column="PROCCD" property="PROCCD" jdbcType="VARCHAR" /> 
+		<result column="CVGCD" property="CVGCD" jdbcType="VARCHAR" />  
+ 
+ 
+		<result column="PPODESC" property="PPODESC" jdbcType="VARCHAR" />  
+		<result column="ServiceDescription" property="ServiceDescription" jdbcType="VARCHAR" />  
+		<result column="Copay" property="Copay" jdbcType="VARCHAR" />  
+		<result column="PaidPct" property="PaidPct" jdbcType="VARCHAR" />  
+		<result column="Deductible" property="Deductible" jdbcType="VARCHAR" />  
+		<result column="OOP" property="OOP" jdbcType="VARCHAR" />
+		<result column="NOTES" property="NOTES" jdbcType="VARCHAR" />    
+	 
+		<result column="zipcode" property="zipcode" jdbcType="VARCHAR" />  
+		<result column="proccdesc" property="proccdesc" jdbcType="VARCHAR" />  
+		 
+	</resultMap>
+	
+	<select id="sel_mstcategoryMaster"  parameterType="adppo" resultMap="adppoResult">
+	select mst_ip,mst_category from TBL_PROC_CATEGORY_MASTER order by mst_ip
+	</select>
+	
+	<select id="sel_mstcategorySub"  parameterType="adppo" resultMap="adppoResult">
+	select sub_ip,sub_category
+	from TBL_PROC_CATEGORY_SUB  
+		<where>
+				<if test="mst_ip != null" >
+					and mst_ip=#{mst_ip}
+				</if>
+		</where>
+	order by sub_ip
+	</select>
+	
+	<select id="sel_mstcategoryDetl"  parameterType="adppo" resultMap="adppoResult">
+	with a as(
+		select proc_from,proc_thru,INC_5TH_ALPHA  from TBL_PROC_CATEGORY_DETL
+		<where>
+				<if test="sub_ip != null" >
+					and sub_ip=#{sub_ip}
+				</if>
+		</where>
+	)
+	select proccd,descr 
+  	from PROCEDUR b
+  	<where>
+  		exists(select 1 from a where b.proccd&gt;=a.proc_from and b.proccd&lt;=a.proc_thru  and  INC_5TH_ALPHA!='F')
+  		and (fromdt is null or fromdt&lt;=sysdate) and (thrudt is null or thrudt&gt;=sysdate)
+  		<if test="sqlstr != null" >
+  		and ${sqlstr}
+  		</if> 
+   	</where>
+  	union
+   	select proccd,descr 
+  	from PROCEDUR b
+  	<where>
+  		exists(select 1 from a where b.proccd&gt;=a.proc_from and b.proccd&lt;=a.proc_thru and  INC_5TH_ALPHA='F')
+  		and trim(translate(subStr(proccd,length(proccd),1),'0123456789',' ')) is   NULL
+  		and (fromdt is null or fromdt&lt;=sysdate) and (thrudt is null or thrudt&gt;=sysdate)
+  		<if test="sqlstr != null" >
+  		and ${sqlstr}
+  		</if>  
+   	</where>
+   	order by proccd,descr
+	</select>
+	
+	
+	<select id="selProccd"  parameterType="adppo" resultMap="adppoResult">
+	select proccd,descr 
+  	from PROCEDUR
+  	<where>
+  		(fromdt is null or fromdt&lt;=sysdate) and (thrudt is null or thrudt&gt;=sysdate)
+  	<if test="sqlstr != null" >
+  		and ${sqlstr}
+  	</if> 
+   	   and rownum&lt;30
+   	</where>
+	</select>
+	
+	
+	<select id="selmembercart"  parameterType="adppo" resultMap="adppoResult">
+	select  cartid,providername as name,  address1,  address2,  city, St,  zip, 
+     specialty,specialtyid as specialty_id,  phone,  lname,  fname, effdate, termdate,latlon,poscode,serviceamt,zipcode,proccdesc,cpt
+     from TBL_ADVANCEEOB_MEMBERCART   
+		<where>
+			<if test="memberlogin != null" >
+				and memberlogin=#{memberlogin}
+			</if>
+			<if test="cartid != null" >
+				and cartid=#{cartid}
+			</if>
+			<if test="ssn != null" >
+				and ssn=#{ssn}
+			</if>
+		</where> 
+		order by 
+			<if test="seq == 'filDistance'" >
+				 latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 serviceamt,
+			 </if>
+			 providername
+	</select>
+	
+	
+ 	<insert id="insertmembercart" parameterType="Adppo">
+ 		<selectKey resultType="java.lang.Long" keyProperty="carttId" order="BEFORE" >
+	      select MISP.SEQ_TBL_ADVANCEEOB_CART.nextval from dual
+	     </selectKey> 
+ 	 insert into TBL_ADVANCEEOB_MEMBERCART(cartid,providername,address1,address2,city,st,zip,specialty,specialtyid,phone,lname,fname,effdate,termdate,latlon,memberlogin,poscode,serviceamt,ssn,zipcode,proccdesc,cpt)
+     values(#{carttId,jdbcType=DECIMAL}
+     ,#{name,jdbcType=VARCHAR}
+     ,#{address1,jdbcType=VARCHAR}
+     ,#{address2,jdbcType=VARCHAR}
+     ,#{city,jdbcType=VARCHAR}
+     ,#{st,jdbcType=VARCHAR}
+     ,#{zip,jdbcType=VARCHAR}
+     ,#{specialty,jdbcType=VARCHAR}
+     ,#{specialty_id,jdbcType=DECIMAL}
+     ,#{phone,jdbcType=VARCHAR}
+     ,#{lname,jdbcType=VARCHAR}
+     ,#{fname,jdbcType=VARCHAR}
+     ,#{effdate,jdbcType=VARCHAR}
+     ,#{termdate,jdbcType=VARCHAR}
+     ,#{latlon,jdbcType=VARCHAR}
+     ,#{memberlogin,jdbcType=VARCHAR}
+     ,#{poscode,jdbcType=VARCHAR}
+     ,#{serviceamt,jdbcType=VARCHAR}
+     ,#{ssn,jdbcType=VARCHAR}
+     ,#{zipcode,jdbcType=VARCHAR}
+     ,#{proccdesc,jdbcType=VARCHAR}
+     ,#{cpt,jdbcType=VARCHAR}
+     )
+ 	</insert>
+ 	   
+ 	 
+	<delete id="deltmembercart" parameterType="Adppo">
+		delete from TBL_ADVANCEEOB_MEMBERCART 
+		<where>
+			<if test="cartid != null" >
+		    	and cartid=#{cartid}
+		    </if>  
+			<if test="ssn != null" >
+		    	and ssn=#{ssn}
+		    </if>   
+		</where> 
+	</delete>
+ 	 
+	
+	
+	<select id="selppoAll"  parameterType="adppo" resultMap="adppoResult">
+		select ppo, ppo_name   from tbl_PPO  where insql != 0 
+		order by ppo_name
+	</select>
+	 
+	<select id="selppoSpecialty"  parameterType="adppo" resultMap="adppoResult">
+		select distinct specialty,specialty_id
+		from Tbl_PPO_Specialty_Conversion a
+		inner join Tbl_Specialty b on a.spec1=b.specialty_id 
+		<where>
+			<if test="ppono != null" >
+				and a.ppo=#{ppono}
+			</if>
+		</where> 
+		order by specialty
+	</select>
+	
+	<select id="selLatlon"  parameterType="adppo" resultMap="adppoResult">
+		<!-- select lat, lon from tbl_ZipFull  where zip = 96854; -->
+		select latitude as lat,longitude as lon
+		from  tbl_zipcodes
+		<where>
+			<if test="zip != null" >
+				and zipcode=#{zip}
+			</if>
+		</where>  
+	</select>
+	
+	<select id="selestcostempplan"  parameterType="adppo" resultMap="adppoResult">
+		with EMPPLAN0 as(
+	      select a.MASTER_GROUP as MSTNO, a.GROUP_NUMBER as GRPNO, a.EMPLOYEE_NUMBER as EMPNO, a.DEPENDENT_NUMBER as DEPNO, 
+	      a.EMPLOYEE_SSN as EMPSSN, a.PPO1 as PPONO, NVL(b.PLNNO,0) as PLNNO
+	      from MEDI.TBL_MEMBER_NETWORK a
+	      left join MEDI.GRPPPO b on a.GROUP_NUMBER=b.GRPNO and a.PPO1=b.PPONO
+	      where a.COVERAGE_TYPE='M' and SYSDATE between a.BENEFIT_FROM and a.BENEFIT_THRU and SYSDATE between b.BEGDT and b.ENDDT
+	       union 
+	      select a.MASTER_GROUP as MSTNO, a.GROUP_NUMBER as GRPNO, a.EMPLOYEE_NUMBER as EMPNO, a.DEPENDENT_NUMBER as DEPNO, 
+	      a.EMPLOYEE_SSN as EMPSSN, 0 as PPONO, a.PLAN_NO as PLNNO
+	      from MEDI.TBL_MEMBER_NETWORK a
+	      where a.COVERAGE_TYPE='M' and SYSDATE between a.BENEFIT_FROM and a.BENEFIT_THRU  
+		) 
+		,EMPPLAN as(  
+		select MSTNO, GRPNO,EMPNO,DEPNO,EMPSSN,PPONO,PLNNO
+		,to_number(to_char(sysdate,'yyyy')) as CLMPRE
+		, (ROUND(TO_NUMBER(sysdate-to_date(to_char(sysdate,'yyyy')||'-01-01','yyyy-mm-dd')))+1)*1000000+(to_char(sysdate,'hh24')-1)*10000+to_char(sysdate,'mi')*100+to_char(sysdate,'ss') as CLMNO 
+		from EMPPLAN0 
+	      <where>
+	      		<if test="grpno != null" >
+					and GRPNO=#{grpno}
+				</if>
+	      		<if test="empno != null" >
+					and EMPNO=#{empno}
+				</if>
+	      		<if test="depno != null" >
+					and DEPNO=#{depno}
+				</if>
+	      </where>
+		)
+		,EMPPLANEMP0 as( 
+		      select
+		      a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, 
+		      a.EMPSSN, a.PPONO,  nvl(b.OVRPPOPLN,a.PLNNO) as PLNNO 
+		      ,a.CLMPRE,a.CLMNO
+		      from EMPPLAN a
+		      left join MEDI.EEDPELIG b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and b.DEPNO=0
+		      and sysdate between b.SNAPFROMDT and b.SNAPTHRUDT and b.OVRPPOPLN&gt;0
+		            and a.PPONO&gt;0
+		)
+		,EMPPLANEMP as( 
+		      select
+		      a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, 
+		      a.EMPSSN, a.PPONO,  nvl(b.OVRPLN,a.PLNNO) as PLNNO
+		      ,a.CLMPRE,a.CLMNO
+		      from EMPPLANEMP0 a
+		      left join MEDI.EEDPELIG b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and b.DEPNO=0
+		      and sysdate between b.SNAPFROMDT and b.SNAPTHRUDT and b.OVRPLN&gt;0
+		            and a.PPONO=0
+		)
+		,EMPPLANDEP0 as( 
+		        select
+		        a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, 
+		        a.EMPSSN, a.PPONO,   nvl(b.OVRPPOPLN,a.PLNNO) as PLNNO
+		        ,a.CLMPRE,a.CLMNO
+		        from EMPPLANEMP a
+		        left join MEDI.EEDPELIG b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and a.DEPNO=b.DEPNO
+		        and sysdate between b.SNAPFROMDT and b.SNAPTHRUDT and b.OVRPPOPLN&gt;0 and a.PLNNO!=b.OVRPPOPLN
+		             and a.PPONO&gt;0 
+		),EMPPLANS as( 
+		        select
+		        a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, 
+		        a.EMPSSN, a.PPONO,  nvl(b.OVRPLN,a.PLNNO) as PLNNO
+		        ,a.CLMPRE,a.CLMNO
+		        from EMPPLANDEP0 a
+		        left join MEDI.EEDPELIG b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and a.DEPNO=b.DEPNO
+		        and sysdate between b.SNAPFROMDT and b.SNAPTHRUDT and b.OVRPLN&gt;0 and a.PLNNO!=b.OVRPLN
+		             and a.PPONO=0 
+		)
+		,TBL_ESTCOST_EMPPLAN_ as ( 
+		select a.GRPNO,a.EMPNO,a.DEPNO,a.MSTNO, a.EMPSSN,a.PPONO, a.PLNNO,a.CLMPRE,a.CLMNO,
+		 nvl(b.indedamt01,'') as indedamt01,
+		 nvl(b.fmdedamt01,'') as fmdedamt01,
+		 nvl(b.fmdedct01,'') as fmdedct01,
+		  nvl(b.inoopamt01,'') as inoopamt01,
+		  nvl(b.fmoopamt01,'') as fmoopamt01,
+		  nvl(b.fmoopct01,'') as fmoopct01,
+		  nvl(b.anlmtdesc01,'') as anlmtdesc01,
+		  nvl(b.anlmtdesc02,'') as anlmtdesc02,
+		  nvl(b.anlmtdesc03,'') as anlmtdesc03,
+		  nvl(b.anlmtdesc04,'') as anlmtdesc04,
+		  nvl(b.anlmtdesc05,'') as anlmtdesc05,
+		  nvl(b.anlmtdesc06,'') as anlmtdesc06,
+		  nvl(b.anlmtdesc07,'') as anlmtdesc07,
+		  nvl(b.anlmtdesc08,'') as anlmtdesc08,
+		  nvl(b.anlmtdesc09,'') as anlmtdesc09,
+		  nvl(b.anlmtdesc10,'') as anlmtdesc10,
+		  nvl(b.anlmtdesc11,'') as anlmtdesc11,
+		  nvl(b.anlmtdesc12,'') as anlmtdesc12,
+		  nvl(b.anlmtdesc13,'') as anlmtdesc13,
+		  nvl(b.anlmtdesc14,'') as anlmtdesc14,
+		  nvl(b.anlmtdesc15,'') as anlmtdesc15,
+		  nvl(b.anlmtdesc16,'') as anlmtdesc16,
+		  nvl(b.anlmtdesc17,'') as anlmtdesc17,
+		  nvl(b.anlmtdesc18,'') as anlmtdesc18,
+		  nvl(b.anlmtdesc19,'') as anlmtdesc19,
+		  nvl(b.anlmtdesc20,'') as anlmtdesc20,
+		  case when b.anlmtdesc01 is null then null else case when nvl(b.anlmt01,0)=0 then 99999999.99 else b.anlmt01 end end as anlmt01,
+		  case when b.anlmtdesc02 is null then null else case when nvl(b.anlmt02,0)=0 then 99999999.99 else b.anlmt02 end end as anlmt02,
+		  case when b.anlmtdesc03 is null then null else case when nvl(b.anlmt03,0)=0 then 99999999.99 else b.anlmt03 end end as anlmt03,
+		  case when b.anlmtdesc04 is null then null else case when nvl(b.anlmt04,0)=0 then 99999999.99 else b.anlmt04 end end as anlmt04,
+		  case when b.anlmtdesc05 is null then null else case when nvl(b.anlmt05,0)=0 then 99999999.99 else b.anlmt05 end end as anlmt05,
+		  case when b.anlmtdesc06 is null then null else case when nvl(b.anlmt06,0)=0 then 99999999.99 else b.anlmt06 end end as anlmt06,
+		  case when b.anlmtdesc07 is null then null else case when nvl(b.anlmt07,0)=0 then 99999999.99 else b.anlmt07 end end as anlmt07,
+		  case when b.anlmtdesc08 is null then null else case when nvl(b.anlmt08,0)=0 then 99999999.99 else b.anlmt08 end end as anlmt08,
+		  case when b.anlmtdesc09 is null then null else case when nvl(b.anlmt09,0)=0 then 99999999.99 else b.anlmt09 end end as anlmt09,
+		  case when b.anlmtdesc10 is null then null else case when nvl(b.anlmt10,0)=0 then 99999999.99 else b.anlmt10 end end as anlmt10, 
+		  case when b.anlmtdesc11 is null then null else case when nvl(b.anlmt11,0)=0 then 99999999.99 else b.anlmt11 end end as anlmt11,
+		  case when b.anlmtdesc12 is null then null else case when nvl(b.anlmt12,0)=0 then 99999999.99 else b.anlmt12 end end as anlmt12,
+		  case when b.anlmtdesc13 is null then null else case when nvl(b.anlmt13,0)=0 then 99999999.99 else b.anlmt13 end end as anlmt13,
+		  case when b.anlmtdesc14 is null then null else case when nvl(b.anlmt14,0)=0 then 99999999.99 else b.anlmt14 end end as anlmt14,
+		  case when b.anlmtdesc15 is null then null else case when nvl(b.anlmt15,0)=0 then 99999999.99 else b.anlmt15 end end as anlmt15,
+		  case when b.anlmtdesc16 is null then null else case when nvl(b.anlmt16,0)=0 then 99999999.99 else b.anlmt16 end end as anlmt16,
+		  case when b.anlmtdesc17 is null then null else case when nvl(b.anlmt17,0)=0 then 99999999.99 else b.anlmt17 end end as anlmt17,
+		  case when b.anlmtdesc18 is null then null else case when nvl(b.anlmt18,0)=0 then 99999999.99 else b.anlmt18 end end as anlmt18,
+		  case when b.anlmtdesc19 is null then null else case when nvl(b.anlmt19,0)=0 then 99999999.99 else b.anlmt19 end end as anlmt19,
+		  case when b.anlmtdesc20 is null then null else case when nvl(b.anlmt20,0)=0 then 99999999.99 else b.anlmt20 end end as anlmt20,
+		  case when b.anlmtdesc01 is null then null else case when nvl(b.anvsts01,0)=0 then 99999 else b.anvsts01 end end as anvsts01,
+		  case when b.anlmtdesc02 is null then null else case when nvl(b.anvsts02,0)=0 then 99999 else b.anvsts02 end end as anvsts02,
+		  case when b.anlmtdesc03 is null then null else case when nvl(b.anvsts03,0)=0 then 99999 else b.anvsts03 end end as anvsts03,
+		  case when b.anlmtdesc04 is null then null else case when nvl(b.anvsts04,0)=0 then 99999 else b.anvsts04 end end as anvsts04,
+		  case when b.anlmtdesc05 is null then null else case when nvl(b.anvsts05,0)=0 then 99999 else b.anvsts05 end end as anvsts05,
+		  case when b.anlmtdesc06 is null then null else case when nvl(b.anvsts06,0)=0 then 99999 else b.anvsts06 end end as anvsts06,
+		  case when b.anlmtdesc07 is null then null else case when nvl(b.anvsts07,0)=0 then 99999 else b.anvsts07 end end as anvsts07,
+		  case when b.anlmtdesc08 is null then null else case when nvl(b.anvsts08,0)=0 then 99999 else b.anvsts08 end end as anvsts08,
+		  case when b.anlmtdesc09 is null then null else case when nvl(b.anvsts09,0)=0 then 99999 else b.anvsts09 end end as anvsts09,
+		  case when b.anlmtdesc10 is null then null else case when nvl(b.anvsts10,0)=0 then 99999 else b.anvsts10 end end as anvsts10,
+		  case when b.anlmtdesc11 is null then null else case when nvl(b.anvsts11,0)=0 then 99999 else b.anvsts11 end end as anvsts11,
+		  case when b.anlmtdesc12 is null then null else case when nvl(b.anvsts12,0)=0 then 99999 else b.anvsts12 end end as anvsts12,
+		  case when b.anlmtdesc13 is null then null else case when nvl(b.anvsts13,0)=0 then 99999 else b.anvsts13 end end as anvsts13,
+		  case when b.anlmtdesc14 is null then null else case when nvl(b.anvsts14,0)=0 then 99999 else b.anvsts14 end end as anvsts14,
+		  case when b.anlmtdesc15 is null then null else case when nvl(b.anvsts15,0)=0 then 99999 else b.anvsts15 end end as anvsts15,
+		  case when b.anlmtdesc16 is null then null else case when nvl(b.anvsts16,0)=0 then 99999 else b.anvsts16 end end as anvsts16,
+		  case when b.anlmtdesc17 is null then null else case when nvl(b.anvsts17,0)=0 then 99999 else b.anvsts17 end end as anvsts17,
+		  case when b.anlmtdesc18 is null then null else case when nvl(b.anvsts18,0)=0 then 99999 else b.anvsts18 end end as anvsts18,
+		  case when b.anlmtdesc19 is null then null else case when nvl(b.anvsts19,0)=0 then 99999 else b.anvsts19 end end as anvsts19,
+		  case when b.anlmtdesc20 is null then null else case when nvl(b.anvsts20,0)=0 then 99999 else b.anvsts20 end end as anvsts20,
+		  nvl(b.fmanlmtdesc01,'') as fmanlmtdesc01 ,
+		  nvl(b.fmanlmtdesc02,'') as fmanlmtdesc02 ,
+		  nvl(b.fmanlmtdesc03,'') as fmanlmtdesc03 ,
+		  nvl(b.fmanlmtdesc04,'') as fmanlmtdesc04 ,
+		  nvl(b.fmanlmtdesc05,'') as fmanlmtdesc05 ,
+		  case when b.fmanlmtdesc01 is null then null else case when nvl(b.fmanlmt01,0)=0 then 99999999.99 else b.fmanlmt01 end end as fmanlmt01, 
+		  case when b.fmanlmtdesc02 is null then null else case when nvl(b.fmanlmt02,0)=0 then 99999999.99 else b.fmanlmt02 end end as fmanlmt02, 
+		  case when b.fmanlmtdesc03 is null then null else case when nvl(b.fmanlmt03,0)=0 then 99999999.99 else b.fmanlmt03 end end as fmanlmt03, 
+		  case when b.fmanlmtdesc04 is null then null else case when nvl(b.fmanlmt04,0)=0 then 99999999.99 else b.fmanlmt04 end end as fmanlmt04, 
+		  case when b.fmanlmtdesc05 is null then null else case when nvl(b.fmanlmt05,0)=0 then 99999999.99 else b.fmanlmt05 end end as fmanlmt05,
+		  case when b.fmanlmtdesc01 is null then null else case when nvl(b.fmanvsts01,0)=0 then 99999 else b.fmanvsts01 end end as fmanvsts01,
+		  case when b.fmanlmtdesc02 is null then null else case when nvl(b.fmanvsts02,0)=0 then 99999 else b.fmanvsts02 end end as fmanvsts02,
+		  case when b.fmanlmtdesc03 is null then null else case when nvl(b.fmanvsts03,0)=0 then 99999 else b.fmanvsts03 end end as fmanvsts03,
+		  case when b.fmanlmtdesc04 is null then null else case when nvl(b.fmanvsts04,0)=0 then 99999 else b.fmanvsts04 end end as fmanvsts04,
+		  case when b.fmanlmtdesc05 is null then null else case when nvl(b.fmanvsts05,0)=0 then 99999 else b.fmanvsts05 end end as fmanvsts05,
+		  nvl(b.lflmtdesc01,'') as  lflmtdesc01  ,
+		  nvl(b.lflmtdesc02,'') as  lflmtdesc02  ,
+		  nvl(b.lflmtdesc03,'') as  lflmtdesc03  ,
+		  nvl(b.lflmtdesc04,'') as  lflmtdesc04  ,
+		  nvl(b.lflmtdesc05,'') as  lflmtdesc05  ,
+		  nvl(b.lflmtdesc06,'') as  lflmtdesc06  ,
+		  nvl(b.lflmtdesc07,'') as  lflmtdesc07  ,
+		  nvl(b.lflmtdesc08,'') as  lflmtdesc08  ,
+		  nvl(b.lflmtdesc09,'') as  lflmtdesc09  ,
+		  nvl(b.lflmtdesc10,'') as  lflmtdesc10  ,
+		  nvl(b.lflmtdesc11,'') as  lflmtdesc11  ,
+		  nvl(b.lflmtdesc12,'') as  lflmtdesc12  ,
+		  nvl(b.lflmtdesc13,'') as  lflmtdesc13  ,
+		  nvl(b.lflmtdesc14,'') as  lflmtdesc14  ,
+		  nvl(b.lflmtdesc15,'') as  lflmtdesc15  ,
+		  nvl(b.lflmtdesc16,'') as  lflmtdesc16  ,
+		  nvl(b.lflmtdesc17,'') as  lflmtdesc17  ,
+		  nvl(b.lflmtdesc18,'') as  lflmtdesc18  ,
+		  nvl(b.lflmtdesc19,'') as  lflmtdesc19  ,
+		  nvl(b.lflmtdesc20,'') as  lflmtdesc20  ,
+		  case when b.lflmtdesc01 is null then null else case when nvl(b.lflmt01,0)=0 then 99999999.99 else b.lflmt01 end end as lflmt01, 
+		  case when b.lflmtdesc02 is null then null else case when nvl(b.lflmt02,0)=0 then 99999999.99 else b.lflmt02 end end as lflmt02, 
+		  case when b.lflmtdesc03 is null then null else case when nvl(b.lflmt03,0)=0 then 99999999.99 else b.lflmt03 end end as lflmt03, 
+		  case when b.lflmtdesc04 is null then null else case when nvl(b.lflmt04,0)=0 then 99999999.99 else b.lflmt04 end end as lflmt04, 
+		  case when b.lflmtdesc05 is null then null else case when nvl(b.lflmt05,0)=0 then 99999999.99 else b.lflmt05 end end as lflmt05, 
+		  case when b.lflmtdesc06 is null then null else case when nvl(b.lflmt06,0)=0 then 99999999.99 else b.lflmt06 end end as lflmt06, 
+		  case when b.lflmtdesc07 is null then null else case when nvl(b.lflmt07,0)=0 then 99999999.99 else b.lflmt07 end end as lflmt07, 
+		  case when b.lflmtdesc08 is null then null else case when nvl(b.lflmt08,0)=0 then 99999999.99 else b.lflmt08 end end as lflmt08, 
+		  case when b.lflmtdesc09 is null then null else case when nvl(b.lflmt09,0)=0 then 99999999.99 else b.lflmt09 end end as lflmt09, 
+		  case when b.lflmtdesc10 is null then null else case when nvl(b.lflmt10,0)=0 then 99999999.99 else b.lflmt10 end end as lflmt10, 
+		  case when b.lflmtdesc11 is null then null else case when nvl(b.lflmt11,0)=0 then 99999999.99 else b.lflmt11 end end as lflmt11, 
+		  case when b.lflmtdesc12 is null then null else case when nvl(b.lflmt12,0)=0 then 99999999.99 else b.lflmt12 end end as lflmt12, 
+		  case when b.lflmtdesc13 is null then null else case when nvl(b.lflmt13,0)=0 then 99999999.99 else b.lflmt13 end end as lflmt13, 
+		  case when b.lflmtdesc14 is null then null else case when nvl(b.lflmt14,0)=0 then 99999999.99 else b.lflmt14 end end as lflmt14, 
+		  case when b.lflmtdesc15 is null then null else case when nvl(b.lflmt15,0)=0 then 99999999.99 else b.lflmt15 end end as lflmt15, 
+		  case when b.lflmtdesc16 is null then null else case when nvl(b.lflmt16,0)=0 then 99999999.99 else b.lflmt16 end end as lflmt16, 
+		  case when b.lflmtdesc17 is null then null else case when nvl(b.lflmt17,0)=0 then 99999999.99 else b.lflmt17 end end as lflmt17, 
+		  case when b.lflmtdesc18 is null then null else case when nvl(b.lflmt18,0)=0 then 99999999.99 else b.lflmt18 end end as lflmt18, 
+		  case when b.lflmtdesc19 is null then null else case when nvl(b.lflmt19,0)=0 then 99999999.99 else b.lflmt19 end end as lflmt19, 
+		  case when b.lflmtdesc20 is null then null else case when nvl(b.lflmt20,0)=0 then 99999999.99 else b.lflmt20 end end as lflmt20, 
+		  case when b.lflmtdesc01 is null then null else case when nvl(b.lfvsts01,0)=0 then 99999 else b.lfvsts01 end end as lfvsts01, 
+		  case when b.lflmtdesc02 is null then null else case when nvl(b.lfvsts02,0)=0 then 99999 else b.lfvsts02 end end as lfvsts02,
+		  case when b.lflmtdesc03 is null then null else case when nvl(b.lfvsts03,0)=0 then 99999 else b.lfvsts03 end end as lfvsts03,
+		  case when b.lflmtdesc04 is null then null else case when nvl(b.lfvsts04,0)=0 then 99999 else b.lfvsts04 end end as lfvsts04,
+		  case when b.lflmtdesc05 is null then null else case when nvl(b.lfvsts05,0)=0 then 99999 else b.lfvsts05 end end as lfvsts05,
+		  case when b.lflmtdesc06 is null then null else case when nvl(b.lfvsts06,0)=0 then 99999 else b.lfvsts06 end end as lfvsts06,
+		  case when b.lflmtdesc07 is null then null else case when nvl(b.lfvsts07,0)=0 then 99999 else b.lfvsts07 end end as lfvsts07,
+		  case when b.lflmtdesc08 is null then null else case when nvl(b.lfvsts08,0)=0 then 99999 else b.lfvsts08 end end as lfvsts08,
+		  case when b.lflmtdesc09 is null then null else case when nvl(b.lfvsts09,0)=0 then 99999 else b.lfvsts09 end end as lfvsts09,
+		  case when b.lflmtdesc10 is null then null else case when nvl(b.lfvsts10,0)=0 then 99999 else b.lfvsts10 end end as lfvsts10,
+		  case when b.lflmtdesc11 is null then null else case when nvl(b.lfvsts11,0)=0 then 99999 else b.lfvsts11 end end as lfvsts11,
+		  case when b.lflmtdesc12 is null then null else case when nvl(b.lfvsts12,0)=0 then 99999 else b.lfvsts12 end end as lfvsts12,
+		  case when b.lflmtdesc13 is null then null else case when nvl(b.lfvsts13,0)=0 then 99999 else b.lfvsts13 end end as lfvsts13,
+		  case when b.lflmtdesc14 is null then null else case when nvl(b.lfvsts14,0)=0 then 99999 else b.lfvsts14 end end as lfvsts14,
+		  case when b.lflmtdesc15 is null then null else case when nvl(b.lfvsts15,0)=0 then 99999 else b.lfvsts15 end end as lfvsts15,
+		  case when b.lflmtdesc16 is null then null else case when nvl(b.lfvsts16,0)=0 then 99999 else b.lfvsts16 end end as lfvsts16,
+		  case when b.lflmtdesc17 is null then null else case when nvl(b.lfvsts17,0)=0 then 99999 else b.lfvsts17 end end as lfvsts17,
+		  case when b.lflmtdesc18 is null then null else case when nvl(b.lfvsts18,0)=0 then 99999 else b.lfvsts18 end end as lfvsts18,
+		  case when b.lflmtdesc19 is null then null else case when nvl(b.lfvsts19,0)=0 then 99999 else b.lfvsts19 end end as lfvsts19,
+		  case when b.lflmtdesc20 is null then null else case when nvl(b.lfvsts20,0)=0 then 99999 else b.lfvsts20 end end as lfvsts20,
+		  nvl(b.oopincded01,'') as  oopincded01
+		 from EMPPLANS a
+		 left join  medi.PLAN  b on a.PLNNO=b.PLNNO
+		)
+		 select * from TBL_ESTCOST_EMPPLAN_
+	</select>
+	<select id="selestcostclmdetl"  parameterType="adppo" resultMap="adppoResult">
+	with EMPPLAN0 as(
+	      select a.MASTER_GROUP as MSTNO, a.GROUP_NUMBER as GRPNO, a.EMPLOYEE_NUMBER as EMPNO, a.DEPENDENT_NUMBER as DEPNO, 
+	      a.EMPLOYEE_SSN as EMPSSN, a.PPO1 as PPONO, NVL(b.PLNNO,0) as PLNNO
+	      from MEDI.TBL_MEMBER_NETWORK a
+	      left join MEDI.GRPPPO b on a.GROUP_NUMBER=b.GRPNO and a.PPO1=b.PPONO
+	      where a.COVERAGE_TYPE='M' and SYSDATE between a.BENEFIT_FROM and a.BENEFIT_THRU and SYSDATE between b.BEGDT and b.ENDDT
+	       union 
+	      select a.MASTER_GROUP as MSTNO, a.GROUP_NUMBER as GRPNO, a.EMPLOYEE_NUMBER as EMPNO, a.DEPENDENT_NUMBER as DEPNO, 
+	      a.EMPLOYEE_SSN as EMPSSN, 0 as PPONO, a.PLAN_NO as PLNNO
+	      from MEDI.TBL_MEMBER_NETWORK a
+	      where a.COVERAGE_TYPE='M' and SYSDATE between a.BENEFIT_FROM and a.BENEFIT_THRU  
+		) 
+		,EMPPLAN as(  
+		select MSTNO, GRPNO,EMPNO,DEPNO,EMPSSN,PPONO,PLNNO
+		,to_number(to_char(sysdate,'yyyy')) as CLMPRE
+		, (ROUND(TO_NUMBER(sysdate-to_date(to_char(sysdate,'yyyy')||'-01-01','yyyy-mm-dd')))+1)*1000000+(to_char(sysdate,'hh24')-1)*10000+to_char(sysdate,'mi')*100+to_char(sysdate,'ss') as CLMNO 
+		from EMPPLAN0 
+	      <where>
+	      		<if test="grpno != null" >
+					and GRPNO=#{grpno}
+				</if>
+	      		<if test="empno != null" >
+					and EMPNO=#{empno}
+				</if>
+	      		<if test="depno != null" >
+					and DEPNO=#{depno}
+				</if>
+	      </where>
+		)
+		,EMPPLANEMP0 as( 
+		      select
+		      a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, 
+		      a.EMPSSN, a.PPONO,  nvl(b.OVRPPOPLN,a.PLNNO) as PLNNO 
+		      ,a.CLMPRE,a.CLMNO
+		      from EMPPLAN a
+		      left join MEDI.EEDPELIG b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and b.DEPNO=0
+		      and sysdate between b.SNAPFROMDT and b.SNAPTHRUDT and b.OVRPPOPLN&gt;0
+		            and a.PPONO&gt;0
+		)
+		,EMPPLANEMP as( 
+		      select
+		      a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, 
+		      a.EMPSSN, a.PPONO,  nvl(b.OVRPLN,a.PLNNO) as PLNNO
+		      ,a.CLMPRE,a.CLMNO
+		      from EMPPLANEMP0 a
+		      left join MEDI.EEDPELIG b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and b.DEPNO=0
+		      and sysdate between b.SNAPFROMDT and b.SNAPTHRUDT and b.OVRPLN&gt;0
+		            and a.PPONO=0
+		)
+		,EMPPLANDEP0 as( 
+		        select
+		        a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, 
+		        a.EMPSSN, a.PPONO,   nvl(b.OVRPPOPLN,a.PLNNO) as PLNNO
+		        ,a.CLMPRE,a.CLMNO
+		        from EMPPLANEMP a
+		        left join MEDI.EEDPELIG b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and a.DEPNO=b.DEPNO
+		        and sysdate between b.SNAPFROMDT and b.SNAPTHRUDT and b.OVRPPOPLN&gt;0 and a.PLNNO!=b.OVRPPOPLN
+		             and a.PPONO&gt;0 
+		),EMPPLANS as( 
+		        select
+		        a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, 
+		        a.EMPSSN, a.PPONO,  nvl(b.OVRPLN,a.PLNNO) as PLNNO
+		        ,a.CLMPRE,a.CLMNO
+		        from EMPPLANDEP0 a
+		        left join MEDI.EEDPELIG b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and a.DEPNO=b.DEPNO
+		        and sysdate between b.SNAPFROMDT and b.SNAPTHRUDT and b.OVRPLN&gt;0 and a.PLNNO!=b.OVRPLN
+		             and a.PPONO=0 
+		)
+		,TBL_ESTCOST_EMPPLAN_ as ( 
+		select a.GRPNO,a.EMPNO,a.DEPNO,a.MSTNO, a.EMPSSN,a.PPONO, a.PLNNO,a.CLMPRE,a.CLMNO,
+		 nvl(b.indedamt01,'') as indedamt01,
+		 nvl(b.fmdedamt01,'') as fmdedamt01,
+		 nvl(b.fmdedct01,'') as fmdedct01,
+		  nvl(b.inoopamt01,'') as inoopamt01,
+		  nvl(b.fmoopamt01,'') as fmoopamt01,
+		  nvl(b.fmoopct01,'') as fmoopct01,
+		  nvl(b.anlmtdesc01,'') as anlmtdesc01,
+		  nvl(b.anlmtdesc02,'') as anlmtdesc02,
+		  nvl(b.anlmtdesc03,'') as anlmtdesc03,
+		  nvl(b.anlmtdesc04,'') as anlmtdesc04,
+		  nvl(b.anlmtdesc05,'') as anlmtdesc05,
+		  nvl(b.anlmtdesc06,'') as anlmtdesc06,
+		  nvl(b.anlmtdesc07,'') as anlmtdesc07,
+		  nvl(b.anlmtdesc08,'') as anlmtdesc08,
+		  nvl(b.anlmtdesc09,'') as anlmtdesc09,
+		  nvl(b.anlmtdesc10,'') as anlmtdesc10,
+		  nvl(b.anlmtdesc11,'') as anlmtdesc11,
+		  nvl(b.anlmtdesc12,'') as anlmtdesc12,
+		  nvl(b.anlmtdesc13,'') as anlmtdesc13,
+		  nvl(b.anlmtdesc14,'') as anlmtdesc14,
+		  nvl(b.anlmtdesc15,'') as anlmtdesc15,
+		  nvl(b.anlmtdesc16,'') as anlmtdesc16,
+		  nvl(b.anlmtdesc17,'') as anlmtdesc17,
+		  nvl(b.anlmtdesc18,'') as anlmtdesc18,
+		  nvl(b.anlmtdesc19,'') as anlmtdesc19,
+		  nvl(b.anlmtdesc20,'') as anlmtdesc20,
+		  case when b.anlmtdesc01 is null then null else case when nvl(b.anlmt01,0)=0 then 99999999.99 else b.anlmt01 end end as anlmt01,
+		  case when b.anlmtdesc02 is null then null else case when nvl(b.anlmt02,0)=0 then 99999999.99 else b.anlmt02 end end as anlmt02,
+		  case when b.anlmtdesc03 is null then null else case when nvl(b.anlmt03,0)=0 then 99999999.99 else b.anlmt03 end end as anlmt03,
+		  case when b.anlmtdesc04 is null then null else case when nvl(b.anlmt04,0)=0 then 99999999.99 else b.anlmt04 end end as anlmt04,
+		  case when b.anlmtdesc05 is null then null else case when nvl(b.anlmt05,0)=0 then 99999999.99 else b.anlmt05 end end as anlmt05,
+		  case when b.anlmtdesc06 is null then null else case when nvl(b.anlmt06,0)=0 then 99999999.99 else b.anlmt06 end end as anlmt06,
+		  case when b.anlmtdesc07 is null then null else case when nvl(b.anlmt07,0)=0 then 99999999.99 else b.anlmt07 end end as anlmt07,
+		  case when b.anlmtdesc08 is null then null else case when nvl(b.anlmt08,0)=0 then 99999999.99 else b.anlmt08 end end as anlmt08,
+		  case when b.anlmtdesc09 is null then null else case when nvl(b.anlmt09,0)=0 then 99999999.99 else b.anlmt09 end end as anlmt09,
+		  case when b.anlmtdesc10 is null then null else case when nvl(b.anlmt10,0)=0 then 99999999.99 else b.anlmt10 end end as anlmt10, 
+		  case when b.anlmtdesc11 is null then null else case when nvl(b.anlmt11,0)=0 then 99999999.99 else b.anlmt11 end end as anlmt11,
+		  case when b.anlmtdesc12 is null then null else case when nvl(b.anlmt12,0)=0 then 99999999.99 else b.anlmt12 end end as anlmt12,
+		  case when b.anlmtdesc13 is null then null else case when nvl(b.anlmt13,0)=0 then 99999999.99 else b.anlmt13 end end as anlmt13,
+		  case when b.anlmtdesc14 is null then null else case when nvl(b.anlmt14,0)=0 then 99999999.99 else b.anlmt14 end end as anlmt14,
+		  case when b.anlmtdesc15 is null then null else case when nvl(b.anlmt15,0)=0 then 99999999.99 else b.anlmt15 end end as anlmt15,
+		  case when b.anlmtdesc16 is null then null else case when nvl(b.anlmt16,0)=0 then 99999999.99 else b.anlmt16 end end as anlmt16,
+		  case when b.anlmtdesc17 is null then null else case when nvl(b.anlmt17,0)=0 then 99999999.99 else b.anlmt17 end end as anlmt17,
+		  case when b.anlmtdesc18 is null then null else case when nvl(b.anlmt18,0)=0 then 99999999.99 else b.anlmt18 end end as anlmt18,
+		  case when b.anlmtdesc19 is null then null else case when nvl(b.anlmt19,0)=0 then 99999999.99 else b.anlmt19 end end as anlmt19,
+		  case when b.anlmtdesc20 is null then null else case when nvl(b.anlmt20,0)=0 then 99999999.99 else b.anlmt20 end end as anlmt20,
+		  case when b.anlmtdesc01 is null then null else case when nvl(b.anvsts01,0)=0 then 99999 else b.anvsts01 end end as anvsts01,
+		  case when b.anlmtdesc02 is null then null else case when nvl(b.anvsts02,0)=0 then 99999 else b.anvsts02 end end as anvsts02,
+		  case when b.anlmtdesc03 is null then null else case when nvl(b.anvsts03,0)=0 then 99999 else b.anvsts03 end end as anvsts03,
+		  case when b.anlmtdesc04 is null then null else case when nvl(b.anvsts04,0)=0 then 99999 else b.anvsts04 end end as anvsts04,
+		  case when b.anlmtdesc05 is null then null else case when nvl(b.anvsts05,0)=0 then 99999 else b.anvsts05 end end as anvsts05,
+		  case when b.anlmtdesc06 is null then null else case when nvl(b.anvsts06,0)=0 then 99999 else b.anvsts06 end end as anvsts06,
+		  case when b.anlmtdesc07 is null then null else case when nvl(b.anvsts07,0)=0 then 99999 else b.anvsts07 end end as anvsts07,
+		  case when b.anlmtdesc08 is null then null else case when nvl(b.anvsts08,0)=0 then 99999 else b.anvsts08 end end as anvsts08,
+		  case when b.anlmtdesc09 is null then null else case when nvl(b.anvsts09,0)=0 then 99999 else b.anvsts09 end end as anvsts09,
+		  case when b.anlmtdesc10 is null then null else case when nvl(b.anvsts10,0)=0 then 99999 else b.anvsts10 end end as anvsts10,
+		  case when b.anlmtdesc11 is null then null else case when nvl(b.anvsts11,0)=0 then 99999 else b.anvsts11 end end as anvsts11,
+		  case when b.anlmtdesc12 is null then null else case when nvl(b.anvsts12,0)=0 then 99999 else b.anvsts12 end end as anvsts12,
+		  case when b.anlmtdesc13 is null then null else case when nvl(b.anvsts13,0)=0 then 99999 else b.anvsts13 end end as anvsts13,
+		  case when b.anlmtdesc14 is null then null else case when nvl(b.anvsts14,0)=0 then 99999 else b.anvsts14 end end as anvsts14,
+		  case when b.anlmtdesc15 is null then null else case when nvl(b.anvsts15,0)=0 then 99999 else b.anvsts15 end end as anvsts15,
+		  case when b.anlmtdesc16 is null then null else case when nvl(b.anvsts16,0)=0 then 99999 else b.anvsts16 end end as anvsts16,
+		  case when b.anlmtdesc17 is null then null else case when nvl(b.anvsts17,0)=0 then 99999 else b.anvsts17 end end as anvsts17,
+		  case when b.anlmtdesc18 is null then null else case when nvl(b.anvsts18,0)=0 then 99999 else b.anvsts18 end end as anvsts18,
+		  case when b.anlmtdesc19 is null then null else case when nvl(b.anvsts19,0)=0 then 99999 else b.anvsts19 end end as anvsts19,
+		  case when b.anlmtdesc20 is null then null else case when nvl(b.anvsts20,0)=0 then 99999 else b.anvsts20 end end as anvsts20,
+		  nvl(b.fmanlmtdesc01,'') as fmanlmtdesc01 ,
+		  nvl(b.fmanlmtdesc02,'') as fmanlmtdesc02 ,
+		  nvl(b.fmanlmtdesc03,'') as fmanlmtdesc03 ,
+		  nvl(b.fmanlmtdesc04,'') as fmanlmtdesc04 ,
+		  nvl(b.fmanlmtdesc05,'') as fmanlmtdesc05 ,
+		  case when b.fmanlmtdesc01 is null then null else case when nvl(b.fmanlmt01,0)=0 then 99999999.99 else b.fmanlmt01 end end as fmanlmt01, 
+		  case when b.fmanlmtdesc02 is null then null else case when nvl(b.fmanlmt02,0)=0 then 99999999.99 else b.fmanlmt02 end end as fmanlmt02, 
+		  case when b.fmanlmtdesc03 is null then null else case when nvl(b.fmanlmt03,0)=0 then 99999999.99 else b.fmanlmt03 end end as fmanlmt03, 
+		  case when b.fmanlmtdesc04 is null then null else case when nvl(b.fmanlmt04,0)=0 then 99999999.99 else b.fmanlmt04 end end as fmanlmt04, 
+		  case when b.fmanlmtdesc05 is null then null else case when nvl(b.fmanlmt05,0)=0 then 99999999.99 else b.fmanlmt05 end end as fmanlmt05,
+		  case when b.fmanlmtdesc01 is null then null else case when nvl(b.fmanvsts01,0)=0 then 99999 else b.fmanvsts01 end end as fmanvsts01,
+		  case when b.fmanlmtdesc02 is null then null else case when nvl(b.fmanvsts02,0)=0 then 99999 else b.fmanvsts02 end end as fmanvsts02,
+		  case when b.fmanlmtdesc03 is null then null else case when nvl(b.fmanvsts03,0)=0 then 99999 else b.fmanvsts03 end end as fmanvsts03,
+		  case when b.fmanlmtdesc04 is null then null else case when nvl(b.fmanvsts04,0)=0 then 99999 else b.fmanvsts04 end end as fmanvsts04,
+		  case when b.fmanlmtdesc05 is null then null else case when nvl(b.fmanvsts05,0)=0 then 99999 else b.fmanvsts05 end end as fmanvsts05,
+		  nvl(b.lflmtdesc01,'') as  lflmtdesc01  ,
+		  nvl(b.lflmtdesc02,'') as  lflmtdesc02  ,
+		  nvl(b.lflmtdesc03,'') as  lflmtdesc03  ,
+		  nvl(b.lflmtdesc04,'') as  lflmtdesc04  ,
+		  nvl(b.lflmtdesc05,'') as  lflmtdesc05  ,
+		  nvl(b.lflmtdesc06,'') as  lflmtdesc06  ,
+		  nvl(b.lflmtdesc07,'') as  lflmtdesc07  ,
+		  nvl(b.lflmtdesc08,'') as  lflmtdesc08  ,
+		  nvl(b.lflmtdesc09,'') as  lflmtdesc09  ,
+		  nvl(b.lflmtdesc10,'') as  lflmtdesc10  ,
+		  nvl(b.lflmtdesc11,'') as  lflmtdesc11  ,
+		  nvl(b.lflmtdesc12,'') as  lflmtdesc12  ,
+		  nvl(b.lflmtdesc13,'') as  lflmtdesc13  ,
+		  nvl(b.lflmtdesc14,'') as  lflmtdesc14  ,
+		  nvl(b.lflmtdesc15,'') as  lflmtdesc15  ,
+		  nvl(b.lflmtdesc16,'') as  lflmtdesc16  ,
+		  nvl(b.lflmtdesc17,'') as  lflmtdesc17  ,
+		  nvl(b.lflmtdesc18,'') as  lflmtdesc18  ,
+		  nvl(b.lflmtdesc19,'') as  lflmtdesc19  ,
+		  nvl(b.lflmtdesc20,'') as  lflmtdesc20  ,
+		  case when b.lflmtdesc01 is null then null else case when nvl(b.lflmt01,0)=0 then 99999999.99 else b.lflmt01 end end as lflmt01, 
+		  case when b.lflmtdesc02 is null then null else case when nvl(b.lflmt02,0)=0 then 99999999.99 else b.lflmt02 end end as lflmt02, 
+		  case when b.lflmtdesc03 is null then null else case when nvl(b.lflmt03,0)=0 then 99999999.99 else b.lflmt03 end end as lflmt03, 
+		  case when b.lflmtdesc04 is null then null else case when nvl(b.lflmt04,0)=0 then 99999999.99 else b.lflmt04 end end as lflmt04, 
+		  case when b.lflmtdesc05 is null then null else case when nvl(b.lflmt05,0)=0 then 99999999.99 else b.lflmt05 end end as lflmt05, 
+		  case when b.lflmtdesc06 is null then null else case when nvl(b.lflmt06,0)=0 then 99999999.99 else b.lflmt06 end end as lflmt06, 
+		  case when b.lflmtdesc07 is null then null else case when nvl(b.lflmt07,0)=0 then 99999999.99 else b.lflmt07 end end as lflmt07, 
+		  case when b.lflmtdesc08 is null then null else case when nvl(b.lflmt08,0)=0 then 99999999.99 else b.lflmt08 end end as lflmt08, 
+		  case when b.lflmtdesc09 is null then null else case when nvl(b.lflmt09,0)=0 then 99999999.99 else b.lflmt09 end end as lflmt09, 
+		  case when b.lflmtdesc10 is null then null else case when nvl(b.lflmt10,0)=0 then 99999999.99 else b.lflmt10 end end as lflmt10, 
+		  case when b.lflmtdesc11 is null then null else case when nvl(b.lflmt11,0)=0 then 99999999.99 else b.lflmt11 end end as lflmt11, 
+		  case when b.lflmtdesc12 is null then null else case when nvl(b.lflmt12,0)=0 then 99999999.99 else b.lflmt12 end end as lflmt12, 
+		  case when b.lflmtdesc13 is null then null else case when nvl(b.lflmt13,0)=0 then 99999999.99 else b.lflmt13 end end as lflmt13, 
+		  case when b.lflmtdesc14 is null then null else case when nvl(b.lflmt14,0)=0 then 99999999.99 else b.lflmt14 end end as lflmt14, 
+		  case when b.lflmtdesc15 is null then null else case when nvl(b.lflmt15,0)=0 then 99999999.99 else b.lflmt15 end end as lflmt15, 
+		  case when b.lflmtdesc16 is null then null else case when nvl(b.lflmt16,0)=0 then 99999999.99 else b.lflmt16 end end as lflmt16, 
+		  case when b.lflmtdesc17 is null then null else case when nvl(b.lflmt17,0)=0 then 99999999.99 else b.lflmt17 end end as lflmt17, 
+		  case when b.lflmtdesc18 is null then null else case when nvl(b.lflmt18,0)=0 then 99999999.99 else b.lflmt18 end end as lflmt18, 
+		  case when b.lflmtdesc19 is null then null else case when nvl(b.lflmt19,0)=0 then 99999999.99 else b.lflmt19 end end as lflmt19, 
+		  case when b.lflmtdesc20 is null then null else case when nvl(b.lflmt20,0)=0 then 99999999.99 else b.lflmt20 end end as lflmt20, 
+		  case when b.lflmtdesc01 is null then null else case when nvl(b.lfvsts01,0)=0 then 99999 else b.lfvsts01 end end as lfvsts01, 
+		  case when b.lflmtdesc02 is null then null else case when nvl(b.lfvsts02,0)=0 then 99999 else b.lfvsts02 end end as lfvsts02,
+		  case when b.lflmtdesc03 is null then null else case when nvl(b.lfvsts03,0)=0 then 99999 else b.lfvsts03 end end as lfvsts03,
+		  case when b.lflmtdesc04 is null then null else case when nvl(b.lfvsts04,0)=0 then 99999 else b.lfvsts04 end end as lfvsts04,
+		  case when b.lflmtdesc05 is null then null else case when nvl(b.lfvsts05,0)=0 then 99999 else b.lfvsts05 end end as lfvsts05,
+		  case when b.lflmtdesc06 is null then null else case when nvl(b.lfvsts06,0)=0 then 99999 else b.lfvsts06 end end as lfvsts06,
+		  case when b.lflmtdesc07 is null then null else case when nvl(b.lfvsts07,0)=0 then 99999 else b.lfvsts07 end end as lfvsts07,
+		  case when b.lflmtdesc08 is null then null else case when nvl(b.lfvsts08,0)=0 then 99999 else b.lfvsts08 end end as lfvsts08,
+		  case when b.lflmtdesc09 is null then null else case when nvl(b.lfvsts09,0)=0 then 99999 else b.lfvsts09 end end as lfvsts09,
+		  case when b.lflmtdesc10 is null then null else case when nvl(b.lfvsts10,0)=0 then 99999 else b.lfvsts10 end end as lfvsts10,
+		  case when b.lflmtdesc11 is null then null else case when nvl(b.lfvsts11,0)=0 then 99999 else b.lfvsts11 end end as lfvsts11,
+		  case when b.lflmtdesc12 is null then null else case when nvl(b.lfvsts12,0)=0 then 99999 else b.lfvsts12 end end as lfvsts12,
+		  case when b.lflmtdesc13 is null then null else case when nvl(b.lfvsts13,0)=0 then 99999 else b.lfvsts13 end end as lfvsts13,
+		  case when b.lflmtdesc14 is null then null else case when nvl(b.lfvsts14,0)=0 then 99999 else b.lfvsts14 end end as lfvsts14,
+		  case when b.lflmtdesc15 is null then null else case when nvl(b.lfvsts15,0)=0 then 99999 else b.lfvsts15 end end as lfvsts15,
+		  case when b.lflmtdesc16 is null then null else case when nvl(b.lfvsts16,0)=0 then 99999 else b.lfvsts16 end end as lfvsts16,
+		  case when b.lflmtdesc17 is null then null else case when nvl(b.lfvsts17,0)=0 then 99999 else b.lfvsts17 end end as lfvsts17,
+		  case when b.lflmtdesc18 is null then null else case when nvl(b.lfvsts18,0)=0 then 99999 else b.lfvsts18 end end as lfvsts18,
+		  case when b.lflmtdesc19 is null then null else case when nvl(b.lfvsts19,0)=0 then 99999 else b.lfvsts19 end end as lfvsts19,
+		  case when b.lflmtdesc20 is null then null else case when nvl(b.lfvsts20,0)=0 then 99999 else b.lfvsts20 end end as lfvsts20,
+		  nvl(b.oopincded01,'') as  oopincded01
+		 from EMPPLANS a
+		 left join  medi.PLAN  b on a.PLNNO=b.PLNNO
+		)
+		, CLMDETL as(
+			      select a.CLMPRE,a.CLMNO 
+			      ,rownum as CLMLN
+			    
+			      , PPONO
+			      <if test="poscode != null" >
+			      , #{poscode} as POS
+				  </if>
+			      <if test="proccd != null" >
+			      , #{proccd} as PROCCD
+				  </if>
+			      ,  to_char(sysdate,'yyyy/mm/dd')  as INCFRMDT  
+			      , PLNNO, 0 as CVGTP
+			      
+			      <if test="CHGAMT != null" >
+			      , #{CHGAMT} as CHGAMT
+				  </if>
+				  
+			      <if test="ADJCVRD != null" >
+			      , #{ADJCVRD} as ADJCVRD
+				  </if>
+			   
+			      , 0 as PRVRESP, 0 AS EERESP
+			      , 0 as EDEAMT, 0 AS COPAMT, 0 AS COINAMT, 0 AS DEDPSTAMT, 0 AS OOPPSTAMT, 0 AS DEDREMPLN, 0 AS DEDREMPPO, 0 AS OOPREMPLN, 0 AS OOPREMPPO
+			      , a.MSTNO, a.GRPNO, a.EMPNO, a.DEPNO, a.EMPSSN
+			     <if test="PRVTP != null" >
+			      , #{PRVTP} as PRVTP
+				  </if>
+			    
+			      , case when  add_months(b.DOB,(to_number(to_char(sysdate,'yyyy'))-to_number(to_char(b.DOB,'yyyy')))*12)&gt;sysdate then to_number(to_char(sysdate,'yyyy'))-to_number(to_char(b.DOB,'yyyy'))-1 else  to_number(to_char(sysdate,'yyyy'))-to_number(to_char(b.DOB,'yyyy')) end as AGE
+			      
+			      <if test="MODCD1 != null" >
+			      , #{MODCD1} as MODCD1
+				  </if>
+				  
+			      <if test="DIAG != null" >
+			      , #{DIAG} as DIAG
+				  </if>
+			     
+			      , 1 as UNITS, 1 AS UNITSALWD
+			      ,'' as INOUTACCS, '' as IOACCSCOMDED
+			      ,'' as CVGCD
+			      ,'' as DEDNO,
+			      '' as OOPNO,
+			      '' as BENCD,
+			      '' as ANNACC1,
+			      '' as ANNACC2,
+			      '' as LIFACC1,
+			      '' as LIFACC2,
+			      '' as PERC,
+			      '' as VSTSCD,
+			      '' as COPAYCD,
+			      '' as COPAYAMT,
+			      '' as AMTLMT,
+			      '' as AMTFLAG,
+			      '' as ANNVSTS,
+			      '' as TMFRMTP,
+			      '' as TMFRMCT,
+			      '' as TMFRMDEN,
+			      '' as TMFRMCD,
+			      '' as DLYLMTCD,
+			      '' as COPDED,
+			      '' as COPOOP,
+			      '' as OOPINCDED,
+			      '' as FREQCD,
+			      '' as WVECD 
+			      from TBL_ESTCOST_EMPPLAN_ a
+			      inner join  MEDI.EMPDEP b on a.GRPNO=b.GRPNO and a.EMPNO=b.EMPNO and a.DEPNO=b.DEPNO
+			)
+			, TBL_ESTCOST_CLMDETL_ as (
+			select  A.GRPNO, A.EMPNO, A.DEPNO, A.MODCD1, A.DIAG, A.POS, A.AGE, A.PRVTP, A.PROCCD
+			    , A.CLMPRE, A.CLMNO, PPONO
+			    , A.CLMLN,A.PLNNO,CVGTP,a.INCFRMDT,CHGAMT,ADJCVRD
+			     ,PRVRESP, EERESP
+			      , EDEAMT,  COPAMT, COINAMT, DEDPSTAMT, OOPPSTAMT, DEDREMPLN, DEDREMPPO, OOPREMPLN, OOPREMPPO
+			      ,UNITS,UNITSALWD
+			      ,a.INOUTACCS, a.IOACCSCOMDED
+			      ,nvl(b.DEFCVGCD,a.CVGCD) as CVGCD
+			      ,a.DEDNO,
+			      a.OOPNO,
+			      a.BENCD,
+			      a.ANNACC1,
+			      a.ANNACC2,
+			      a.LIFACC1,
+			      a.LIFACC2,
+			      a.PERC,
+			      a.VSTSCD,
+			      a.COPAYCD,
+			      a.COPAYAMT,
+			      a.AMTLMT,
+			      a.AMTFLAG,
+			      a.ANNVSTS,
+			      a.TMFRMTP,
+			      a.TMFRMCT,
+			      a.TMFRMDEN,
+			      a.TMFRMCD,
+			      a.DLYLMTCD,
+			      a.COPDED,
+			      a.COPOOP,
+			      a.OOPINCDED
+			      ,a.FREQCD,a.WVECD
+			from CLMDETL a
+			left join MEDI.PROCEDUR b on a.PROCCD=b.PROCCD
+			)
+			, EDCVGASN1 as(
+			select  distinct A.GRPNO, A.EMPNO, A.DEPNO, A.MODCD1, A.DIAG, A.POS, A.AGE, A.PRVTP, A.PROCCD,A.PLNNO
+			    ,case when (MODCDFROM&gt;'00' or MODCDTHRU&lt;'ZZ') then '1' else '0' end ||
+			    case when ((DIAGFROM&gt;'A00.' and DIAGTP='0') or (DIAGFROM&gt;'000000' and DIAGTP='9')
+			       or (DIAGTHRU not like 'ZZZZ%' and DIAGTP='0') or (DIAGTHRU not like 'zzzz%' and DIAGTP='9')) then '1' else '0' end ||
+			    case when (POSFROM&gt;0 or POSTHRU&lt;99) then '1' else '0' end ||
+			    case when (AGEFROM&gt;0 or AGETHRU&lt;999) then '1' else '0' end ||
+			    case when (PRVTPFROM&gt;0 or PRVTPTHRU&lt;99) then '1' else '0' end
+			    as  CVGMAPFLAG,a.INOUTACCS, a.IOACCSCOMDED
+			    , A.CLMPRE, A.CLMNO 
+			    , A.CLMLN, b.*
+			  from TBL_ESTCOST_CLMDETL_ a
+			  inner join MEDI.EDCVGASN b on a.PROCCD=b.CODE
+			  where a.MODCD1 between b.MODCDFROM and b.MODCDTHRU and a.POS between b.POSFROM and b.POSTHRU
+			    and a.AGE between b.AGEFROM and b.AGETHRU and a.PRVTP between b.PRVTPFROM and b.PRVTPTHRU
+			    and a.DIAG between b.DIAGFROM and b.DIAGTHRU
+			 order by CLMPRE, CLMNO 
+			 , CLMLN
+			)  
+			,SYSOVRD as (
+			select rownum as SEQ, c.CODE as CODE_SYS
+			, a.GRPNO, a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD,a.CVGMAPFLAG, a.CLMPRE, a.CLMNO 
+			, a.CLMLN
+			, a.code 
+			, a.posfrom
+			, a.posthru
+			, a.prvtpfrom
+			, a.prvtpthru
+			, a.diagfrom
+			, a.diagthru
+			, a.modfrom
+			, a.modthru
+			, a.cvgcd
+			, a.agefrom
+			, a.agethru
+			, a.modcdfrom
+			, a.modcdthru
+			, a.diagtp
+			, a.lstchgdt
+			, a.lstchgoper
+			, a.adddt
+			from EDCVGASN1 a
+			inner join (select CLMPRE, CLMNO,  
+			              CLMLN, max(CVGMAPFLAG) as CVGMAPFLAG 
+			              from  EDCVGASN1 
+			              group by CLMPRE, CLMNO 
+			              , CLMLN) b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO  
+			                            and a.CLMLN=b.CLMLN and a.CVGMAPFLAG=b.CVGMAPFLAG
+			inner join (select * from MEDI.SYSCOVCD where CVGTP=0) c on a.CVGCD=c.DESCNO
+			)
+			,SYSOVRD_MULTI as(
+			    select a.*  
+					from SYSOVRD a
+					where exists (select 1 from SYSOVRD b where a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO   and a.CLMLN=b.CLMLN and a.CVGCD!=b.CVGCD)
+			)
+			,SYSOVRD_MULTI1 as( 
+			    select case when b.SEQ!=null then a.CVGMAPFLAG||'0' else a.CVGMAPFLAG||'1' end  as CVGMAPFLAG
+			    ,a.SEQ, a.CODE_SYS, a.GRPNO, a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO 
+			    , a.CLMLN, a.code, a.posfrom , a.posthru, a.prvtpfrom, a.prvtpthru, a.diagfrom, a.diagthru, a.modfrom, a.modthru
+			    , a.cvgcd, a.agefrom, a.agethru, a.modcdfrom, a.modcdthru, a.diagtp, a.lstchgdt, a.lstchgoper, a.adddt
+			    from SYSOVRD_MULTI a
+			    left join SYSOVRD_MULTI b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			      and ((a.MODCDFROM&lt;b.MODCDFROM and a.MODCDTHRU&gt;=b.MODCDTHRU) or (a.MODCDFROM&lt;=b.MODCDFROM and a.MODCDTHRU&gt;b.MODCDTHRU))
+			)
+			
+			,SYSOVRD_MULTI2 as( 
+			    select case when b.SEQ!=null then a.CVGMAPFLAG||'0' else a.CVGMAPFLAG||'1' end  as CVGMAPFLAG
+			    ,a.SEQ, a.CODE_SYS, a.GRPNO, a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO 
+			    , a.CLMLN, a.code, a.posfrom , a.posthru, a.prvtpfrom, a.prvtpthru, a.diagfrom, a.diagthru, a.modfrom, a.modthru
+			    , a.cvgcd, a.agefrom, a.agethru, a.modcdfrom, a.modcdthru, a.diagtp, a.lstchgdt, a.lstchgoper, a.adddt
+			    from SYSOVRD_MULTI1 a
+			    left join SYSOVRD_MULTI1 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			      and ((a.DIAGFROM&lt;b.DIAGFROM and a.DIAGTHRU&gt;=b.DIAGTHRU) or (a.DIAGFROM&lt;=b.DIAGFROM and a.DIAGTHRU&gt;b.DIAGTHRU))
+			)
+			,SYSOVRD_MULTI3 as(  
+			    select case when b.SEQ!=null then a.CVGMAPFLAG||'0' else a.CVGMAPFLAG||'1' end  as CVGMAPFLAG
+			    ,a.SEQ, a.CODE_SYS, a.GRPNO, a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO 
+			    , a.CLMLN, a.code, a.posfrom , a.posthru, a.prvtpfrom, a.prvtpthru, a.diagfrom, a.diagthru, a.modfrom, a.modthru
+			    , a.cvgcd, a.agefrom, a.agethru, a.modcdfrom, a.modcdthru, a.diagtp, a.lstchgdt, a.lstchgoper, a.adddt
+			    from SYSOVRD_MULTI2 a
+			    left join SYSOVRD_MULTI2 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			       and ((a.POSFROM&lt;b.POSFROM and a.POSTHRU&gt;=b.POSTHRU) or (a.POSFROM&lt;=b.POSFROM and a.POSTHRU&gt;b.POSTHRU))
+			)  
+			,SYSOVRD_MULTI4 as(  
+			    select case when b.SEQ!=null then a.CVGMAPFLAG||'0' else a.CVGMAPFLAG||'1' end  as CVGMAPFLAG
+			    ,a.SEQ, a.CODE_SYS, a.GRPNO, a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO 
+			    , a.CLMLN, a.code, a.posfrom , a.posthru, a.prvtpfrom, a.prvtpthru, a.diagfrom, a.diagthru, a.modfrom, a.modthru
+			    , a.cvgcd, a.agefrom, a.agethru, a.modcdfrom, a.modcdthru, a.diagtp, a.lstchgdt, a.lstchgoper, a.adddt
+			    from SYSOVRD_MULTI3 a
+			    left join SYSOVRD_MULTI3 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			       and ((a.AGEFROM&lt;b.AGEFROM and a.AGETHRU&gt;=b.AGETHRU) or (a.AGEFROM&lt;=b.AGEFROM and a.AGETHRU&gt;b.AGETHRU))
+			) 
+			,SYSOVRD_MULTI5 as(   
+			    select case when b.SEQ!=null then a.CVGMAPFLAG||'0' else a.CVGMAPFLAG||'1' end  as CVGMAPFLAG
+			    ,a.SEQ, a.CODE_SYS, a.GRPNO, a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO 
+			    , a.CLMLN, a.code, a.posfrom , a.posthru, a.prvtpfrom, a.prvtpthru, a.diagfrom, a.diagthru, a.modfrom, a.modthru
+			    , a.cvgcd, a.agefrom, a.agethru, a.modcdfrom, a.modcdthru, a.diagtp, a.lstchgdt, a.lstchgoper, a.adddt
+			    from SYSOVRD_MULTI4 a
+			    left join SYSOVRD_MULTI4 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			      and ((a.PRVTPFROM&lt;b.PRVTPFROM and a.PRVTPTHRU&gt;=b.PRVTPTHRU) or (a.PRVTPFROM&lt;=b.PRVTPFROM and a.PRVTPTHRU&gt;b.PRVTPTHRU))
+			 )
+			, SYSOVRD1 as (
+			  select * from SYSOVRD
+			   where SEQ not in (
+			          select SEQ
+			          from SYSOVRD_MULTI5
+			          where SEQ not in (
+			              select a.SEQ
+			              from SYSOVRD_MULTI5 a
+			              where not exists (select 1 from SYSOVRD_MULTI5 b where a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN and a.CVGMAPFLAG&lt;b.CVGMAPFLAG)
+			            )
+			    )
+			) 
+			,TBL_ESTCOST_CLMDETL_1 as (
+			select a.GRPNO, a.EMPNO, a.DEPNO,a.MODCD1, a.DIAG,a.POS, a.AGE, a.PRVTP,a.PROCCD
+			,PPONO
+			,b.CVGMAPFLAG
+			     ,PRVRESP, EERESP
+			     , EDEAMT,  COPAMT, COINAMT, DEDPSTAMT, OOPPSTAMT, DEDREMPLN, DEDREMPPO, OOPREMPLN, OOPREMPPO
+			      ,UNITS,UNITSALWD
+			, A.CLMLN,A.PLNNO,CVGTP, CHGAMT,ADJCVRD
+			, a.CLMPRE, a.CLMNO,   a.INOUTACCS, a.IOACCSCOMDED
+			,nvl(b.CVGCD,a.CVGCD) as CVGCD
+			,a.DEDNO,
+			a.OOPNO,
+			a.BENCD,
+			a.ANNACC1,
+			a.ANNACC2,
+			a.LIFACC1,
+			a.LIFACC2,
+			a.PERC,
+			a.VSTSCD,
+			a.COPAYCD,
+			a.COPAYAMT,
+			a.AMTLMT,
+			a.AMTFLAG,
+			a.ANNVSTS,
+			a.TMFRMTP,
+			a.TMFRMCT,
+			a.TMFRMDEN,
+			a.TMFRMCD,
+			a.DLYLMTCD,
+			a.COPDED,
+			a.COPOOP,
+			a.OOPINCDED,a.INCFRMDT
+			,a.FREQCD,a.WVECD
+			from TBL_ESTCOST_CLMDETL_ a
+			LEFT join SYSOVRD1 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO  and a.CLMLN=b.CLMLN
+			)
+			,GRPCVGASN1 as(
+			  select distinct A.PLNNO,A.EMPNO, A.DEPNO, A.MODCD1, A.DIAG, A.POS, A.AGE, A.PRVTP, A.PROCCD, A.CLMPRE, A.CLMNO, A.CLMLN, b.*
+			    ,case when (MODCDFROM&gt;'00' or MODCDTHRU&lt;'ZZ') then '1' else '0' end ||
+			    case when ((DIAGFROM&gt;'A00.' and DIAGTP='0') or (DIAGFROM&gt;'000000' and DIAGTP='9')
+			       or (DIAGTHRU not like 'ZZZZ%' and DIAGTP='0') or (DIAGTHRU not like 'zzzz%' and DIAGTP='9')) then '1' else '0' end ||
+			    case when (POSFROM&gt;0 or POSTHRU&lt;99) then '1' else '0' end ||
+			    case when (AGEFROM&gt;0 or AGETHRU&lt;999) then '1' else '0' end ||
+			    case when (PRVTPFROM&gt;0 or PRVTPTHRU&lt;99) then '1' else '0' end as CVGMAPFLAG
+			  from TBL_ESTCOST_CLMDETL_1 a
+			  inner join MEDI.GRPCVGASN b on a.PROCCD=b.CODE and a.GRPNO=b.GRPNO
+			  where a.MODCD1 between b.MODCDFROM and b.MODCDTHRU and a.POS between b.POSFROM and b.POSTHRU
+			        and a.AGE between b.AGEFROM and b.AGETHRU and a.PRVTP between b.PRVTPFROM and b.PRVTPTHRU
+			        and a.DIAG between b.DIAGFROM and b.DIAGTHRU
+			        order by CLMPRE, CLMNO, CLMLN
+			)
+			,GRPOVRD as(
+			select rownum as SEQ, c.CODE as CODE_GRP, a.*
+			from GRPCVGASN1 a
+			inner join (select CLMPRE, CLMNO, CLMLN, max(CVGMAPFLAG) as CVGMAPFLAG  from GRPCVGASN1 group by CLMPRE, CLMNO,  CLMLN) b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN and a.CVGMAPFLAG=b.CVGMAPFLAG
+			inner join   (select * from SYSCOVCD where CVGTP=0) c on a.CVGCD=c.DESCNO
+			)
+			,GRPOVRD_MULTI as(
+			    select    
+			    a.SEQ, a.CODE_GRP  
+			    ,a.CVGMAPFLAG
+			    ,a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO,a.CLMLN
+			    ,a.grpno,a.code,a.posfrom,a.posthru,a.prvtpfrom,a.prvtpthru,a.diagfrom,a.diagthru
+			    ,case when a.modcdfrom='0' then '00' else a.modcdfrom end as modcdfrom
+			    ,a.modcdthru,a.agefrom,a.agethru
+			    ,a.cvgcd,a.diagtp,a.lstchgdt,a.lstchgoper,a.adddt
+			    from GRPOVRD a
+			    where exists (select 1 from GRPOVRD b where a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO  and a.CLMLN=b.CLMLN and a.CVGCD!=b.CVGCD)
+			)  
+			,GRPOVRD_MULTI1 as(
+			     select a.SEQ, a.CODE_GRP
+			     ,case when b.SEQ!=null then  a.CVGMAPFLAG||'0' else  a.CVGMAPFLAG||'1'  end as CVGMAPFLAG
+			     ,a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO,a.CLMLN
+			     ,a.grpno,a.code,a.posfrom,a.posthru,a.prvtpfrom,a.prvtpthru,a.diagfrom,a.diagthru,a.modcdfrom,a.modcdthru,a.agefrom
+			     ,a.agethru,a.cvgcd,a.diagtp,a.lstchgdt,a.lstchgoper,a.adddt
+			     from GRPOVRD_MULTI a
+			     left join GRPOVRD_MULTI b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			          and ((a.MODCDFROM&lt;b.MODCDFROM and a.MODCDTHRU&gt;=b.MODCDTHRU) or (a.MODCDFROM&lt;=b.MODCDFROM and a.MODCDTHRU&gt;b.MODCDTHRU))
+			 ) 
+			,GRPOVRD_MULTI2 as( 
+			     select a.SEQ, a.CODE_GRP
+			     ,case when b.SEQ!=null then  a.CVGMAPFLAG||'0' else  a.CVGMAPFLAG||'1'  end as CVGMAPFLAG
+			     ,a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO,a.CLMLN
+			     ,a.grpno,a.code,a.posfrom,a.posthru,a.prvtpfrom,a.prvtpthru,a.diagfrom,a.diagthru,a.modcdfrom,a.modcdthru,a.agefrom
+			     ,a.agethru,a.cvgcd,a.diagtp,a.lstchgdt,a.lstchgoper,a.adddt
+			     from GRPOVRD_MULTI1 a
+			     left join GRPOVRD_MULTI1 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			          and ((a.DIAGFROM&lt;b.DIAGFROM and a.DIAGTHRU&gt;=b.DIAGTHRU) or (a.DIAGFROM&lt;=b.DIAGFROM and a.DIAGTHRU&gt;b.DIAGTHRU))
+			      
+			)    
+			,GRPOVRD_MULTI3 as(   
+			     select a.SEQ, a.CODE_GRP
+			     ,case when b.SEQ!=null then  a.CVGMAPFLAG||'0' else  a.CVGMAPFLAG||'1'  end as CVGMAPFLAG
+			     ,a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO,a.CLMLN
+			     ,a.grpno,a.code,a.posfrom,a.posthru,a.prvtpfrom,a.prvtpthru,a.diagfrom,a.diagthru,a.modcdfrom,a.modcdthru,a.agefrom
+			     ,a.agethru,a.cvgcd,a.diagtp,a.lstchgdt,a.lstchgoper,a.adddt
+			     from GRPOVRD_MULTI2 a
+			     left join GRPOVRD_MULTI2 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			          and ((a.POSFROM&lt;b.POSFROM and a.POSTHRU&gt;=b.POSTHRU) or (a.POSFROM&lt;=b.POSFROM and a.POSTHRU&gt;b.POSTHRU))
+			)        
+			,GRPOVRD_MULTI4 as(  
+			     select a.SEQ, a.CODE_GRP
+			     ,case when b.SEQ!=null then  a.CVGMAPFLAG||'0' else  a.CVGMAPFLAG||'1'  end as CVGMAPFLAG
+			     ,a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO,a.CLMLN
+			     ,a.grpno,a.code,a.posfrom,a.posthru,a.prvtpfrom,a.prvtpthru,a.diagfrom,a.diagthru,a.modcdfrom,a.modcdthru,a.agefrom
+			     ,a.agethru,a.cvgcd,a.diagtp,a.lstchgdt,a.lstchgoper,a.adddt
+			     from GRPOVRD_MULTI3 a
+			     left join GRPOVRD_MULTI3 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			          and ((a.AGEFROM&lt;b.AGEFROM and a.AGETHRU&gt;=b.AGETHRU) or (a.AGEFROM&lt;=b.AGEFROM and a.AGETHRU&gt;b.AGETHRU))
+			)     
+			,GRPOVRD_MULTI5 as(     
+			     select a.SEQ, a.CODE_GRP
+			     ,case when b.SEQ!=null then  a.CVGMAPFLAG||'0' else  a.CVGMAPFLAG||'1'  end as CVGMAPFLAG
+			     ,a.EMPNO, a.DEPNO, a.MODCD1, a.DIAG, a.POS, a.AGE, a.PRVTP, a.PROCCD, a.CLMPRE, a.CLMNO,a.CLMLN
+			     ,a.grpno,a.code,a.posfrom,a.posthru,a.prvtpfrom,a.prvtpthru,a.diagfrom,a.diagthru,a.modcdfrom,a.modcdthru,a.agefrom
+			     ,a.agethru,a.cvgcd,a.diagtp,a.lstchgdt,a.lstchgoper,a.adddt
+			     from GRPOVRD_MULTI4 a
+			     left join GRPOVRD_MULTI4 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN
+			          and ((a.PRVTPFROM&lt;b.PRVTPFROM and a.PRVTPTHRU&gt;=b.PRVTPTHRU) or (a.PRVTPFROM&lt;=b.PRVTPFROM and a.PRVTPTHRU&gt;b.PRVTPTHRU))
+			 ) 
+			,GRPOVRD1 as(
+			 select * 
+			 from  GRPOVRD
+			  where SEQ not in (
+			        select SEQ
+			        from GRPOVRD_MULTI5
+			        where SEQ not in (
+			            select a.SEQ
+			            from GRPOVRD_MULTI5 a
+			            where not exists (select 1 from GRPOVRD_MULTI5 b where a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO  and a.CLMLN=b.CLMLN and a.CVGMAPFLAG&lt;b.CVGMAPFLAG)
+			          )
+			        )
+			) 
+			,TBL_ESTCOST_CLMDETL_2 as(
+					select a.GRPNO, a.EMPNO, a.DEPNO,a.MODCD1, a.DIAG,a.POS, a.AGE, a.PRVTP,a.PROCCD
+					,a.PPONO
+					,a.CVGMAPFLAG
+					,a.PRVRESP,a.EERESP
+					, a.EDEAMT, a.COPAMT,a.COINAMT, a.DEDPSTAMT, a.OOPPSTAMT, a.DEDREMPLN, a.DEDREMPPO, a.OOPREMPLN, a.OOPREMPPO
+					,a.UNITS,a.UNITSALWD
+					,a.CVGTP,a.INCFRMDT,a.CHGAMT,a.ADJCVRD
+					, a.CLMPRE, a.CLMNO, a.CLMLN,A.PLNNO,a.INOUTACCS, a.IOACCSCOMDED
+					,nvl(b.CVGCD,a.CVGCD) as CVGCD
+					,a.DEDNO,
+					a.OOPNO,
+					a.BENCD,
+					a.ANNACC1,
+					a.ANNACC2,
+					a.LIFACC1,
+					a.LIFACC2,
+					a.PERC,
+					a.VSTSCD,
+					a.COPAYCD,
+					a.COPAYAMT,
+					a.AMTLMT,
+					a.AMTFLAG,
+					a.ANNVSTS,
+					a.TMFRMTP,
+					a.TMFRMCT,
+					a.TMFRMDEN,
+					a.TMFRMCD,
+					a.DLYLMTCD,
+					a.COPDED,
+					a.COPOOP,
+					a.OOPINCDED,
+					 a.FREQCD,a.WVECD
+					from TBL_ESTCOST_CLMDETL_1 a
+					left join GRPOVRD1 b on a.CLMPRE=b.CLMPRE and a.CLMNO=b.CLMNO and a.CLMLN=b.CLMLN 
+					)  
+					,TBL_ESTCOST_CLMDETL_3 as(
+					select distinct
+					b.CLMLN, b.CLMNO, b.CLMPRE,
+					nvl(NVL(a.DEDNO,0),b.DEDNO) as DEDNO,
+					nvl(NVL(a.OOPNO,0),b.OOPNO) as OOPNO,
+					nvl(a.BENCD,b.BENCD) as BENCD,
+					nvl(NVL(a.ANNACC1,0),b.ANNACC1) as ANNACC1,
+					nvl(NVL(a.ANNACC2,0),b.ANNACC2) as ANNACC2,
+					nvl(NVL(a.LIFACC1,0),b.LIFACC1) as LIFACC1,
+					nvl(NVL(a.LIFACC2,0),b.LIFACC2) as LIFACC2,
+					nvl(a.PERC,b.PERC) as PERC,
+					nvl(a.VSTSCD,b.VSTSCD) as VSTSCD,
+					nvl(a.COPAYCD,b.COPAYCD) as COPAYCD,
+					nvl(a.COPAYAMT,b.COPAYAMT) as COPAYAMT,
+					nvl(nvl(D.FREQCD,'F'),b.FREQCD) as FREQCD,
+					nvl(nvl(D.WVECD,'F'),b.WVECD) as WVECD,
+					nvl(a.AMTLMT,b.AMTLMT) as AMTLMT,
+					nvl(a.AMTFLAG,b.AMTFLAG) as AMTFLAG,
+					nvl(a.ANNVSTS,b.ANNVSTS) as ANNVSTS,
+					nvl(a.TMFRMTP,b.TMFRMTP) as TMFRMTP,
+					nvl(a.TMFRMCT,b.TMFRMCT) as TMFRMCT,
+					nvl(a.TMFRMDEN,b.TMFRMDEN) as TMFRMDEN,
+					nvl(a.TMFRMCD,b.TMFRMCD) as TMFRMCD,
+					nvl(a.DLYLMTCD,b.DLYLMTCD) as DLYLMTCD 
+					,nvl(NVL(D.APPDED,'F'),b.COPDED) as COPDED
+					,nvl(NVL(D.APPCOIN,'F'),b.COPOOP) as COPOOP
+					,nvl(C.OOPINCDED01,b.OOPINCDED) as OOPINCDED
+					,nvl(b1.INOUTACCS,b.INOUTACCS ) as INOUTACCS
+					,nvl(b1.IOACCSCOMDED,b.IOACCSCOMDED) as IOACCSCOMDED
+					,b.PPONO
+					,b.CVGMAPFLAG
+					     ,b.PRVRESP, b.EERESP
+					     , b.EDEAMT,  b.COPAMT, b.COINAMT, b.DEDPSTAMT, b.OOPPSTAMT, b.DEDREMPLN, b.DEDREMPPO, b.OOPREMPLN, b.OOPREMPPO
+					      ,b.UNITS,b.UNITSALWD
+					,b.CVGTP,b.CHGAMT,b.ADJCVRD  
+					,b.INCFRMDT
+					,b.GRPNO, b.EMPNO, b.DEPNO,b.MODCD1, b.DIAG,b.POS, b.AGE, b.PRVTP,b.PROCCD
+					,b.CVGCD
+					from TBL_ESTCOST_CLMDETL_2 b 
+					 left join MEDI.PLANCVG a on a.PLNNO=b.PLNNO AND a.CVGCD=b.CVGCD AND a.CVGSUF=0
+					 left join MEDI.PLAN C ON a.PLNNO=C.PLNNO
+					 left join MEDI.SYSCOPCDS D ON a.COPAYCD=D.COPCD
+					left join MEDI.GRPPLAN b1 on    b.INCFRMDT  between to_char(b1.BEGDT,'yyyy/mm/dd')and  to_char(b1.ENDDT,'yyyy/mm/dd') and b.GRPNO=b1.GRPNO
+					)
+					, benefits as (
+					 SELECT A.PPONO, D.NAME AS PPO_NAME, C.DESCR, A.INDEDAMT01, A.FMDEDAMT01, A.FMDEDCT01, A.INOOPAMT01, A.FMOOPAMT01, A.FMOOPCT01
+					      , B.COPAYAMT, B.PERC, B.DEDNO, B.OOPNO, NVL(E.CVGCD,0) AS CVGPEND
+					    FROM TBL_ESTCOST_EMPPLAN_  A
+					    --FROM MEDI.TBL_ESTCOST_EMPPLAN A 
+					    INNER JOIN TBL_ESTCOST_CLMDETL_3 B ON A.GRPNO=B.GRPNO AND A.EMPNO=B.EMPNO AND A.DEPNO=B.DEPNO AND A.PPONO=B.PPONO AND A.CLMPRE=B.CLMPRE AND A.CLMNO=B.CLMNO
+					    --INNER JOIN MEDI.TBL_ESTCOST_CLMDETL B ON A.GRPNO=B.GRPNO AND A.EMPNO=B.EMPNO AND A.DEPNO=B.DEPNO AND A.PPONO=B.PPONO AND A.CLMPRE=B.CLMPRE AND A.CLMNO=B.CLMNO
+					    INNER JOIN MEDI.SYSCOVCD C ON B.CVGCD=C.DESCNO and C.CVGTP=0
+					    INNER JOIN MEDI.PPO D ON A.PPONO=D.PPONO
+					    LEFT JOIN MEDI.GRPCVGPEND E ON B.GRPNO=E.GRPNO AND B.CVGCD=E.CVGCD
+					 )   
+					select distinct substr('00'||PPONO,-3)||' '||PPO_NAME as PPODESC, DESCR as ServiceDescription
+					  , COPAYAMT as Copay, PERC as PaidPct
+					  , case when DEDNO>0 then cast(cast(INDEDAMT01 as int) as varchar(5))||'/'||cast(cast(FMDEDAMT01 as int) as varchar(5))||'/'||cast(FMDEDCT01 as varchar(3)) else null end as Deductible
+					  , case when OOPNO>0 then cast(cast(INOOPAMT01 as int) as varchar(5))||'/'||cast(cast(FMOOPAMT01 as int) as varchar(5))||'/'||cast(FMOOPCT01 as varchar(3)) else null end as OOP
+					  , case when CVGPEND>0 then 'Manual review is required.' else null end as NOTES
+					from benefits
+					order by PPODESC desc
+	</select>
+	<select id="selplanbenefits"  parameterType="adppo" resultMap="adppoResult">
+		with benefits as (
+		 SELECT A.PPONO, D.NAME AS PPO_NAME, C.DESCR, A.INDEDAMT01, A.FMDEDAMT01, A.FMDEDCT01, A.INOOPAMT01, A.FMOOPAMT01, A.FMOOPCT01
+		      , B.COPAYAMT, B.PERC, B.DEDNO, B.OOPNO, NVL(E.CVGCD,0) AS CVGPEND
+		    FROM MEDI.TBL_ESTCOST_EMPPLAN A
+		    INNER JOIN MEDI.TBL_ESTCOST_CLMDETL B ON A.GRPNO=B.GRPNO AND A.EMPNO=B.EMPNO AND A.DEPNO=B.DEPNO AND A.PPONO=B.PPONO AND A.CLMPRE=B.CLMPRE AND A.CLMNO=B.CLMNO
+		    INNER JOIN MEDI.SYSCOVCD C ON B.CVGCD=C.DESCNO and C.CVGTP=0
+		    INNER JOIN MEDI.PPO D ON A.PPONO=D.PPONO
+		    LEFT JOIN MEDI.GRPCVGPEND E ON B.GRPNO=E.GRPNO AND B.CVGCD=E.CVGCD
+		 )   
+		select distinct substr('00'||PPONO,-3)||' '||PPO_NAME as PPODESC, DESCR as Service_Description
+		  , COPAYAMT as Copay, PERC as Paid_Pct
+		  , case when DEDNO>0 then cast(cast(INDEDAMT01 as int) as varchar(5))||'/'||cast(cast(FMDEDAMT01 as int) as varchar(5))||'/'||cast(FMDEDCT01 as varchar(3)) else null end as Deductible
+		  , case when OOPNO>0 then cast(cast(INOOPAMT01 as int) as varchar(5))||'/'||cast(cast(FMOOPAMT01 as int) as varchar(5))||'/'||cast(FMOOPCT01 as varchar(3)) else null end as OOP
+		  , case when CVGPEND>0 then 'Manual review is required.' else null end as NOTES
+		from benefits
+		order by PPODESC desc
+	</select>
+	<select id="selchecklUCR"  parameterType="adppo" resultMap="adppoResult">
+	 with temp001 as (
+	   select  
+		 #{UCRGRPNO} as GRPNO,
+	     #{UCRZIP} as ZIP  ,
+	     #{UCRCPT} as CPT  , 
+	     #{UCRMODCD} as MODCD  , 
+	     NULL as EFFYM  , 
+	     NULL as UCRCD  ,  
+	     NULL as PCT  ,
+	     NULL as GEOAREA  , 
+	     NULL as RVSID  , 
+	     NULL as RELVAL  , 
+	     NULL as UCRPCT  , 
+	     NULL as UCRAMT  
+	    from dual
+	  )
+   	,temp as (
+	    select 
+	     GRPNO  , 
+	     ZIP  ,
+	     CPT  , 
+	     case when MODCD is NULL then '  ' else MODCD end as MODCD  , 
+	     EFFYM  , 
+	     case when UCRCD is NULL and trim(translate(subStr(CPT,0,1),'0123456789',' ')) is not NULL   then 'H' 
+	          when UCRCD is NULL and trim(translate(subStr(CPT,0,1),'0123456789',' ')) is  NULL then 'M' 
+	     else UCRCD end as UCRCD  ,   
+	       <!-- trim(translate(subStr(CPT,0,1),'0123456789',' ')) is NULL -->
+	       <!-- not regexp_like(subStr(CPT,0,1),'^[0-9]+[0-9]$') -->
+	     PCT  ,
+	     GEOAREA  , 
+	     RVSID  , 
+	     RELVAL  , 
+	     UCRPCT  , 
+	     UCRAMT  
+	    from TEMP001 
+	  )
+	  ,a as(
+	  SELECT UCRCD, MAX(a.EFFYM) As EFFYM
+	  FROM (SELECT DISTINCT UCRCD, EFFYM FROM MEDI.UCRRVS2) a 
+	  WHERE SYSDATE>=TO_DATE(SUBSTR(a.EFFYM, 5, 2)||'/01/'||SUBSTR(a.EFFYM,1,4), 'MM/DD/YYYY')
+	  GROUP BY UCRCD
+	  )
+	 ,temp1 as (
+	     select
+	     b.GRPNO  , 
+	     b.ZIP  ,
+	     b.CPT  , 
+	     b.MODCD  , 
+	     nvl(b.EFFYM,a.EFFYM) as  EFFYM ,
+	     b.UCRCD  ,  
+	     b.PCT  ,
+	     b.GEOAREA  , 
+	     b.RVSID  , 
+	     b.RELVAL  , 
+	     b.UCRPCT  , 
+	     b.UCRAMT  
+	  from temp b
+	  left join a on   a.UCRCD=b.UCRCD
+	  )
+	,temp2 as(
+	  select
+	     b.GRPNO  , 
+	     b.ZIP  ,
+	     b.CPT  , 
+	     b.MODCD  , 
+	     b.EFFYM,
+	     b.UCRCD  ,  
+	     b.PCT  ,
+	     nvl(b.GEOAREA,a.GEOAREA) as  GEOAREA , 
+	     nvl(b.RVSID,a.RVSID) as  RVSID , 
+	     b.RELVAL  , 
+	     b.UCRPCT  , 
+	     b.UCRAMT  
+	  from temp1 b
+	  left join MEDI.UCRZIP2 a on   a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.ZIP=substr(b.ZIP, 1,3)
+	  )
+	  <!-- UPDATE #TEMP01 SET UCRCD=(CASE WHEN ISNUMERIC(LEFT(CPT, 1))=0 THEN 'H' ELSE 'M' END)-->
+	  <!-- WHERE UCRCD IS NULL-->
+	
+		 <!--  /*UPDATE b SET b.EFFYM=a.EFFYM
+		  FROM OPENQUERY(ORACLE_MEDI, 'SELECT UCRCD, MAX(a.EFFYM) As EFFYM
+		  FROM (SELECT DISTINCT UCRCD, EFFYM FROM MEDI.UCRRVS2) a 
+		  WHERE SYSDATE>=TO_DATE(SUBSTR(a.EFFYM, 5, 2)||''/01/''||SUBSTR(a.EFFYM,1,4), ''MM/DD/YYYY'')
+		  GROUP BY UCRCD') a INNER JOIN #TEMP01 b ON a.UCRCD=b.UCRCD
+		  WHERE b.EFFYM IS NULL
+		
+		  UPDATE b SET b.GEOAREA=a.GEOAREA, b.RVSID=a.RVSID
+		  FROM OPENQUERY(ORACLE_MEDI, 'SELECT * FROM MEDI.UCRZIP2') a
+		  INNER JOIN #TEMP01 b ON a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.ZIP=LEFT(b.ZIP, 3)
+		  WHERE b.GEOAREA IS NULL
+		*/
+		 2. Per group number, get UCR percentile  
+		  /*UPDATE b SET b.PCT=a.MEDICDPCT1 
+		  FROM OPENQUERY(ORACLE_MEDI, 'SELECT GRPNO, MEDICDPCT1 FROM MEDI.GRPPLAN WHERE SYSDATE BETWEEN BEGDT AND ENDDT AND MDCDFLAGS00=''T'' AND MDCDSRC01=2') a
+		  INNER JOIN #TEMP01 b ON a.GRPNO=b.GRPNO
+		  WHERE b.PCT IS NULL
+		  */-->
+	,aa as (
+	    SELECT GRPNO, MEDICDPCT1 
+	    FROM MEDI.GRPPLAN 
+	    WHERE SYSDATE BETWEEN BEGDT AND ENDDT 
+	          AND MDCDFLAGS00='T' AND MDCDSRC01=2
+	)  
+	,temp3 as(
+	  select
+	     b.GRPNO  , 
+	     b.ZIP  ,
+	     b.CPT  , 
+	     b.MODCD  , 
+	     b.EFFYM,
+	     b.UCRCD  ,  
+	     nvl(b.PCT,a.MEDICDPCT1)  as  PCT , 
+	     b.GEOAREA , 
+	     b.RVSID , 
+	     b.RELVAL  , 
+	     b.UCRPCT  , 
+	     b.UCRAMT  
+	  from temp2 b
+	  left join aa a on   a.GRPNO=b.GRPNO
+	  )
+	<!--  3. (Table #2 Relative value)   MEDI.UCRRVS2
+	 /* UPDATE b SET b.RELVAL=a.RELVAL
+	  FROM OPENQUERY(ORACLE_MEDI, 'SELECT * FROM MEDI.UCRRVS2') a
+	  INNER JOIN #TEMP01 b ON a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.PROCCD=b.CPT and a.PROCMOD=b.MODCD and a.RVSID=b.RVSID
+	  WHERE b.RELVAL IS NULL
+	*/-->
+	,temp4 as(
+	  select
+	     b.GRPNO  , 
+	     b.ZIP  ,
+	     b.CPT  , 
+	     b.MODCD  , 
+	     b.EFFYM,
+	     b.UCRCD  ,  
+	     b.PCT, 
+	     b.GEOAREA , 
+	     b.RVSID , 
+	     nvl(b.RELVAL,a.RELVAL) as  RELVAL , 
+	     b.UCRPCT  , 
+	     b.UCRAMT  
+	  from temp3 b
+	  left join MEDI.UCRRVS2 a on   a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM 
+	                                and a.PROCCD=b.CPT and a.PROCMOD=b.MODCD 
+	                                and a.RVSID=b.RVSID
+	  )
+	  <!-- /*
+	  IF EXISTS (SELECT 1 FROM #TEMP01 WHERE RELVAL IS NULL)  
+		 CPT+Modifier Code may not locate exact match then use the one without Modifier
+	    Begin
+	    UPDATE b SET b.RELVAL=a.RELVAL
+	    FROM OPENQUERY(ORACLE_MEDI, 'SELECT * FROM MEDI.UCRRVS2 WHERE PROCMOD=''  ''') a
+	    INNER JOIN #TEMP01 b ON a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.PROCCD=b.CPT and a.RVSID=b.RVSID
+	    WHERE b.RELVAL IS NULL
+	    End
+	  */-->
+	  ,temp5 as(
+	  select distinct
+	     b.GRPNO  , 
+	     b.ZIP  ,
+	     b.CPT  , 
+	     b.MODCD  , 
+	     b.EFFYM,
+	     b.UCRCD  ,  
+	     b.PCT, 
+	     b.GEOAREA , 
+	     b.RVSID , 
+	     nvl(b.RELVAL,a.RELVAL) as  RELVAL , 
+	     b.UCRPCT  , 
+	     b.UCRAMT  
+	  from temp4 b
+	  left join MEDI.UCRRVS2 a on   a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.PROCCD=b.CPT and a.RVSID=b.RVSID
+	  )
+	  
+	<!--  4. (Table #4 Percentile)    MEDI.UCRFCT2
+	    DROP TABLE #UCRFCT2    28''
+	  /*
+	  SELECT * INTO #UCRFCT2  
+	  FROM OPENQUERY(ORACLE_MEDI, 'SELECT * FROM MEDI.UCRFCT2 WHERE UCRCD IN (''M'', ''H'') AND EFFYM=''201908''') a
+	
+	  UPDATE b SET b.UCRPCT=(CASE b.PCT WHEN 90 THEN a.PCT90 WHEN 85 THEN a.PCT85 
+	    WHEN 80 THEN a.PCT80 WHEN 95 THEN a.PCT95 WHEN 75 THEN a.PCT75 WHEN 70 THEN a.PCT70
+	    WHEN 60 THEN a.PCT60 WHEN 50 THEN a.PCT50 WHEN 40 THEN a.PCT40 WHEN 30 THEN a.PCT30
+	    WHEN 25 THEN a.PCT25 ELSE NULL END)
+	    FROM #UCRFCT2 a INNER JOIN #TEMP01 b ON a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.GEOAREA=b.GEOAREA
+	    WHERE b.UCRPCT IS NULL AND b.CPT BETWEEN a.PROCLO AND a.PROCHI 
+	    AND a.CONFACT=(CASE WHEN b.MODCD='26' THEN '03' ELSE '00' END)
+	    */-->
+	,UCRFCT2_ as (
+	          SELECT distinct a.UCRCD,a.EFFYM,a.GEOAREA 
+	          ,a.PCT90,a.PCT85,a.PCT80, a.PCT95,a.PCT75,a.PCT70,a.PCT60,a.PCT50,a.PCT40,a.PCT30,a.PCT25
+	          ,a.PROCLO,a.PROCHI ,a.CONFACT
+	          FROM MEDI.UCRFCT2  a
+	          WHERE a.UCRCD IN ('M', 'H') AND a.EFFYM='201908'
+	)
+	,UCRFCT2_1 as(
+	  select distinct a.*
+	  from temp5 b
+	  inner join UCRFCT2_ a on a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.GEOAREA=b.GEOAREA
+	  AND b.CPT BETWEEN a.PROCLO AND a.PROCHI AND a.CONFACT=(CASE WHEN b.MODCD='26' THEN '03' ELSE '00' END)
+	)
+	 ,temp6 as(
+	  select  
+	     b.GRPNO  , 
+	     b.ZIP  ,
+	     b.CPT  , 
+	     b.MODCD  , 
+	     b.EFFYM,
+	     b.UCRCD  ,  
+	     b.PCT, 
+	     b.GEOAREA , 
+	     b.RVSID , 
+	     b.RELVAL , 
+	     case when a.UCRCD IS not NULL   then
+	          (CASE b.PCT WHEN 90 THEN a.PCT90 WHEN 85 THEN a.PCT85 
+	           WHEN 80 THEN a.PCT80 WHEN 95 THEN a.PCT95 WHEN 75 THEN a.PCT75 WHEN 70 THEN a.PCT70
+	           WHEN 60 THEN a.PCT60 WHEN 50 THEN a.PCT50 WHEN 40 THEN a.PCT40 WHEN 30 THEN a.PCT30
+	           WHEN 25 THEN a.PCT25 ELSE null END)
+	     else b.UCRPCT end as UCRPCT, 
+	     b.UCRAMT  
+	     from temp5 b
+	     left join UCRFCT2_1 a on a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.GEOAREA=b.GEOAREA
+	  )
+	  
+	  <!-- /*
+	  IF EXISTS (SELECT 1 FROM #TEMP01 WHERE UCRPCT IS NULL) 
+		 In case (modifer 26), no corresponding value with CONFACT 03, then use 00
+	    Begin
+	    UPDATE b SET b.UCRPCT=(CASE b.PCT WHEN 90 THEN a.PCT90 WHEN 85 THEN a.PCT85 
+	    WHEN 80 THEN a.PCT80 WHEN 95 THEN a.PCT95 WHEN 75 THEN a.PCT75 WHEN 70 THEN a.PCT70
+	    WHEN 60 THEN a.PCT60 WHEN 50 THEN a.PCT50 WHEN 40 THEN a.PCT40 WHEN 30 THEN a.PCT30
+	    WHEN 25 THEN a.PCT25 ELSE NULL END)
+	    FROM #UCRFCT2 a INNER JOIN #TEMP01 b ON a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.GEOAREA=b.GEOAREA
+	    WHERE b.UCRPCT IS NULL AND b.CPT BETWEEN a.PROCLO AND a.PROCHI AND a.CONFACT='00'
+	    End
+	    */-->
+	,UCRFCT2_2 as(
+	  select distinct a.*
+	  from temp6 b
+	  inner join UCRFCT2_1 a on   a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.GEOAREA=b.GEOAREA
+	  AND b.CPT BETWEEN a.PROCLO AND a.PROCHI AND a.CONFACT='00' 
+	)
+	    
+	,temp7 as(
+	  select distinct
+	     b.GRPNO  , 
+	     b.ZIP  ,
+	     b.CPT  , 
+	     b.MODCD  , 
+	     b.EFFYM,
+	     b.UCRCD  ,  
+	     b.PCT, 
+	     b.GEOAREA , 
+	     b.RVSID , 
+	     b.RELVAL , 
+	     case when a.UCRCD IS not NULL   then
+	     (CASE b.PCT WHEN 90 THEN a.PCT90 WHEN 85 THEN a.PCT85 
+	      WHEN 80 THEN a.PCT80 WHEN 95 THEN a.PCT95 WHEN 75 THEN a.PCT75 WHEN 70 THEN a.PCT70
+	      WHEN 60 THEN a.PCT60 WHEN 50 THEN a.PCT50 WHEN 40 THEN a.PCT40 WHEN 30 THEN a.PCT30
+	      WHEN 25 THEN a.PCT25 ELSE null END 
+	      ) else b.UCRPCT end as UCRPCT, 
+	     b.UCRAMT  
+	  from temp6 b
+	  left join UCRFCT2_2 a on   a.UCRCD=b.UCRCD and a.EFFYM=b.EFFYM and a.GEOAREA=b.GEOAREA
+	  )
+	  <!-- 
+	   5. UCRAMT
+	   UPDATE #TEMP01 SET UCRAMT=ROUND(RELVAL*UCRPCT,2)
+	   WHERE UCRAMT IS NULL AND RELVAL IS NOT NULL AND UCRPCT IS NOT NULL
+	  -->
+	select  
+	b.GRPNO  , 
+	     b.ZIP  ,
+	     b.CPT  , 
+	     b.MODCD  , 
+	     b.EFFYM,
+	     b.UCRCD  ,  
+	     b.PCT, 
+	     b.GEOAREA , 
+	     b.RVSID , 
+	     b.RELVAL ,
+	     b.UCRPCT,
+	     case when b.UCRAMT is null AND b.RELVAL is not NULL AND b.UCRPCT is not NULL  then ROUND(b.RELVAL*b.UCRPCT,2) else  b.UCRAMT end as UCRAMT
+	from temp7 b
+	</select>
+	
+	<select id="selProbylocationtaxid"  parameterType="adppo" resultMap="adppoResult">
+	with aa as(
+	Select DISTINCT  a.name, a.address1, a.address2, a.city,a.St, a.zip, 
+  	b.specialty, a.phone, a.lname, a.fname,a.effdate,a.termdate 
+  	--,abs(c.latitude-${ix1}) AS latt,abs(c.longitude-${iy1}) AS longg
+    --,abs(c.latitude-34.7333)*abs(c.latitude-34.7333)+abs(c.longitude-118.1492)*abs(c.longitude-118.1492) as latlon1
+  	, power(abs(c.latitude-${ix1})*abs(c.latitude-${ix1})+abs(c.longitude-${iy1})*abs(c.longitude-${iy1}),0.5) as latlon
+  	
+  	<if test="ppono != null" >
+    FROM PPO_${ppono} a
+    </if>
+    <if test="ppono == null" >
+    FROM PPO_102 a 
+    </if>
+    LEFT JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+	INNER JOIN tbl_zipcodes c ON a.zip=c.zipcode 
+	 
+	<where>
+		(a.termdate >= sysdate or a.termdate is null) 
+			<if test="provtype != null" >
+				and b.providertype=#{provtype}
+			</if>
+			<if test="provname != null" >
+				and a.name like '%${provname}%'
+			</if>
+			<if test="spec != null" >
+				and a.spec1 in (${spec})
+			</if>
+			 
+		 
+			<if test="ox1 != null" >
+			   AND (c.latitude &gt;= ${ox1}) and (c.latitude &lt;= ${ox2})
+			   AND (c.longitude &lt;= ${oy2}) and (c.longitude &gt;= ${oy1})
+			</if> 
+			
+			<if test="taxid != null" >
+				and a.NPI =#{taxid}
+			</if>
+			  
+			<if test="provst != null" >
+				and a.st =#{provst}
+			 </if>
+	</where>
+	order by 
+			<if test="seq == 'filDistance'" >
+				 latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 
+			 </if>
+	a.name
+	<!--
+			
+			<if test="seq == null" >
+				 order by a.name
+			 </if>
+	order by a.name
+	-->
+	)
+	select a.*,e.cartid
+	from aa a
+	left join TBL_ADVANCEEOB_MEMBERCART e on a.name=e.providername 
+	and  a.address1=e.address1  
+	and  a.city=e.city 
+	and a.St=e.St 
+	and  a.zip=e.zip 
+	and a.specialty=e.specialty 
+	</select>
+	
+	
+	<select id="selProbylocationtaxidFHsize"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	select c.cntlrate,
+	 c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,''as comments ,c.codeversion
+	 from TBL_FH_PRATE_DETAILS c
+	  <where>
+	  c.poscode!=99
+			  	<if test="Provcode != null" >
+			 	and c.code=#{Provcode} 
+			 	</if>
+	    </where>
+	) 
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	<if test="ppono != null" >
+		,ppos0 as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		 
+    		a.taxid,a.npi , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 ,ppos as (
+	     select name,address1,city,St, zip, phone, spec1,
+	      
+	     taxid,npi,specialty,max(effdate) as effdate
+	     from ppos0
+	     group by name,address1,city,St, zip, phone, spec1,
+	      
+	     taxid,npi,specialty
+	     )
+	     
+	</if>
+	 ,a1 as(
+     select distinct a.prov_npi_1,a.provtaxid,a.internalprovnum ,a.provtype ,a.name,
+     upper(a.address1) as address1,
+     upper(replace(a.city,' ','')) as city,
+     upper(replace(a.state,' ','')) as state,
+     a.postalcode
+     ,a.cntlrate
+     ,substr(a.postalcode,1,5) as zipcode 
+     from TBL_FH_PRDT a
+     <if test="taxid == null" >
+     inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5) 
+     </if>
+     WHERE   a.provtype='P' and a.prov_npi_1 is not null
+     			 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				  <if test="taxid != null" >
+								and a.prov_npi_1=#{taxid}
+				 </if>
+    
+ 	)
+	,aa as (
+	   select   a.* 
+	   	 <if test="ppono != null" >
+	 		, e.phone, e.specialty ,e.effdate, '' as termdate 
+		 </if>
+		 <if test="ppono == null" >
+		 	, 'XXXXXXXXXX' as phone, ' ' as specialty ,'' as effdate, '' as termdate 
+		 </if>
+	   from a1 a
+	   <if test="ppono != null" >
+	   inner join ppos e on a.prov_npi_1=e.npi and a.provtaxid=e.taxid 
+	   and a.state=e.St 
+	   and a.city=e.city
+	   and  replace(replace(a.address1,',',''),' ','')=replace(replace(e.address1,',',''),' ','')
+	   and zipcode = e.zip
+	   </if>
+	 )
+	 ,b as( 
+		 select   a.*
+		  ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		  from aa a  
+		  inner join tempcodes c on a.cntlrate=c.cntlrate     
+	 )
+	 ,f as(
+		  select prov_npi_1--,provtaxid
+		  ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlrate
+		  ,max(serviceamt) as serviceamt
+		 from b
+		 group by prov_npi_1--,provtaxid
+		 ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlrate
+	 )
+		select count(1) as total
+		 from f
+	</select>
+	
+	
+	
+	
+	<select id="selProbylocationtaxidFH"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	    select c.cntlrate,
+		 c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,''as comments ,c.codeversion
+		 from TBL_FH_PRATE_DETAILS c
+		  <where>
+		  c.poscode!=99
+				  	<if test="Provcode != null" >
+				 	and c.code=#{Provcode} 
+				 	</if>
+		    </where>
+	) 
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+			<if test="provst != null" >
+		  		,'' AS latlon
+		  	</if>
+		  	<if test="provst == null" >
+			, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5)*111 as latlon
+			</if>
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	<if test="ppono != null" >
+		,ppos0 as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		 
+    		a.taxid,a.npi , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 ,ppos2 as (
+	     select name,address1,city,St, zip, phone, spec1,
+	      
+	     taxid,npi,specialty,max(effdate) as effdate
+	     from ppos0
+	     group by name,address1,city,St, zip, phone, spec1,
+	      
+	     taxid,npi,specialty
+	     )
+	     ,ppos as (
+	     select distinct a.*
+	     from ppos0 a 
+	     inner join ppos2 b on a.name=b.name
+	                        and a.address1=b.address1
+	                        and a.city=b.city
+	                        and a.St=b.St
+	                        and a.zip=b.zip
+	                        and a.phone=b.phone
+	                        and a.spec1=b.spec1
+	                         
+	                        and a.taxid=b.taxid
+	                        and a.npi=b.npi
+	                        and a.specialty=b.specialty
+	                        and a.effdate=b.effdate
+	     )
+	</if>
+	 ,a1 as(
+     select distinct a.prov_npi_1,a.provtaxid,a.internalprovnum ,a.provtype ,a.name,
+     upper(a.address1) as address1,
+     upper(replace(a.city,' ','')) as city,
+     upper(replace(a.state,' ','')) as state,
+     a.postalcode
+     ,a.cntlrate
+     ,substr(a.postalcode,1,5) as zipcode 
+     <if test="taxid == null" >
+     ,d.latlon 
+     </if>
+     <if test="taxid != null" >
+     ,'' as latlon
+     </if>
+     from TBL_FH_PRDT a
+     <if test="taxid == null" >
+     inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5) 
+     </if>
+     WHERE   a.provtype='P' and a.prov_npi_1 is not null
+     			 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				  <if test="taxid != null" >
+								and a.prov_npi_1=#{taxid}
+				 </if>
+     order by  
+       <if test="taxid == null" >
+     	<if test="seq == 'filDistance'" >
+				 d.latlon,
+		</if>
+		</if>
+		a.name
+ 	)
+ 	,a as(
+	 select a1.*
+	 from a1
+	 
+	 <if test="ppono == 38" >
+	 --WHERE  rownum&lt;=100 --and exists(select 1 from c where a1.cntlrate=c.cntlrate )
+	 </if>
+	)
+	,aa as (
+	   select   a.* 
+	   	 <if test="ppono != null" >
+	 		, e.phone, e.specialty ,e.spec1,e.effdate, e.termdate 
+		 </if>
+		 <if test="ppono == null" >
+		 	, 'XXXXXXXXXX' as phone, ' ' as specialty ,' ' as spec1,'' as effdate, '' as termdate 
+		 </if>
+	   from a
+	   <if test="ppono != null" >
+	   inner join ppos e on a.prov_npi_1=e.npi and a.provtaxid=e.taxid 
+	   and a.state=e.St 
+	   and a.city=e.city
+	   and  replace(replace(a.address1,',',''),' ','')=replace(replace(e.address1,',',''),' ','')
+	   and zipcode = e.zip
+	   </if>
+	 )
+	 ,b as( 
+		 select   a.*
+		  ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		  from aa a  
+		  inner join tempcodes c on a.cntlrate=c.cntlrate     
+	 )
+	 ,f as(
+		  select prov_npi_1--,provtaxid
+		  ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlrate
+		  ,max(serviceamt) as serviceamt
+		 from b
+		 group by prov_npi_1--,provtaxid
+		 ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlrate
+		 order by serviceamt
+	 )
+	 ,asa as (
+		 select b.*
+		 from f
+		 inner join b on f.prov_npi_1=b.prov_npi_1
+		 --and f.provtaxid=b.provtaxid
+		 and f.internalprovnum =b.internalprovnum
+		 and f.provtype =b.provtype
+		 and f.name=b.name
+		 and f.address1=b.address1
+		 and f.city=b.city
+		 and f.state=b.state
+		 and f.postalcode=b.postalcode
+		 --and f.cntlrate=b.cntlrate
+		 and f.serviceamt=b.serviceamt
+		 
+			
+		  order by
+		    <if test="seq == 'filDistance'" >
+				 b.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 f.serviceamt,
+			 </if>
+			 <if test="seq == 'filSpec'" >
+				 specialty,
+			 </if>
+		     b.name,b.prov_npi_1--,b.provtaxid
+		     ,b.internalprovnum ,specialty,
+		     b.provtype ,b.address1,b.city,b.state ,b.postalcode ,b.codetype,b.code,b.poscode,b.serviceamt 
+		)
+	 ,asa1 as (
+	 select prov_npi_1--,provtaxid
+	 ,internalprovnum ,provtype ,
+	 name, 
+	 address1, city, 
+	 state, 
+	 postalcode --,cntlrate 
+	 ,zipcode ,latlon 
+	  , phone, specialty ,spec1 as specialty_id,effdate,termdate 
+	 ,codetype,code,negratetype,serviceamt,poscode,comments ,codeversion ,rownum as rownumid
+	 from asa
+	 )
+	 select *
+	 from asa1
+	 <where>
+		 <if test="pagelow != null" >
+	   			and ( rownumid &gt;=${pagelow} and rownumid &lt;=${pageup})
+			</if>
+		</where>
+	</select>
+	
+	
+	<select id="selProbylocationtaxidFHS"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	  select c.cntlrate,
+		 c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,''as comments ,c.codeversion
+		 from TBL_FH_PRATE_DETAILS c
+		  <where>
+		  c.poscode!=99
+				  	<if test="Provcode != null" >
+				 	and c.code=#{Provcode} 
+				 	</if>
+		    </where>
+	) 
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+			<if test="provst != null" >
+		  		,'' AS latlon
+		  	</if>
+		  	<if test="provst == null" >
+			, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5)*111 as latlon
+			</if>
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	<if test="ppono != null" >
+		,ppos0 as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		substr(a.keyid,1,instr(a.keyid,'_')-1) as keyid,a.taxid,a.npi , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 ,ppos2 as (
+	     select name,address1,city,St, zip, phone, spec1,keyid,taxid,npi,specialty,max(effdate) as effdate
+	     from ppos0
+	     group by name,address1,city,St, zip, phone, spec1,keyid,taxid,npi,specialty
+	     )
+	     ,ppos as (
+	     select distinct a.*
+	     from ppos0 a 
+	     inner join ppos2 b on a.name=b.name
+	                        and a.address1=b.address1
+	                        and a.city=b.city
+	                        and a.St=b.St
+	                        and a.zip=b.zip
+	                        and a.phone=b.phone
+	                        and a.spec1=b.spec1
+	                        and a.keyid=b.keyid
+	                        and a.taxid=b.taxid
+	                        and a.npi=b.npi
+	                        and a.specialty=b.specialty
+	                        and a.effdate=b.effdate
+	     )
+	</if>
+	 ,a1 as(
+     select distinct a.prov_npi_1,a.provtaxid,a.internalprovnum ,a.provtype ,a.name,
+     upper(a.address1) as address1,
+     upper(replace(a.city,' ','')) as city,
+     upper(replace(a.state,' ','')) as state,
+     a.postalcode
+     ,a.cntlrate
+     ,substr(a.postalcode,1,5) as zipcode 
+     <if test="taxid == null" >
+     ,d.latlon 
+     </if>
+     <if test="taxid != null" >
+     ,'' as latlon
+     </if>
+     from TBL_FH_PRDT a
+     <if test="taxid == null" >
+     inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5) 
+     </if>
+     WHERE   a.provtype='P' and a.prov_npi_1 is  null
+     			 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				  <if test="taxid != null" >
+								and a.prov_npi_1=#{taxid}
+				 </if>
+     order by  
+       <if test="taxid == null" >
+     	<if test="seq == 'filDistance'" >
+				 d.latlon,
+		</if>
+		</if>
+		a.name
+ 	)
+	
+ 	,a as(
+	 select a1.*
+	 from a1
+	 
+	 <if test="ppono == 38" >
+	 --WHERE  rownum&lt;=100 --and exists(select 1 from c where a1.cntlrate=c.cntlrate )
+	 </if>
+	)
+	,aa as (
+	   select   a.* 
+	   	 <if test="ppono != null" >
+	 		, e.phone, e.specialty ,e.spec1 ,e.effdate,e.termdate 
+		 </if>
+		 <if test="ppono == null" >
+		 	, 'XXXXXXXXXX' as phone, ' ' as specialty, ' ' as spec1 ,'' as effdate, '' as termdate 
+		 </if>
+	   from a
+	   <if test="ppono != null" >
+	   inner join ppos e on a.provtaxid=e.taxid and a.internalprovnum = e.keyid
+	   and a.state=e.St 
+	   and a.city=e.city
+	   and  replace(replace(a.address1,',',''),' ','')=replace(replace(e.address1,',',''),' ','')
+	   and zipcode = e.zip
+	   </if>
+	 )
+	 ,b as( 
+		 select   a.*
+		  ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		  from aa a  
+		  inner join tempcodes c on a.cntlrate=c.cntlrate     
+	 )
+	 ,f as(
+		  select prov_npi_1--,provtaxid
+		  ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlrate
+		  ,max(serviceamt) as serviceamt
+		 from b
+		 group by prov_npi_1--,provtaxid
+		 ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlrate
+		 order by serviceamt
+	 )
+	,asa as (
+		 select b.*
+		 from f
+		 inner join b on f.prov_npi_1=b.prov_npi_1
+		 --and f.provtaxid=b.provtaxid
+		 and f.internalprovnum =b.internalprovnum
+		 and f.provtype =b.provtype
+		 and f.name=b.name
+		 and f.address1=b.address1
+		 and f.city=b.city
+		 and f.state=b.state
+		 and f.postalcode=b.postalcode
+		 --and f.cntlrate=b.cntlrate
+		 and f.serviceamt=b.serviceamt
+		 
+			
+		  order by
+		    <if test="seq == 'filDistance'" >
+				 b.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 f.serviceamt,
+			 </if>
+			 <if test="seq == 'filSpec'" >
+				 specialty,
+			 </if>
+		     b.name,b.prov_npi_1--,b.provtaxid
+		     ,b.internalprovnum ,specialty,
+		     b.provtype ,b.address1,b.city,b.state ,b.postalcode ,b.codetype,b.code,b.poscode,b.serviceamt 
+		)
+	 ,asa1 as (
+	 select prov_npi_1--,provtaxid
+	 ,internalprovnum ,provtype ,
+	 name, 
+	 address1, city, 
+	 state, 
+	 postalcode --,cntlrate 
+	 ,zipcode ,latlon 
+	  , phone, specialty ,spec1 as specialty_id,effdate,termdate 
+	 ,codetype,code,negratetype,serviceamt,poscode,comments ,codeversion ,rownum as rownumid
+	 from asa
+	 )
+	 select *
+	 from asa1
+	 
+	 <where>
+		 <if test="pagelow != null" >
+	   			and ( rownumid &gt;=${pagelow} and rownumid &lt;=${pageup})
+			</if>
+		</where>
+	</select>
+	<select id="selProbylocationtaxidFHSsize"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	    select c.cntlrate,
+		 c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,''as comments ,c.codeversion
+		 from TBL_FH_PRATE_DETAILS c
+		  <where>
+		  c.poscode!=99
+				  	<if test="Provcode != null" >
+				 	and c.code=#{Provcode} 
+				 	</if>
+		    </where>
+	) 
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	<if test="ppono != null" >
+		,ppos0 as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		substr(a.keyid,1,instr(a.keyid,'_')-1) as keyid,a.taxid,a.npi , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 ,ppos as (
+	     select name,address1,city,St, zip, phone, spec1,keyid,taxid,npi,specialty,max(effdate) as effdate
+	     from ppos0
+	     group by name,address1,city,St, zip, phone, spec1,keyid,taxid,npi,specialty
+	     )
+	     
+	</if>
+	 ,a1 as(
+     select distinct a.prov_npi_1,a.provtaxid,a.internalprovnum ,a.provtype ,a.name,
+     upper(a.address1) as address1,
+     upper(replace(a.city,' ','')) as city,
+     upper(replace(a.state,' ','')) as state,
+     a.postalcode
+     ,a.cntlrate
+     ,substr(a.postalcode,1,5) as zipcode 
+     from TBL_FH_PRDT a
+     <if test="taxid == null" >
+     inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5) 
+     </if>
+     WHERE   a.provtype='P' and a.prov_npi_1 is  null
+     			 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				  <if test="taxid != null" >
+								and a.prov_npi_1=#{taxid}
+				 </if>
+ 	)
+	 
+	,aa as (
+	   select   a.* 
+	   	 <if test="ppono != null" >
+	 		, e.phone, e.specialty ,e.effdate, '' as termdate  
+		 </if>
+		 <if test="ppono == null" >
+		 	, 'XXXXXXXXXX' as phone, ' ' as specialty ,'' as effdate, '' as termdate 
+		 </if>
+	   from a1 a
+	   <if test="ppono != null" >
+	   inner join ppos e on a.provtaxid=e.taxid and a.internalprovnum = e.keyid
+	   and a.state=e.St 
+	   and a.city=e.city
+	   and  replace(replace(a.address1,',',''),' ','')=replace(replace(e.address1,',',''),' ','')
+	   and zipcode = e.zip
+	   </if>
+	 )
+	 ,b as( 
+		 select   a.*
+		  ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		  from aa a  
+		  inner join tempcodes c on a.cntlrate=c.cntlrate     
+	 )
+	 ,f as(
+		  select prov_npi_1--,provtaxid
+		  ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlrate
+		  ,max(serviceamt) as serviceamt
+		 from b
+		 group by prov_npi_1--,provtaxid
+		 ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlrate
+	 )
+	
+		select count(1) as total
+		 from f
+	</select>
+	
+	
+	<select id="selProbylocationtaxidFHF"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	   select c.cntlpkg,
+	 c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+	 from TBL_FH_FRATE_DETAILS c
+		  <where>
+		  c.poscode!=99
+				  	<if test="Provcode != null" >
+				 	and c.code=#{Provcode} 
+				 	</if>
+		    </where>
+	) 
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+			<if test="provst != null" >
+		  		,'' AS latlon
+		  	</if>
+		  	<if test="provst == null" >
+			, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5)*111 as latlon
+			</if>
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	<if test="ppono != null" >
+		,ppos0 as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		 
+    		a.taxid,a.npi , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 ,ppos2 as (
+	     select name,address1,city,St, zip, phone, spec1, taxid,npi,specialty,max(effdate) as effdate
+	     from ppos0
+	     group by name,address1,city,St, zip, phone, spec1, taxid,npi,specialty
+	     )
+	     ,ppos as (
+	     select distinct a.*
+	     from ppos0 a 
+	     inner join ppos2 b on a.name=b.name
+	                        and a.address1=b.address1
+	                        and a.city=b.city
+	                        and a.St=b.St
+	                        and a.zip=b.zip
+	                        and a.phone=b.phone
+	                        and a.spec1=b.spec1
+	                        
+	                        and a.taxid=b.taxid
+	                        and a.npi=b.npi
+	                        and a.specialty=b.specialty
+	                        and a.effdate=b.effdate
+	     )
+	</if>
+	 ,a1 as(
+     select distinct a.prov_npi_1,a.provtaxid,a.internalprovnum ,a.provtype ,a.name,
+     upper(a.address1) as address1,
+     upper(replace(a.city,' ','')) as city,
+     upper(replace(a.state,' ','')) as state,
+     a.postalcode
+     ,a.cntlpkg
+     ,substr(a.postalcode,1,5) as zipcode 
+     <if test="taxid == null" >
+     ,d.latlon 
+     </if>
+     <if test="taxid != null" >
+     ,'' as latlon
+     </if>
+     from TBL_FH_PRDT a
+     <if test="taxid == null" >
+     inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5) 
+     </if>
+     WHERE   a.provtype='F' and a.prov_npi_1 is not null
+     			 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				  <if test="taxid != null" >
+								and a.prov_npi_1=#{taxid}
+				 </if>
+     order by  
+       <if test="taxid == null" >
+     	<if test="seq == 'filDistance'" >
+				 d.latlon,
+		</if>
+		</if>
+		a.name
+ 	) 
+ 	,a as(
+	 select a1.*
+	 from a1
+	 
+	 <if test="ppono == 38" >
+	 --WHERE  rownum&lt;=100 --and exists(select 1 from c where a1.cntlpkg=c.cntlpkg )
+	 </if>
+	)
+	,aa as (
+	   select   a.* 
+	   	 <if test="ppono != null" >
+	 		, e.phone, e.specialty,e.spec1 ,e.effdate,e.termdate 
+		 </if>
+		 <if test="ppono == null" >
+		 	, 'XXXXXXXXXX' as phone, ' ' as specialty ,' ' as spec1 ,'' as effdate, '' as termdate 
+		 </if>
+	   from a
+	   <if test="ppono != null" >
+	   inner join ppos e on a.prov_npi_1=e.npi and a.provtaxid=e.taxid 
+	   and a.state=e.St 
+	   and a.city=e.city
+	   and  replace(replace(a.address1,',',''),' ','')=replace(replace(e.address1,',',''),' ','')
+	   and zipcode = e.zip
+	   </if>
+	 )
+	 ,b as( 
+		 select   a.*
+		  ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		  from aa a  
+		  inner join tempcodes c on a.cntlpkg=c.cntlpkg  
+	 )
+	 ,f as(
+		  select prov_npi_1--,provtaxid
+		  ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlpkg
+		  ,max(serviceamt) as serviceamt
+		 from b
+		 group by prov_npi_1--,provtaxid
+		 ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlpkg
+		 order by serviceamt
+	 )
+	 ,asa as (
+		 select b.*
+		 from f
+		 inner join b on f.prov_npi_1=b.prov_npi_1
+		 --and f.provtaxid=b.provtaxid
+		 and f.internalprovnum =b.internalprovnum
+		 and f.provtype =b.provtype
+		 and f.name=b.name
+		 and f.address1=b.address1
+		 and f.city=b.city
+		 and f.state=b.state
+		 and f.postalcode=b.postalcode
+		 --and f.cntlpkg=b.cntlpkg
+		 and f.serviceamt=b.serviceamt
+		  
+			
+		  order by
+		    <if test="seq == 'filDistance'" >
+				 b.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 f.serviceamt,
+			 </if>
+			 <if test="seq == 'filSpec'" >
+				 specialty,
+			 </if>
+		     b.name,b.prov_npi_1--,b.provtaxid
+		     ,b.internalprovnum ,specialty,
+		     b.provtype ,b.address1,b.city,b.state ,b.postalcode ,b.codetype,b.code,b.poscode,b.serviceamt 
+	)
+	,asa1 as (
+	 select prov_npi_1--,provtaxid
+	 ,internalprovnum ,provtype ,
+	 name, 
+	 address1, city, 
+	 state, 
+	 postalcode --,cntlpkg 
+	 ,zipcode ,latlon 
+	  , phone, specialty ,spec1 as specialty_id,effdate,termdate 
+	 ,codetype,code,negratetype,serviceamt,poscode,comments ,codeversion ,rownum as rownumid
+	 from asa
+	 )
+	 select *
+	 from asa1
+	 
+	 <where>
+		 <if test="pagelow != null" >
+	   			and ( rownumid &gt;=${pagelow} and rownumid &lt;=${pageup})
+			</if>
+		</where>
+	</select>
+	<select id="selProbylocationtaxidFHFsize"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	   select c.cntlpkg,
+	 c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+	 from TBL_FH_FRATE_DETAILS c
+		  <where>
+		  c.poscode!=99
+				  	<if test="Provcode != null" >
+				 	and c.code=#{Provcode} 
+				 	</if>
+		    </where>
+	) 
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+			
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	<if test="ppono != null" >
+		,ppos0 as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		 
+    		a.taxid,a.npi , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 ,ppos as (
+	     select name,address1,city,St, zip, phone, spec1, taxid,npi,specialty,max(effdate) as effdate
+	     from ppos0
+	     group by name,address1,city,St, zip, phone, spec1, taxid,npi,specialty
+	     )
+	</if>
+	 ,a1 as(
+     select distinct a.prov_npi_1,a.provtaxid,a.internalprovnum ,a.provtype ,a.name,
+     upper(a.address1) as address1,
+     upper(replace(a.city,' ','')) as city,
+     upper(replace(a.state,' ','')) as state,
+     a.postalcode
+     ,a.cntlpkg
+     ,substr(a.postalcode,1,5) as zipcode 
+     from TBL_FH_PRDT a
+     <if test="taxid == null" >
+     inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5) 
+     </if>
+     WHERE   a.provtype='F' and a.prov_npi_1 is not null
+     			 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				  <if test="taxid != null" >
+								and a.prov_npi_1=#{taxid}
+				 </if>
+ 	)
+	 
+	,aa as (
+	   select   a.* 
+	   	 <if test="ppono != null" >
+	 		, e.phone, e.specialty ,e.effdate, '' as termdate  
+		 </if>
+		 <if test="ppono == null" >
+		 	, 'XXXXXXXXXX' as phone, ' ' as specialty ,'' as effdate, '' as termdate 
+		 </if>
+	   from a1 a
+	   <if test="ppono != null" >
+	   inner join ppos e on a.prov_npi_1=e.npi and a.provtaxid=e.taxid 
+	   and a.state=e.St 
+	   and a.city=e.city
+	   and  replace(replace(a.address1,',',''),' ','')=replace(replace(e.address1,',',''),' ','')
+	   and zipcode = e.zip
+	   </if>
+	 )
+	 ,b as( 
+		 select   a.*
+		  ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		  from aa a  
+		  inner join tempcodes c on a.cntlpkg=c.cntlpkg  
+	 )
+	 ,f as(
+		  select prov_npi_1--,provtaxid
+		  ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlpkg
+		  ,max(serviceamt) as serviceamt
+		 from b
+		 group by prov_npi_1--,provtaxid
+		 ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlpkg
+	 )
+		select count(1) as total
+		 from f
+	</select>
+	
+	<select id="selProbylocationtaxidFHFS"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	   select c.cntlpkg,
+	 c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+	 from TBL_FH_FRATE_DETAILS c
+		  <where>
+		  c.poscode!=99
+				  	<if test="Provcode != null" >
+				 	and c.code=#{Provcode} 
+				 	</if>
+		    </where>
+	) 
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+			<if test="provst != null" >
+		  		,'' AS latlon
+		  	</if>
+		  	<if test="provst == null" >
+			, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5)*111 as latlon
+			</if>
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	<if test="ppono != null" >
+		,ppos0 as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		substr(a.keyid,1,instr(a.keyid,'_')-1) as keyid,
+    		a.taxid,a.npi , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 ,ppos2 as (
+	     select name,address1,city,St, zip, phone, spec1,keyid,taxid,npi,specialty,max(effdate) as effdate
+	     from ppos0
+	     group by name,address1,city,St, zip, phone, spec1,keyid,taxid,npi,specialty
+	     )
+	     ,ppos as (
+	     select distinct a.*
+	     from ppos0 a 
+	     inner join ppos2 b on a.name=b.name
+	                        and a.address1=b.address1
+	                        and a.city=b.city
+	                        and a.St=b.St
+	                        and a.zip=b.zip
+	                        and a.phone=b.phone
+	                        and a.spec1=b.spec1
+	                        and a.keyid=b.keyid
+	                        and a.taxid=b.taxid
+	                        and a.npi=b.npi
+	                        and a.specialty=b.specialty
+	                        and a.effdate=b.effdate
+	     )
+	</if>
+	 ,a1 as(
+     select distinct a.prov_npi_1,a.provtaxid,a.internalprovnum ,a.provtype ,a.name,
+     upper(a.address1) as address1,
+     upper(replace(a.city,' ','')) as city,
+     upper(replace(a.state,' ','')) as state,
+     a.postalcode
+     ,a.cntlpkg
+     ,substr(a.postalcode,1,5) as zipcode 
+     <if test="taxid == null" >
+     ,d.latlon 
+     </if>
+     <if test="taxid != null" >
+     ,'' as latlon
+     </if>
+     from TBL_FH_PRDT a
+     <if test="taxid == null" >
+     inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5) 
+     </if>
+     WHERE   a.provtype='F' and a.prov_npi_1 is  null
+     			 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				  <if test="taxid != null" >
+								and a.prov_npi_1=#{taxid}
+				 </if>
+     order by  
+       <if test="taxid == null" >
+     	<if test="seq == 'filDistance'" >
+				 d.latlon,
+		</if>
+		</if>
+		a.name
+ 	) 
+ 	,a as(
+	 select a1.*
+	 from a1
+	 
+	 <if test="ppono == 38" >
+	 --WHERE  rownum&lt;=100 --and exists(select 1 from c where a1.cntlpkg=c.cntlpkg )
+	 </if>
+	)
+	,aa as (
+	   select   a.* 
+	   	 <if test="ppono != null" >
+	 		, e.phone, e.specialty ,e.spec1,e.effdate,e.termdate 
+		 </if>
+		 <if test="ppono == null" >
+		 	, 'XXXXXXXXXX' as phone, ' ' as specialty, ' ' as spec1 ,'' as effdate, '' as termdate 
+		 </if>
+	   from a
+	   <if test="ppono != null" >
+	   inner join ppos e on a.provtaxid=e.taxid and a.internalprovnum = e.keyid
+	   and a.state=e.St 
+	   and a.city=e.city
+	   and  replace(replace(a.address1,',',''),' ','')=replace(replace(e.address1,',',''),' ','')
+	   and zipcode = e.zip
+	   </if>
+	 )
+	 ,b as( 
+		 select   a.*
+		  ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		  from aa a  
+		  inner join tempcodes c on a.cntlpkg=c.cntlpkg     
+	 )
+	 ,f as(
+		  select prov_npi_1--,provtaxid
+		  ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlpkg
+		  ,max(serviceamt) as serviceamt
+		 from b
+		 group by prov_npi_1--,provtaxid
+		 ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlpkg
+		 order by serviceamt
+	 )
+	,asa as(
+		 select b.*
+		 from f
+		 inner join b on f.prov_npi_1=b.prov_npi_1
+		 --and f.provtaxid=b.provtaxid
+		 and f.internalprovnum =b.internalprovnum
+		 and f.provtype =b.provtype
+		 and f.name=b.name
+		 and f.address1=b.address1
+		 and f.city=b.city
+		 and f.state=b.state
+		 and f.postalcode=b.postalcode
+		 --and f.cntlpkg=b.cntlpkg
+		 and f.serviceamt=b.serviceamt
+		 
+		  order by
+		    <if test="seq == 'filDistance'" >
+				 b.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 f.serviceamt,
+			 </if>
+			 <if test="seq == 'filSpec'" >
+				 specialty,
+			 </if>
+		     b.name,b.prov_npi_1--,b.provtaxid
+		     ,b.internalprovnum ,specialty,
+		     b.provtype ,b.address1,b.city,b.state ,b.postalcode ,b.codetype,b.code,b.poscode,b.serviceamt
+	)
+	,asa1 as (
+	 select prov_npi_1--,provtaxid
+	 ,internalprovnum ,provtype ,
+	 name, 
+	 address1, city, 
+	 state, 
+	 postalcode --,cntlpkg 
+	 ,zipcode ,latlon 
+	  , phone, specialty , spec1 as specialty_id,effdate,termdate 
+	 ,codetype,code,negratetype,serviceamt,poscode,comments ,codeversion ,rownum as rownumid
+	 from asa
+	 )
+	 select *
+	 from asa1
+	 
+	 <where>
+		 <if test="pagelow != null" >
+	   			and ( rownumid &gt;=${pagelow} and rownumid &lt;=${pageup})
+			</if>
+		</where> 
+	</select>
+	<select id="selProbylocationtaxidFHFSsize"  parameterType="adppo" resultMap="adppoResult">
+	with tempcodes as(
+	  select c.cntlpkg,
+		 c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		 from TBL_FH_FRATE_DETAILS c
+		  <where>
+		  c.poscode!=99
+				  	<if test="Provcode != null" >
+				 	and c.code=#{Provcode} 
+				 	</if>
+		    </where>
+	) 
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	<if test="ppono != null" >
+		,ppos0 as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		substr(a.keyid,1,instr(a.keyid,'_')-1) as keyid,
+    		a.taxid,a.npi , b.specialty,a.effdate,a.termdate 
+		   FROM PPO_${ppono} a 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 ,ppos  as (
+	     select name,address1,city,St, zip, phone, spec1,keyid,taxid,npi,specialty,max(effdate) as effdate
+	     from ppos0
+	     group by name,address1,city,St, zip, phone, spec1,keyid,taxid,npi,specialty
+	     )
+	</if>
+	 ,a1 as(
+     select distinct a.prov_npi_1,a.provtaxid,a.internalprovnum ,a.provtype ,a.name,
+     upper(a.address1) as address1,
+     upper(replace(a.city,' ','')) as city,
+     upper(replace(a.state,' ','')) as state,
+     a.postalcode
+     ,a.cntlpkg
+     ,substr(a.postalcode,1,5) as zipcode 
+     from TBL_FH_PRDT a
+     <if test="taxid == null" >
+     inner join ziplatlon d on substr(a.postalcode,1,5) =substr(d.zipcode ,1,5) 
+     </if>
+     WHERE   a.provtype='F' and a.prov_npi_1 is  null
+     			 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				  <if test="taxid != null" >
+								and a.prov_npi_1=#{taxid}
+				 </if>
+ 	) 
+	,aa as (
+	   select   a.* 
+	   	 <if test="ppono != null" >
+	 		, e.phone, e.specialty ,e.effdate, '' as termdate  
+		 </if>
+		 <if test="ppono == null" >
+		 	, 'XXXXXXXXXX' as phone, ' ' as specialty ,'' as effdate, '' as termdate 
+		 </if>
+	   from a
+	   <if test="ppono != null" >
+	   inner join ppos e on a.provtaxid=e.taxid and a.internalprovnum = e.keyid
+	   and a.state=e.St 
+	   and a.city=e.city
+	   and  replace(replace(a.address1,',',''),' ','')=replace(replace(e.address1,',',''),' ','')
+	   and zipcode = e.zip
+	   </if>
+	 )
+	 ,b as( 
+		 select   a.*
+		  ,c.codetype,c.code,c.negratetype,c.serviceamt,c.poscode,c.comments ,c.codeversion
+		  from aa a  
+		  inner join tempcodes c on a.cntlpkg=c.cntlpkg     
+	 )
+	 ,f as(
+		  select prov_npi_1--,provtaxid
+		  ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlpkg
+		  ,max(serviceamt) as serviceamt
+		 from b
+		 group by prov_npi_1--,provtaxid
+		 ,internalprovnum ,provtype ,name,address1,city,state,postalcode--,cntlpkg
+	 )
+	 select count(1) as total
+	from f
+	</select>
+	 
+	
+	<select id="selProbympi"  parameterType="adppo" resultMap="adppoResult">
+	with a as (
+		select a.*
+		,b.rate_id,TO_CHAR(b.npi) as npi,b.tin_type,b.tin_value
+		,c.negotiated_type,c.negotiated_rate,c.expiration_date,c.service_code,c.billing_class,c.billing_code_modifier,c.additional_information
+		from tbl_mpirates_inn_network a 
+		inner join tbl_mpirates_inn_negoprov b on a.network_id=b.network_id
+		inner join tbl_mpirates_inn_negorates c on a.network_id=c.network_id and b.rate_id=c.rate_id
+		 <where>
+			  	<if test="Provcode != null" >
+			 	and billing_code=#{Provcode} 
+			 	</if>
+			 	<if test="taxid != null" >
+								and b.npi=#{taxid}
+				 </if>
+	    </where> 
+	)
+	,prate as(
+		select a.*
+		from a 
+		where a.billing_class='professional'
+	)
+	,frate as(
+		select a.*
+		from a 
+		where a.billing_class='institutional'
+	)
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+			<if test="provst != null" >
+		  		,'' AS latlon
+		  	</if>
+		  	<if test="provst == null" >
+			, power(abs(latitude-(${ix1}))*abs(latitude-(${ix1}))+abs(longitude-(${iy1}))*abs(longitude-(${iy1})),0.5)*111 as latlon
+			</if>
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	
+		,ppos as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		 
+    		 TO_CHAR(a.npi) as npi , b.specialty,a.effdate,a.termdate  ,a.type,c.latlon
+    		<if test="ppono != null" >
+    		FROM PPO_${ppono} a 
+    		</if>
+    		<if test="ppono == null" >
+    		FROM PPO_40 a 
+    		</if> 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 
+	, dd as(    
+	select * 
+	from ppos a
+	inner join prate b on a.npi=b.npi
+	)
+
+	  ,asa as (
+	select name,address1,city,St as state, zip as zipcode,latlon,phone,specialty, spec1,effdate,termdate 
+   ,negotiated_rate as serviceamt,service_code as poscode,billing_class as codeversion,service_name as comments
+	from dd a
+	
+	where  (a.type='P'  or a.type='F'  ) and service_code='11'
+	       
+	 order by 
+	        <if test="seq == 'filDistance'" >
+				 a.latlon,
+			 </if>
+			 <if test="seq == 'filPrice'" >
+				 a.negotiated_rate,
+			 </if>
+			 <if test="seq == 'filSpec'" >
+				 a.specialty,
+			 </if>
+	 a.name,a.address1,a.city,a.St, a.zip, a.phone, a.spec1,a.type
+ )
+ ,asa1 as (
+ select name,address1,city,state,zipcode,latlon,phone,specialty, spec1 as specialty_id,effdate,termdate 
+       ,serviceamt,poscode,codeversion,comments ,rownum as rownumid
+ from asa
+ )
+ select *
+ from asa1
+ <where>
+       <if test="pagelow != null" >
+	   			and ( rownum &gt;=${pagelow} and rownum &lt;=${pageup})
+			</if>
+</where>
+	 
+	</select>
+	
+	<select id="selProbympisize"  parameterType="adppo" resultMap="adppoResult">
+	with a as (
+		select a.*
+		,b.rate_id,TO_CHAR(b.npi) as npi ,b.tin_type,b.tin_value
+		,c.negotiated_type,c.negotiated_rate,c.expiration_date,c.service_code,c.billing_class,c.billing_code_modifier,c.additional_information
+		from tbl_mpirates_inn_network a 
+		inner join tbl_mpirates_inn_negoprov b on a.network_id=b.network_id
+		inner join tbl_mpirates_inn_negorates c on a.network_id=c.network_id and b.rate_id=c.rate_id
+		 <where>
+			  	<if test="Provcode != null" >
+			 	and billing_code=#{Provcode} 
+			 	</if>
+			 	<if test="taxid != null" >
+								and b.npi=#{taxid}
+				 </if>
+	    </where> 
+	)
+	,prate as(
+		select a.*
+		from a 
+		where a.billing_class='professional'
+	)
+	,frate as(
+		select a.*
+		from a 
+		where a.billing_class='institutional'
+	)
+	<if test="taxid == null" >
+	,ziplatlon as(
+			select latitude,longitude,zipcode 
+		  	from tbl_zipcodes 
+			<where>   
+					<if test="provst == null" >
+						   AND (latitude &gt;= ${ox1}) and (latitude &lt;= ${ox2})
+						   AND (longitude &lt;= ${oy2}) and (longitude &gt;= ${oy1})
+					</if>  
+			 		<if test="provst != null" >
+			 			and upper(replace(state,' ',''))=#{provst}
+			 		</if>
+			</where>
+	) 
+	</if>
+	
+		,ppos as (
+		 	Select distinct upper(a.name) as name, upper(a.address1) as address1,
+    		upper(replace(a.city,' ',''))  as city,upper(replace(a.St,' ','')) as St, a.zip, a.phone, a.spec1,
+    		 
+    		 TO_CHAR(a.npi) as npi  , b.specialty,a.effdate,a.termdate  ,a.type
+    		<if test="ppono != null" >
+    		FROM PPO_${ppono} a 
+    		</if>
+    		<if test="ppono == null" >
+    		FROM PPO_40 a 
+    		</if> 
+		   inner JOIN Tbl_Specialty b ON a.spec1 = b.specialty_ID 
+		   <if test="taxid == null" >
+		   inner join ziplatlon c on a.zip =c.zipcode 
+		   </if>
+		  <where> 
+  				 a.effdate&lt;=sysdate and a.termdate&gt;=sysdate
+				 <if test="provst != null" >
+  				 				and upper(replace(a.st,' ',''))=#{provst}
+  				 </if>
+				 <if test="spec != null" >
+								and a.spec1 in (${spec})
+				 </if>
+				 <if test="provname != null" >
+								and upper(a.name) like '%${provname}%'
+				 </if>
+				 
+				 <if test="taxid != null" >
+								and a.npi=#{taxid}
+				 </if>
+				 
+				 
+		  </where>
+		)
+		 
+	, dd as(    
+		select * 
+		from ppos a
+		inner join prate b on a.npi=b.npi
+	)
+	
+		select count(1) as total
+		from dd a
+		where  (a.type='P'  or a.type='F'  ) and service_code='11'
+	
+	</select>
+	
+	
+	
+	
+	<select id="selPpobymember"  parameterType="adppo" resultMap="adppoResult">
+			with x as(
+			select Employee_SSN,Group_Number,Master_Group
+			from Tbl_Employee_Eligibility
+			<where>
+				<if test="mastgroup != null" >
+				and Master_Group =#{mastgroup}
+			 	</if>
+			 	
+			 	<if test="ssn != null" >
+				and Employee_SSN =#{ssn}
+			 	</if>
+			</where>
+			)
+			SELECT DISTINCT e.PPO, e.PPO_name
+			        , CAST((CASE f.WLTEligFlag WHEN 1 THEN 'Medical' WHEN 2 THEN 'Dental' WHEN 3 THEN 'Vision'
+			        ELSE '' END) As Varchar2(50)) As specific_plan_type
+			        , d.CoverageTypeID, c.nationalPPO, e.PPO_WebUrl ,1  as seq
+			      FROM  Tbl_master_Group  a  
+			      INNER JOIN  tbl_group  b  ON a.mastergroup = b.master_Group
+			      INNER JOIN  BenefitPackages  c  ON b.gr_number = c.groupID 
+			      INNER JOIN  coverage  d  ON c.coverageID = d.coverageID
+			      INNER JOIN tbl_PPO  e  ON c.providerNetworkID = e.ppo
+			      INNER JOIN  CoverageTypes  f  ON d.coveragetypeid=f.coveragetypeid
+			      INNER JOIN (  
+			          SELECT DISTINCT x.Group_Number, '1' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE  y.Medical='T'
+			          UNION
+			          SELECT DISTINCT x.Group_Number, '2' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE y.Dental='T'
+			          UNION
+			          SELECT DISTINCT x.Group_Number, '3' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE  y.Vision='T'
+			        ) g on f.WLTEligFlag=g.CvgType
+			      WHERE  b.gr_number = g.Group_Number and sysdate between c.starting and c.ending
+			    UNION  -- Secondary PPO
+			      SELECT DISTINCT e.PPO, e.PPO_name
+			        , (CASE f.WLTEligFlag WHEN 1 THEN 'Medical' WHEN 2 THEN 'Dental' WHEN 3 THEN 'Vision'
+			        ELSE '' END) || '; Secondary PPO' As specific_plan_type
+			        , d.CoverageTypeID, c.nationalPPO, e.PPO_WebUrl, 2 as seq
+			      FROM  Tbl_master_Group  a  
+			      INNER JOIN tbl_group  b  ON a.mastergroup = b.master_Group
+			      INNER JOIN BenefitPackages  c  ON b.gr_number = c.groupID 
+			      INNER JOIN coverage  d  ON c.coverageID = d.coverageID
+			      INNER JOIN tbl_PPO  e  ON c.nationalppo= e.ppo
+			      INNER JOIN CoverageTypes  f  ON d.coveragetypeid=f.coveragetypeid
+			      INNER JOIN (  
+			          SELECT DISTINCT x.Group_Number, '1' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE  y.Medical='T'
+			          UNION
+			          SELECT DISTINCT x.Group_Number, '2' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE   y.Dental='T'
+			          UNION
+			          SELECT DISTINCT x.Group_Number, '3' As CvgType
+			          FROM  x  
+			            INNER JOIN Tbl_EligibilityHistory y  
+			              ON x.Master_Group=y.Master_Group and x.Employee_SSN=y.Employee_SSN
+			          WHERE   y.Vision='T'
+			        ) g on f.WLTEligFlag=g.CvgType
+			      WHERE  b.gr_number = g.Group_Number and sysdate between c.starting and c.ending
+			      AND c.providerNetworkID!=c.nationalppo
+			      ORDER BY specific_plan_type, SEQ
+  </select>
+  
+	
+	<select id="selPpobymastergroup"  parameterType="adppo" resultMap="adppoResult">		  
+			 
+			 <if test="newfeaturesind ==0" >
+			with aa as(
+			select a.PPO,a.plan_type_id,a.master_group,a.NationalPPO,a.gr_number
+			from tbl_group a
+			INNER JOIN tbl_master_Group  b  ON a.master_group = b.mastergroup
+			<where>
+				<if test="corporationid != null" >
+				and b.corporationID =  #{corporationid}
+				</if>
+				
+				<if test="mastgroup != null" >
+				and  b.mastergroup =#{mastgroup}
+				</if>
+			</where> 
+			)
+			,ppos as(
+			  SELECT DISTINCT a.PPO, a.PPO_name, c.specific_plan_type, a.PPO As nationalPPO, a.PPO_WebUrl
+			  FROM tbl_PPO   a  
+			  INNER JOIN aa  ON a.PPO =  aa.PPO
+			  INNER JOIN tbl_plan_type   c  ON aa.plan_type_id = c.plan_type_ID  
+			  WHERE   a.insql != 0
+			    UNION
+			  SELECT DISTINCT a.PPO, a.PPO_name, c.specific_plan_type, a.PPO As nationalPPO, a.PPO_WebUrl
+			  FROM tbl_PPO   a  
+			  INNER JOIN aa  ON a.PPO = (CASE WHEN aa.NationalPPO=116 THEN 16 ELSE aa.NationalPPO END) 
+			  INNER JOIN tbl_plan_type   c  ON aa.plan_type_id = c.plan_type_ID 
+			  WHERE  a.insql != 0
+			  )
+			  select DISTINCT *
+			  from ppos
+			  Order by PPO_name
+			</if>
+			
+			<if test="newfeaturesind ==1" >
+			 
+			with aa as(
+			select a.PPO,a.plan_type_id,a.master_group,a.NationalPPO,a.gr_number
+			from tbl_group a
+			INNER JOIN tbl_master_Group  b  ON a.master_group = b.mastergroup
+			<where>
+				<if test="corporationid != null" >
+				and b.corporationID =  #{corporationid}
+				</if>
+				
+				<if test="mastgroup != null" >
+				 and b.mastergroup =#{mastgroup}
+				</if>
+			</where> 
+			)
+			,ppos as(
+			SELECT DISTINCT e.PPO, e.PPO_name
+			    , (CASE f.WLTEligFlag WHEN 1 THEN 'Medical' WHEN 2 THEN 'Dental' ELSE '' END) as specific_Plan_Type
+			    ,  d.CoverageTypeID, e.PPO As nationalPPO, e.PPO_WebUrl
+			  FROM  aa
+			  INNER JOIN BenefitPackages   c  ON aa.gr_number = c.groupID  
+			  INNER JOIN coverage   d  ON c.coverageID = d.coverageID 
+			  INNER JOIN tbl_PPO   e  ON c.providerNetworkID = e.ppo and e.InSQL=1
+			  INNER JOIN CoverageTypes   f  ON d.coveragetypeid=f.coveragetypeid
+			  WHERE  f.WLTEligFlag in (1, 2)
+			 UNION
+			  SELECT DISTINCT e.PPO, e.PPO_name
+			    , (CASE f.WLTEligFlag WHEN 1 THEN 'Medical' WHEN 2 THEN 'Dental' ELSE '' END) as specific_Plan_Type
+			    ,  d.CoverageTypeID, e.PPO As nationalPPO, e.PPO_WebUrl
+			  FROM  aa
+			  INNER JOIN BenefitPackages   c  ON aa.gr_number = c.groupID and c.providerNetworkID!=c.nationalPPO  
+			  INNER JOIN coverage   d  ON c.coverageID = d.coverageID 
+			  INNER JOIN tbl_PPO   e  ON c.nationalPPO = e.ppo and e.InSQL=1
+			  INNER JOIN CoverageTypes   f  ON d.coveragetypeid=f.coveragetypeid
+			  WHERE   f.WLTEligFlag in (1, 2)
+			)
+			  select DISTINCT *
+			  from ppos
+			  Order by coverageTypeID, ppo_name
+			</if>
+	</select>	  
+			  
+			  
+			  
+	<select id="selPpobyid"  parameterType="adppo" resultMap="adppoResult">	
+	select ppo, ppo_name   from tbl_PPO  
+	<where>
+		<if test="ppono != null" >
+				and ppo=#{ppono}
+			</if>
+	</where> 
+	</select>
+	<select id="selSubgroupinfo"  parameterType="adppo" resultMap="adppoResult">	
+	select ppo,nationalPPO  from tbl_group  
+		<where>
+			<if test="grnumber != null" >
+					and gr_number=#{grnumber}
+				</if>
+		</where> 
+	</select>
+	
+	<select id="selCorporationbyid"  parameterType="adppo" resultMap="adppoResult">	
+	select corporationid,newfeaturesind from tbl_corporation
+		<where>
+			<if test="corporationid != null" >
+					and corporationid=#{corporationid}
+				</if>
+		</where> 
+	</select>
+	
+	 
+</mapper>
